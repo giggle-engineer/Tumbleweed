@@ -13,6 +13,10 @@
 		0897144E1B59F6C100DC25D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0897144C1B59F6C100DC25D7 /* Main.storyboard */; };
 		089714591B59F6C100DC25D7 /* TumbleweedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714581B59F6C100DC25D7 /* TumbleweedTests.swift */; };
 		089714641B59F6C100DC25D7 /* TumbleweedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */; };
+		08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */; };
+		08BCA9CA1B5A625400A23CA6 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C91B5A625400A23CA6 /* PostView.swift */; };
+		08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */; };
+		08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		0897145F1B59F6C100DC25D7 /* TumbleweedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumbleweedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumbleweedUITests.swift; sourceTree = "<group>"; };
 		089714651B59F6C100DC25D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
+		08BCA9C91B5A625400A23CA6 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostController.swift; sourceTree = "<group>"; };
+		08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			children = (
 				089714461B59F6C100DC25D7 /* AppDelegate.swift */,
 				089714481B59F6C100DC25D7 /* ViewController.swift */,
+				08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */,
+				08BCA9C91B5A625400A23CA6 /* PostView.swift */,
+				08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */,
+				08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */,
 				0897144A1B59F6C100DC25D7 /* Assets.xcassets */,
 				0897144C1B59F6C100DC25D7 /* Main.storyboard */,
 				0897144F1B59F6C100DC25D7 /* Info.plist */,
@@ -251,7 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */,
+				08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */,
 				089714491B59F6C100DC25D7 /* ViewController.swift in Sources */,
+				08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */,
+				08BCA9CA1B5A625400A23CA6 /* PostView.swift in Sources */,
 				089714471B59F6C100DC25D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +490,7 @@
 				0897146A1B59F6C100DC25D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0897146B1B59F6C100DC25D7 /* Build configuration list for PBXNativeTarget "TumbleweedTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +499,7 @@
 				0897146D1B59F6C100DC25D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0897146E1B59F6C100DC25D7 /* Build configuration list for PBXNativeTarget "TumbleweedUITests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +508,7 @@
 				089714701B59F6C100DC25D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

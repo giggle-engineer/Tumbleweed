@@ -8,6 +8,11 @@
 
 import Cocoa
 
-class ImagePostController : NSViewController {
-    
+class ImagePostController : PostController {
+    override func fillContent() {
+        super.fillContent()
+//        print("filling content")
+//        self.view?
+//        self.view?.imageView?.image =
+    }
 }

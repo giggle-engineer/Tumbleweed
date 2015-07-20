@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FA24C1B5B5D6900D37DA7 /* PostView.swift */; };
+		0845087D1B5B75E5001AF7FA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845087C1B5B75E5001AF7FA /* Post.swift */; };
+		087413E01B5BCC5500EE2FDF /* ImagePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */; };
 		089714471B59F6C100DC25D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714461B59F6C100DC25D7 /* AppDelegate.swift */; };
 		089714491B59F6C100DC25D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714481B59F6C100DC25D7 /* ViewController.swift */; };
 		0897144B1B59F6C100DC25D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0897144A1B59F6C100DC25D7 /* Assets.xcassets */; };
@@ -14,9 +17,10 @@
 		089714591B59F6C100DC25D7 /* TumbleweedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714581B59F6C100DC25D7 /* TumbleweedTests.swift */; };
 		089714641B59F6C100DC25D7 /* TumbleweedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */; };
 		08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */; };
-		08BCA9CA1B5A625400A23CA6 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C91B5A625400A23CA6 /* PostView.swift */; };
+		08BCA9CA1B5A625400A23CA6 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C91B5A625400A23CA6 /* PostController.swift */; };
 		08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */; };
 		08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */; };
+		0E55DA44A639C43746C1D182 /* Pods_Tumbleweed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083FA24C1B5B5D6900D37DA7 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		0845087C1B5B75E5001AF7FA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostView.swift; sourceTree = "<group>"; };
 		089714431B59F6C100DC25D7 /* Tumbleweed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbleweed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089714461B59F6C100DC25D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089714481B59F6C100DC25D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,9 +57,12 @@
 		089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumbleweedUITests.swift; sourceTree = "<group>"; };
 		089714651B59F6C100DC25D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
-		08BCA9C91B5A625400A23CA6 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		08BCA9C91B5A625400A23CA6 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostController.swift; sourceTree = "<group>"; };
 		08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostController.swift; sourceTree = "<group>"; };
+		1D9AD972092C1BF1E39AF48A /* Pods-Tumbleweed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbleweed.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.release.xcconfig"; sourceTree = "<group>"; };
+		D14BF02B5E30D414D4647D93 /* Pods-Tumbleweed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbleweed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.debug.xcconfig"; sourceTree = "<group>"; };
+		E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tumbleweed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E55DA44A639C43746C1D182 /* Pods_Tumbleweed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		034D148030671298DE9862CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF02B5E30D414D4647D93 /* Pods-Tumbleweed.debug.xcconfig */,
+				1D9AD972092C1BF1E39AF48A /* Pods-Tumbleweed.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0845087E1B5B75FA001AF7FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08BCA9C91B5A625400A23CA6 /* PostController.swift */,
+				08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */,
+				08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0845087F1B5B7601001AF7FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				083FA24C1B5B5D6900D37DA7 /* PostView.swift */,
+				087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		084508801B5B7606001AF7FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0845087C1B5B75E5001AF7FA /* Post.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0897143A1B59F6C100DC25D7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +134,8 @@
 				089714571B59F6C100DC25D7 /* TumbleweedTests */,
 				089714621B59F6C100DC25D7 /* TumbleweedUITests */,
 				089714441B59F6C100DC25D7 /* Products */,
+				034D148030671298DE9862CD /* Pods */,
+				F6C226C56CC95AD35E009FE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +155,9 @@
 				089714461B59F6C100DC25D7 /* AppDelegate.swift */,
 				089714481B59F6C100DC25D7 /* ViewController.swift */,
 				08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */,
-				08BCA9C91B5A625400A23CA6 /* PostView.swift */,
-				08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */,
-				08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */,
+				0845087E1B5B75FA001AF7FA /* Controllers */,
+				0845087F1B5B7601001AF7FA /* Views */,
+				084508801B5B7606001AF7FA /* Models */,
 				0897144A1B59F6C100DC25D7 /* Assets.xcassets */,
 				0897144C1B59F6C100DC25D7 /* Main.storyboard */,
 				0897144F1B59F6C100DC25D7 /* Info.plist */,
@@ -134,6 +183,14 @@
 			path = TumbleweedUITests;
 			sourceTree = "<group>";
 		};
+		F6C226C56CC95AD35E009FE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 089714681B59F6C100DC25D7 /* Build configuration list for PBXNativeTarget "Tumbleweed" */;
 			buildPhases = (
+				60027279E95E359AAACD08F4 /* Check Pods Manifest.lock */,
 				0897143F1B59F6C100DC25D7 /* Sources */,
 				089714401B59F6C100DC25D7 /* Frameworks */,
 				089714411B59F6C100DC25D7 /* Resources */,
+				7CC5498D5987B8FFFCBE7D47 /* Embed Pods Frameworks */,
+				C5865D4D7829C5A3BD8B8DF5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +256,7 @@
 		0897143B1B59F6C100DC25D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Chloe Stars";
 				TargetAttributes = {
@@ -258,6 +319,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60027279E95E359AAACD08F4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CC5498D5987B8FFFCBE7D47 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5865D4D7829C5A3BD8B8DF5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0897143F1B59F6C100DC25D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,9 +374,12 @@
 			files = (
 				08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */,
 				08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */,
+				083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */,
 				089714491B59F6C100DC25D7 /* ViewController.swift in Sources */,
 				08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */,
-				08BCA9CA1B5A625400A23CA6 /* PostView.swift in Sources */,
+				08BCA9CA1B5A625400A23CA6 /* PostController.swift in Sources */,
+				087413E01B5BCC5500EE2FDF /* ImagePostView.swift in Sources */,
+				0845087D1B5B75E5001AF7FA /* Post.swift in Sources */,
 				089714471B59F6C100DC25D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +509,7 @@
 		};
 		089714691B59F6C100DC25D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14BF02B5E30D414D4647D93 /* Pods-Tumbleweed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -409,6 +522,7 @@
 		};
 		0897146A1B59F6C100DC25D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D9AD972092C1BF1E39AF48A /* Pods-Tumbleweed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

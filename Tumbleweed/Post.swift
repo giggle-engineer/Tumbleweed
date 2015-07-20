@@ -1,13 +1,13 @@
 //
-//  TextPostController.swift
+//  Post.swift
 //  Tumbleweed
 //
 //  Created by Chloe Stars on 7/18/15.
 //  Copyright © 2015 Chloe Stars. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 
-class TextPostController : PostController {
-    
+class Post {
+    var type = ""
 }

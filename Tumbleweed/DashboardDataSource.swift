@@ -32,13 +32,11 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
     }
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
 //        let type = posts.objectAtIndex(row)["type"] as! String
-        let postView = tableView.makeViewWithIdentifier("photo", owner: self) as! PostView
+        let postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
 //        print("row: \(row) type: \(type)")
-        let controller = postControllers[row] as PostController
-        if (controller.view == nil) {
-            postControllers[row].post = posts[row] as? NSDictionary
-            postControllers[row].view = postView
-        }
+//        let controller = postControllers[row] as PostController
+        postControllers[row].post = posts[row] as? NSDictionary
+        postControllers[row].view = postView
         return postView
     }
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {

@@ -34,10 +34,9 @@ class PostController {
         
         TMAPIClient.sharedInstance().avatar(blogName, size: 48) { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
-                let image = NSImage(data: result as! NSData)
-//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-                
-                self.view?.avatar.image = image
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let image = NSImage(data: result as! NSData)
+                    self.view?.avatar.image = image
 //                })
             }
             else {

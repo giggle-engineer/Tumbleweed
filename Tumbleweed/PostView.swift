@@ -16,6 +16,8 @@ class PostView : NSTableCellView {
     @IBOutlet var reblogedFrom : NSTextField!
     @IBOutlet var reblog : NSImageView!
     @IBOutlet var noteCount : NSTextField!
+    @IBOutlet var favoriteButton : DOFavoriteButton!
+    var row : Int?
     var postId : String!
     var reblogKey : String!
     

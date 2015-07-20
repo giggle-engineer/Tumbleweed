@@ -10,21 +10,28 @@ import Cocoa
 import TMTumblrSDK
 
 class PostController {
+    var row : Int?
+    var tableView : NSTableView?
     var post : NSDictionary?
     var view : PostView? {
         didSet {
             self.fillContent()
         }
     }
+    
+    init(tableView : NSTableView) {
+        self.tableView = tableView
+    }
 
     func fillContent() {
-//        print("filling default content for PostController")
         let blogName = post?["blog_name"] as! String
         let id = post?["id"] as! Int
         let idString = String(id)
         let reblogKey = post?["reblog_key"] as! String
         let count = post?["note_count"] as! Int
+        let liked = post?["liked"] as! Bool
         
+        view?.favoriteButton.selected = liked
         view?.postId = idString
         view?.reblogKey = reblogKey
         view?.blogger.stringValue = blogName
@@ -39,6 +46,9 @@ class PostController {
             if error == nil {
                 let image = NSImage(data: result as! NSData)
                 self.view?.avatar.image = image
+                self.view?.avatar.wantsLayer = true
+                self.view?.avatar.layer!.cornerRadius = 3.0
+                self.view?.avatar.layer!.masksToBounds = true
             }
             else {
                 print("error: \(error.description)")

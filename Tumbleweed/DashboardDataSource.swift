@@ -9,6 +9,7 @@
 import Cocoa
 
 class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate {
+    @IBOutlet var tableView : NSTableView!
     var postControllers = Array<PostController>()
     var posts : NSArray = [] {
         didSet {
@@ -18,22 +19,34 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
                 let type = posts.objectAtIndex(i)["type"] as! String
                 switch type {
                     case "text":
-                        postControllers.append(TextPostController())
+                        postControllers.append(TextPostController(tableView: tableView))
                         break
                     case "photo":
-                        postControllers.append(ImagePostController())
+                        postControllers.append(ImagePostController(tableView: tableView))
                         break
                     default:
-                        postControllers.append(TextPostController())
+                        postControllers.append(ImagePostController(tableView: tableView))
                 }
+                postControllers[i].row = i
             }
-            postControllers.append(ImagePostController())
         }
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//        let type = posts.objectAtIndex(row)["type"] as! String
-        let postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
+        let type = posts.objectAtIndex(row)["type"] as! String
+        var postView : PostView!
+        switch(type) {
+            case "text":
+                postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
+                break
+            case "photo":
+                postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
+                break
+            default:
+                print("type: \(type) at row: \(row)")
+                postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
+        }
+//        postView.row = row
 //        print("row: \(row) type: \(type)")
 //        let controller = postControllers[row] as PostController
         postControllers[row].post = posts[row] as? NSDictionary

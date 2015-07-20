@@ -12,6 +12,10 @@ import TMCache
 class ImagePostController : PostController {
     override func fillContent() {
         super.fillContent()
+        if post?["photos"] == nil {
+            // temporary exceptional to handle the fact that we're not handling all post types
+            return
+        }
         let photos = post?["photos"] as! NSArray
         for photo in photos {
             let photo = photo as! NSDictionary
@@ -21,7 +25,7 @@ class ImagePostController : PostController {
             
             TMCache.sharedCache().objectForKey(url, block: { (cache: TMCache!, key:String!, object:AnyObject!) -> Void in
                 let imagePostView = self.view as! ImagePostView
-                imagePostView.photoView?.animates = true
+                imagePostView.photoView?.image = nil
                 if object == nil {
                     let session = NSURLSession.sharedSession()
                     let dataTask = session.dataTaskWithURL(NSURL(string: url)!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
@@ -30,7 +34,7 @@ class ImagePostController : PostController {
                             
                             TMCache.sharedCache().setObject(image, forKey: url, block: { (cache: TMCache!, key: String!, object: AnyObject!) -> Void in })
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                imagePostView.photoView?.image = image
+                                    imagePostView.photoView?.image = image
                             })
                         }
                         else {
@@ -40,15 +44,12 @@ class ImagePostController : PostController {
                     dataTask?.resume()
                 }
                 else {
-                    print("loading from cache!")
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        imagePostView.photoView?.image = object as? NSImage
+                            imagePostView.photoView?.image = object as? NSImage
                     })
                 }
             })
+            return
         }
-//        print("filling content")
-//        self.view?
-//        self.view?.imageView?.image =
     }
 }

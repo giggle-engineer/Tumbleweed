@@ -28,5 +28,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let calledURL = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue
         TMAPIClient.sharedInstance().handleOpenURL(NSURL(string: calledURL!))
     }
+    
+    @IBAction func refreshDashboard(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("refreshDashboard", object: self)
+    }
 }
 

@@ -34,35 +34,23 @@ class ViewController: NSViewController {
             TMAPIClient.sharedInstance().OAuthToken = Defaults["OAuthToken"].stringValue
             TMAPIClient.sharedInstance().OAuthTokenSecret = Defaults["OAuthTokenSecret"].stringValue
         }
+        self.loadDashboard()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadDashboard", name: "refreshDashboard", object: nil)
+    }
+    
+    func loadDashboard() {
+        print("boop")
         TMAPIClient.sharedInstance().dashboard(nil, callback: { (result : AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
                 self.dashboardDataSource.posts = posts
                 self.tableView.reloadData()
-                //            print("dashboard \(posts)")
-                //            print("count: \(posts.count)")
-                //            for post in posts {
-                //                let type = post["type"]
-                //                let note_count = post["note_count"]
-                //                let liked = post["liked"]
-                //                let source_title = post["source_title"]
-                //                let
-                //                print("boop \(post)")
-                //            }
             }
         })
-        
-        TMAPIClient.sharedInstance().blogInfo("giggle-engineer") { (result: AnyObject!, error: NSError!) -> Void in
-//            let posts = result as! NSDictionary
-//            print("blog \(posts)")
-//            print("count: \(posts.count)")
-//            for post in posts {
-//                let boop = post as! String
-//                print("boop \(boop)")
-//            }
-        }
-
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func refresh (sender: AnyObject) {
+        self.loadDashboard()
     }
 
     override var representedObject: AnyObject? {

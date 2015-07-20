@@ -1,0 +1,8 @@
+#include "DOFavoriteButton.xcconfig"
+CODE_SIGN_IDENTITY = 
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/DOFavoriteButton" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CCNPreferencesWindowController" "${PODS_ROOT}/Headers/Public/DOFavoriteButton" "${PODS_ROOT}/Headers/Public/INAppStoreWindow" "${PODS_ROOT}/Headers/Public/JXHTTP" "${PODS_ROOT}/Headers/Public/Spectacles" "${PODS_ROOT}/Headers/Public/SwiftyUserDefaults" "${PODS_ROOT}/Headers/Public/TMTumblrSDK"
+OTHER_LDFLAGS = ${DOFAVORITEBUTTON_OTHER_LDFLAGS}
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

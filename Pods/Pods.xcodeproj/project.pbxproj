@@ -1,0 +1,1760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C4DE294142B78995AA94E8C09539F5 /* CCNPreferencesWindowController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 376E759CFC4019250823DBFA773EF56B /* CCNPreferencesWindowController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05828372F8EEA2A5CCEADBAAE1361F3C /* JXHTTPJSONBody.h in Headers */ = {isa = PBXBuildFile; fileRef = D9AD678C3E6EDB7BF0252A7288ED37B1 /* JXHTTPJSONBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05A7EBDE120908EE4B0656B091649B5F /* DOFavoriteButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 445D580CC8E15B9AE9280B177634D242 /* DOFavoriteButton-dummy.m */; };
+		0A854048027DDE61653BCABD4494F7E9 /* JXURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B45D61E6DFA545FD67D13376F27DD9E7 /* JXURLEncoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0BBAB6C41822126F5591BB1AD9133DE8 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = A002BF0778F859443B77424DDA0A5468 /* like.png */; };
+		0BBCB704A7F4DE100476E2E8469B86E4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		0C14E539C7414726A98B9E27A3DE0311 /* TMAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 335FB22360549B37BF93C1B9F9841CAA /* TMAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D3F4778E49EC92DD19C40E6ECC07C5D /* TMTumblrAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D9509D0045A0675C5D275A35F95620 /* TMTumblrAuthenticator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		107A6615A6754B0B1B5526AC2E15D58E /* JXHTTPMultipartBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FE9B4348A500DF8DE71132741A71C63 /* JXHTTPMultipartBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11F435FDEECB0B2962DD8F0C6FEFBB1D /* TMOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355C4DA24127AADBE2E655F344F0E45 /* TMOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1585862A8C093F468D06611A51A12D27 /* JXHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E853D378D4A0D162B8EF436DAA0222 /* JXHTTPOperationQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		161C393D50DA95BC2BFECEC9B5A163F3 /* TMTumblrSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF951DA32E1EFA18AFC45F691C4BD0A /* TMTumblrSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1694D4AF20E79F18D48643F0BDD8CEAF /* JXHTTPDataBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E652473896AB0136234862084EBC42 /* JXHTTPDataBody.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		17C6E6DBEE8618F3896202BF432D5501 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867FF739454F584A4E3F6C1AC50E8359 /* AppKit.framework */; };
+		19D3C614AEEE6E8C498DCB7B9BC535CE /* TMTumblrSDK.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DA72A3C72CDB6D902A71FD2DC00E65F /* TMTumblrSDK.podspec.json */; };
+		20A41854D229C1BBC5318CFFB8ABF70E /* INAppStoreWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5EE354805BD775B534E8956616A8BB /* INAppStoreWindow-dummy.m */; };
+		22D40DAD57993EFB590E299223FA11A6 /* TMSDKUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AECF100C661AA459515FAD96B0E79 /* TMSDKUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		238A4996A9C9D7EA87F46A2AD8E8AE83 /* INWindowButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F399FD0DDBF55F04CA3A827504CB33 /* INWindowButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		240F333689BA926D6AAAD0CFDB9CE8BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		24BEE40AE0EC96B590B5A5948F15A21D /* TMPodspec.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD46B13EFAC82154D1544AC16F7D7CD /* TMPodspec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25759DEA2948E838F7B3CE1B0EC2965B /* TMSDKFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 313A681E25899C0ECB8B4B7F9EB8CEA9 /* TMSDKFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33EA174DC6A52F0D005665737F88BF7E /* TMTumblrSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEC842D3FE5C7784D1DA7271A19E93 /* TMTumblrSDK-dummy.m */; };
+		346059ABCF36CCF74D9C360BA3ED84BE /* JXHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890BB3DAFC457BB813895E8D4D7BE99 /* JXHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		359A30FBD00A1A5EA0771A70EBC45798 /* JXHTTPDataBody.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FB1D2B3D62F9932289587FC1BEEFD7 /* JXHTTPDataBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		375047B816672FB1A03CF2594455835A /* JXURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 551C6F2C1CD6F09B5DA83A1606517996 /* JXURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4179F04F6B4F3999A1564D261806049F /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFA08D11E65A0B719AEE8BE1559579F /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41DBABD0F80471D254DA693F150960CA /* Pods-Tumbleweed-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5609A3C06DEA4142FC937C088FEF7904 /* Pods-Tumbleweed-dummy.m */; };
+		4BF18A8AF37E7439065308EF05D5CD1F /* Spectacles-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6062B9EA4B59B971C691F752A121A4 /* Spectacles-dummy.m */; };
+		4DD6ECB7763F27B01C1065ED942E67E2 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE381DC4A06A569399240970DDBA34 /* INWindowButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4E52ECAA68AF80A8A7A9E909ADC8E3D5 /* JXHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6879824266FE4A9BEDE37F184EF20175 /* JXHTTPOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4FB6AF51C9831E74896E2C20E104A62C /* JXHTTPFileBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DEFB4DC6C532BF436C42B8DFF7E360 /* JXHTTPFileBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FF991F2207B23949E0803BC316C802B /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 91E0E001BE579E1C176ED55A6E50FEDD /* smile.png */; };
+		52F1302B067A93CB6E4F2B24C8857BB8 /* INAppStoreWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E481C7C310C1F056DD489A42BD1FB0E4 /* INAppStoreWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633E54EEDFE5C25C7C5F3A39560648EA /* JXHTTPOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9CF2BF33146D8EB2192C10EA25AC2A /* JXHTTPOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64313C8D6512AD562F016D914ED64F2C /* JXOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE974048094DEAB15B0974B5A12659 /* JXOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		679D209FACE9F0E169DB5A0C76709AFD /* JXHTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = B6902FE2C6703CD327581D467479BF76 /* JXHTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67BE92AFA55A00C805A8EFE75D461582 /* TMSDKFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D542135717149F6BC9F16B38B085DC /* TMSDKFunctions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		69D84D7451A4D814599555575C03EE36 /* CCNPreferencesWindowController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F81ED65A8371D0B2ADCC338DFAE6DCF /* CCNPreferencesWindowController-dummy.m */; };
+		6A1EF5A3106E4A5214138F68677AEAFC /* JXHTTPOperation+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FED12A974D228C669F68C601A9D31A /* JXHTTPOperation+Convenience.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6B89734C956BF0CFC8CDC5F396067806 /* Spectacles-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E3402B7D6C9529215DD48A8DBDFD060 /* Spectacles-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EB52B16A63A1000EE255769DD4B394E /* JXBackgroundTaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 564105D698E194AB7E1702304E3639BF /* JXBackgroundTaskManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F26184B619AA9C737A8C897CFC8875D /* JXHTTPOperationQueueDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A43E9F3422D355E14D8FE1568ABA80 /* JXHTTPOperationQueueDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7022833206C6216532FF919C89AE01E8 /* TMSDKUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FE0C6AFD5B801C5492BA034725AE0A /* TMSDKUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75F9C802DAC778618AFAEE6AE5A20BEE /* DOFavoriteButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 500D95B2927A50BD22DC520FD890D9AB /* DOFavoriteButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AF3FBE92130D4EB90EF5AF49DE90F2D /* JXHTTPRequestBody.h in Headers */ = {isa = PBXBuildFile; fileRef = C9EA5C11FC36384A2A58BAAABAC04DFE /* JXHTTPRequestBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BABFD63A1E2F489BEFF93DC4A1770DE /* SwiftyUserDefaults-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56441CEA5804C89C86A6AC27954466 /* SwiftyUserDefaults-dummy.m */; };
+		7E13633AF9DD801736B225066C1414FC /* Spectacles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE0410E56C142162DCE7C4D555EDFB /* Spectacles.framework */; };
+		7E9692C3AA068F7EF704902D07C5AF73 /* JXHTTPOperationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5AFE511A9E45C777425F5C8706F923 /* JXHTTPOperationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F19FC43FA9DCA302A11231187DDCABB /* Pods-Tumbleweed-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B6D8F6BDAC982B04B2F6737F14EE38 /* Pods-Tumbleweed-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C3612C78E6326938658A0824978529D /* JXHTTPMultipartBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 679FCD996D5F3F83CD2B5F8C494AC7AD /* JXHTTPMultipartBody.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D223D28BAA9D8DA4F0EBB3E34D494E0 /* CCNPreferencesWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E05DBA68CB69E42C54D89121EECCF9F /* CCNPreferencesWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F67DC71B31BEB9A21AA602864D4AEC0 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8898D8CBC5532F2C9ED072597115E380 /* heart.png */; };
+		91ABABF3DBAAD7A257F6F7EFD89A3AE6 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CEE3F1DB2D7635AF1890051BBF6424 /* INAppStoreWindow.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		92A155DE61A84DB22E386740D04D873C /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9894A9EDE75C3998DF8281EF724285 /* DOFavoriteButton.swift */; };
+		94DB5C4F8E81A858B42BA7E8074BC51A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254306F49905E10E644A1817A0624E90 /* Foundation.framework */; };
+		95956F2DC9B5C3C4117E3FBAD513FA71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254306F49905E10E644A1817A0624E90 /* Foundation.framework */; };
+		97B8402EF6C58779348118BC995CBDFC /* TMTumblrAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 65316B11F65FE8D47119F38BF6424567 /* TMTumblrAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CAF9CBAF4E9747B59014B2B8058F0CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		9E8D6147179E06524D7552D791028554 /* TMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BB0BA51E00D82B8C3DC9A3DDF353EA /* TMAPIClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9F8E66D03D397550DD8C15664F8AE76A /* TMPodspec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4706111001E2A9EE760817C7AC371 /* TMPodspec.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ABFD8ECA51466A084869962F6F225333 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFCE7B626B768A7EED0A885AFFD1F6 /* SwiftyUserDefaults.swift */; };
+		ACD1594035D4BC27D302ADAFE3B2E96C /* JXOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAC75B1061093512AA40F669FE68ADD /* JXOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01A282BEA15EDB2AFC16BD108860805 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 4897F65EBA76835FCB5D29518814746C /* star.png */; };
+		B27483E37433ED7DBB9A259106DAFD23 /* CCNPreferencesWindowControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C88C60561FCB3AF795A4163E0A7891B4 /* CCNPreferencesWindowControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6392FD38F81398B6958E6BAB2EC5234 /* JXHTTPFormEncodedBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DF1460364E5D4DD5CFE32AD5F293A3 /* JXHTTPFormEncodedBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71E33D2B52D10F0406C4BECA87B3546 /* JXHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AD28D927F3C862E867C1423D3471AF /* JXHTTPOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCB4A27DD6918FEB3EEA7D3CADB63BD2 /* SwiftyUserDefaults-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBFBEE5CBA6C88EDA6719B2A12F3DCE6 /* SwiftyUserDefaults-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD800AE5870CE8A5F857E0BE9C075EC4 /* JXHTTPOperation+Convenience.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1A4C561918B2D40CFCC05558D9F4DB /* JXHTTPOperation+Convenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1CC3DE35F8BCDD37350633B26BC1811 /* JXHTTPFormEncodedBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AAF6C7D2D831324EDB3C6FBE044223 /* JXHTTPFormEncodedBody.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C607B9C7AC0DCFFB4AF9CEF4EEEE9E5F /* JXHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E6DDBC5AB56AF3BD0BC724F09048D /* JXHTTP-dummy.m */; };
+		CB5341826086C46D5DB1A1946EB46DF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		CBE3B54BA3C66ECFAA951127C8CFE6F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254306F49905E10E644A1817A0624E90 /* Foundation.framework */; };
+		D299C3AEC3FBF4464A84D6CFA794D24F /* JXHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F106CEC0FC6CF29E131B5FBDE76D28AC /* JXHTTP.framework */; };
+		DC6448E0D864FB5501D33D6B4B715BAB /* TMOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = F1F29215E8B2110E577EA7412F59A6E9 /* TMOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC8B1D727E5A7071DAF926824F724851 /* JXHTTPFileBody.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A743923301AFCBB8E3D4117B08422D /* JXHTTPFileBody.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DE2095E26A9B61CD953C360AD8A95BD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		E45355974976BD6201A88D6EF70B1B38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		E960DC135DE984D9E4D94708BF17F061 /* JXHTTPJSONBody.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8DCB9920ED05C3F07B10A80033B7D8 /* JXHTTPJSONBody.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE45CEDBA72F6E92B8F1F8D089657FE3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		EF71D651513441A0FA35AB9B8F5D80A8 /* JXNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0A04BA2345D54306802801B48930D5 /* JXNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F27626B1D04C58D4A10DFFEF23612201 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */; };
+		F973F68E60F5E46318CF3DA14A49E045 /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFEACB85357E43708D9133D09F519C5 /* CCNPreferencesWindowController.m */; };
+		FE78C880ACE6EF70B12EA0347CF8183C /* JXURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 7637A27DB87382940D6E9F19779742FF /* JXURLEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFBE556961A59589F130153E2D4D6C2A /* JXURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 72EB13141D5CD0660325C2458263A5D7 /* JXURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BA70B8F0D1F960A367D2A1C6395046C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A767130BC2A6A3A8A4048CF0B0D5F00;
+			remoteInfo = Spectacles;
+		};
+		35AF3394115E46D6301D4A09A7EAB9F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CA4D2A1483649BB943D671738066AC7;
+			remoteInfo = DOFavoriteButton;
+		};
+		47534BB52B1A84725E1BA22C4FBB60DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46A9C477BF0409F7890E477E6D86FFB3;
+			remoteInfo = TMTumblrSDK;
+		};
+		47CCE60FF5F5BF38474D74E609F13D99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 211F23F332FBE148848E2BD3F31EB007;
+			remoteInfo = JXHTTP;
+		};
+		52DBE45B7B18C8023D9EC4DB13487BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86B1E030B401229B99CA761FCE83DCA5;
+			remoteInfo = INAppStoreWindow;
+		};
+		C4BF2CDA0C1E9C3CD0B80F7FE72ACDE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 211F23F332FBE148848E2BD3F31EB007;
+			remoteInfo = JXHTTP;
+		};
+		D22B9825ECDE9CEA20ED549BA8516034 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A767130BC2A6A3A8A4048CF0B0D5F00;
+			remoteInfo = Spectacles;
+		};
+		E61D05A609CA86202A115CA07B3F857C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F994699199A14757C72B986EB1209644;
+			remoteInfo = SwiftyUserDefaults;
+		};
+		EFAD7873409652ABCB1A20EB777988AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D23B78D5EC78B6BFFB7BAEAD41B23B9;
+			remoteInfo = CCNPreferencesWindowController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E98CC77B9E91125F5C803E41C128EE /* JXHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0314A12DB41DB41F39935FABA51F1AE0 /* Pods-Tumbleweed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed.debug.xcconfig"; sourceTree = "<group>"; };
+		05CFA5566A86D1D1319AFB74F2DDBF9F /* Spectacles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spectacles.xcconfig; sourceTree = "<group>"; };
+		099DE72ABEE87C57AC5F12F68E9906A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E3402B7D6C9529215DD48A8DBDFD060 /* Spectacles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spectacles-umbrella.h"; sourceTree = "<group>"; };
+		0FE9B4348A500DF8DE71132741A71C63 /* JXHTTPMultipartBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPMultipartBody.h; path = JXHTTP/JXHTTPMultipartBody.h; sourceTree = "<group>"; };
+		133284EE92DB8EDD341562F3A7FAE70A /* Spectacles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spectacles-prefix.pch"; sourceTree = "<group>"; };
+		15AD28D927F3C862E867C1423D3471AF /* JXHTTPOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPOperation.h; path = JXHTTP/JXHTTPOperation.h; sourceTree = "<group>"; };
+		198795290FDD307073D72F6DC02D83B4 /* SwiftyUserDefaults.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyUserDefaults.modulemap; sourceTree = "<group>"; };
+		1B836BCBEFDABF9219C50722EBC990B8 /* CCNPreferencesWindowController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCNPreferencesWindowController-prefix.pch"; sourceTree = "<group>"; };
+		1C52E998F0FCB337A80122BB7B384D99 /* INAppStoreWindow-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "INAppStoreWindow-Private.xcconfig"; sourceTree = "<group>"; };
+		1C7E0AB9A3EC647457DAA682345A6753 /* Spectacles.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Spectacles.modulemap; sourceTree = "<group>"; };
+		1CD000BBFDCE1D59107757404F039375 /* INAppStoreWindow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = INAppStoreWindow.modulemap; sourceTree = "<group>"; };
+		1F81ED65A8371D0B2ADCC338DFAE6DCF /* CCNPreferencesWindowController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCNPreferencesWindowController-dummy.m"; sourceTree = "<group>"; };
+		254306F49905E10E644A1817A0624E90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		254BE9E46B70003AA8757714757B9A30 /* JXHTTP-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "JXHTTP-Private.xcconfig"; sourceTree = "<group>"; };
+		2647EA6D62031A9231B5DBA5594720FD /* SwiftyUserDefaults.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUserDefaults.xcconfig; sourceTree = "<group>"; };
+		29E652473896AB0136234862084EBC42 /* JXHTTPDataBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPDataBody.m; path = JXHTTP/JXHTTPDataBody.m; sourceTree = "<group>"; };
+		2B684FA67F80DBE0A28E7CC916155E47 /* Pods-Tumbleweed.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Tumbleweed.modulemap"; sourceTree = "<group>"; };
+		2D6062B9EA4B59B971C691F752A121A4 /* Spectacles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spectacles-dummy.m"; sourceTree = "<group>"; };
+		313A681E25899C0ECB8B4B7F9EB8CEA9 /* TMSDKFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMSDKFunctions.h; path = TMTumblrSDK/Core/TMSDKFunctions.h; sourceTree = "<group>"; };
+		335FB22360549B37BF93C1B9F9841CAA /* TMAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMAPIClient.h; path = TMTumblrSDK/APIClient/TMAPIClient.h; sourceTree = "<group>"; };
+		376E759CFC4019250823DBFA773EF56B /* CCNPreferencesWindowController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCNPreferencesWindowController-umbrella.h"; sourceTree = "<group>"; };
+		39F399FD0DDBF55F04CA3A827504CB33 /* INWindowButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INWindowButton.h; path = INAppStoreWindow/INWindowButton.h; sourceTree = "<group>"; };
+		3B4E6DDBC5AB56AF3BD0BC724F09048D /* JXHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JXHTTP-dummy.m"; sourceTree = "<group>"; };
+		3BAC75B1061093512AA40F669FE68ADD /* JXOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXOperation.h; path = JXHTTP/JXOperation.h; sourceTree = "<group>"; };
+		4355C4DA24127AADBE2E655F344F0E45 /* TMOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMOAuth.m; path = TMTumblrSDK/Authentication/TMOAuth.m; sourceTree = "<group>"; };
+		445D580CC8E15B9AE9280B177634D242 /* DOFavoriteButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DOFavoriteButton-dummy.m"; sourceTree = "<group>"; };
+		4897F65EBA76835FCB5D29518814746C /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = DOFavoriteButton/star.png; sourceTree = "<group>"; };
+		495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		4B9A55268FFE227167850CC5447C355C /* SwiftyUserDefaults-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftyUserDefaults-Private.xcconfig"; sourceTree = "<group>"; };
+		500D95B2927A50BD22DC520FD890D9AB /* DOFavoriteButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOFavoriteButton-umbrella.h"; sourceTree = "<group>"; };
+		510B43645C6F8CAC727BF08D1065F7AD /* CCNPreferencesWindowController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCNPreferencesWindowController.xcconfig; sourceTree = "<group>"; };
+		530D9CDE42ABCD93ADCF3B0329278F6A /* Pods-Tumbleweed-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-resources.sh"; sourceTree = "<group>"; };
+		54796A85C1D1D404AA17427785977D98 /* Pods-Tumbleweed-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tumbleweed-acknowledgements.plist"; sourceTree = "<group>"; };
+		551C6F2C1CD6F09B5DA83A1606517996 /* JXURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXURLConnectionOperation.m; path = JXHTTP/JXURLConnectionOperation.m; sourceTree = "<group>"; };
+		5609A3C06DEA4142FC937C088FEF7904 /* Pods-Tumbleweed-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tumbleweed-dummy.m"; sourceTree = "<group>"; };
+		56256F3901CF3CDDA7336A44D2432284 /* DOFavoriteButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOFavoriteButton-prefix.pch"; sourceTree = "<group>"; };
+		564105D698E194AB7E1702304E3639BF /* JXBackgroundTaskManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXBackgroundTaskManager.h; path = JXHTTP/JXBackgroundTaskManager.h; sourceTree = "<group>"; };
+		56DA42D7EB9F672B200076EE9D3FA93C /* CCNPreferencesWindowController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CCNPreferencesWindowController-Private.xcconfig"; sourceTree = "<group>"; };
+		57D9509D0045A0675C5D275A35F95620 /* TMTumblrAuthenticator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMTumblrAuthenticator.m; path = TMTumblrSDK/Authentication/TMTumblrAuthenticator.m; sourceTree = "<group>"; };
+		5CEBB34A479628A20FFD0841422EFF20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CEE213C7628924F551B6793951B7B39 /* INAppStoreWindow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "INAppStoreWindow-prefix.pch"; sourceTree = "<group>"; };
+		5D57CDF7C23AD4BA6E7BEB19484074DC /* TMTumblrSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TMTumblrSDK.modulemap; sourceTree = "<group>"; };
+		5FB4706111001E2A9EE760817C7AC371 /* TMPodspec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMPodspec.m; path = Pod/Classes/TMPodspec.m; sourceTree = "<group>"; };
+		61FED12A974D228C669F68C601A9D31A /* JXHTTPOperation+Convenience.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JXHTTPOperation+Convenience.m"; path = "JXHTTP/JXHTTPOperation+Convenience.m"; sourceTree = "<group>"; };
+		65316B11F65FE8D47119F38BF6424567 /* TMTumblrAuthenticator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMTumblrAuthenticator.h; path = TMTumblrSDK/Authentication/TMTumblrAuthenticator.h; sourceTree = "<group>"; };
+		65D542135717149F6BC9F16B38B085DC /* TMSDKFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMSDKFunctions.m; path = TMTumblrSDK/Core/TMSDKFunctions.m; sourceTree = "<group>"; };
+		66DF1460364E5D4DD5CFE32AD5F293A3 /* JXHTTPFormEncodedBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPFormEncodedBody.h; path = JXHTTP/JXHTTPFormEncodedBody.h; sourceTree = "<group>"; };
+		678C534BF8B1180A3F545654D19FA3E6 /* JXHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JXHTTP.modulemap; sourceTree = "<group>"; };
+		679FCD996D5F3F83CD2B5F8C494AC7AD /* JXHTTPMultipartBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPMultipartBody.m; path = JXHTTP/JXHTTPMultipartBody.m; sourceTree = "<group>"; };
+		6879824266FE4A9BEDE37F184EF20175 /* JXHTTPOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPOperation.m; path = JXHTTP/JXHTTPOperation.m; sourceTree = "<group>"; };
+		69DB3EF16C05B372DC251ED5A8D0A40C /* Pods-Tumbleweed-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tumbleweed-frameworks.sh"; sourceTree = "<group>"; };
+		6D4AC7D677E9A8E18B32FD8D4F68ED82 /* Pods-Tumbleweed-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tumbleweed-acknowledgements.markdown"; sourceTree = "<group>"; };
+		71A9BCCA293136E3E057BACBBCC30B84 /* Spectacles-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Spectacles-Private.xcconfig"; sourceTree = "<group>"; };
+		71B6D8F6BDAC982B04B2F6737F14EE38 /* Pods-Tumbleweed-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tumbleweed-umbrella.h"; sourceTree = "<group>"; };
+		72EB13141D5CD0660325C2458263A5D7 /* JXURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXURLConnectionOperation.h; path = JXHTTP/JXURLConnectionOperation.h; sourceTree = "<group>"; };
+		72EE974048094DEAB15B0974B5A12659 /* JXOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXOperation.m; path = JXHTTP/JXOperation.m; sourceTree = "<group>"; };
+		75BB0BA51E00D82B8C3DC9A3DDF353EA /* TMAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMAPIClient.m; path = TMTumblrSDK/APIClient/TMAPIClient.m; sourceTree = "<group>"; };
+		7637A27DB87382940D6E9F19779742FF /* JXURLEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXURLEncoding.h; path = JXHTTP/JXURLEncoding.h; sourceTree = "<group>"; };
+		7890BB3DAFC457BB813895E8D4D7BE99 /* JXHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXHTTP-umbrella.h"; sourceTree = "<group>"; };
+		7B9CF2BF33146D8EB2192C10EA25AC2A /* JXHTTPOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPOperationQueue.h; path = JXHTTP/JXHTTPOperationQueue.h; sourceTree = "<group>"; };
+		7C9894A9EDE75C3998DF8281EF724285 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DOFavoriteButton.swift; path = DOFavoriteButton/DOFavoriteButton.swift; sourceTree = "<group>"; };
+		855142A7B62EDEFE46353D38AB95700F /* TMTumblrSDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TMTumblrSDK-Private.xcconfig"; sourceTree = "<group>"; };
+		867FF739454F584A4E3F6C1AC50E8359 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		86AAF6C7D2D831324EDB3C6FBE044223 /* JXHTTPFormEncodedBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPFormEncodedBody.m; path = JXHTTP/JXHTTPFormEncodedBody.m; sourceTree = "<group>"; };
+		87A43E9F3422D355E14D8FE1568ABA80 /* JXHTTPOperationQueueDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPOperationQueueDelegate.h; path = JXHTTP/JXHTTPOperationQueueDelegate.h; sourceTree = "<group>"; };
+		8898D8CBC5532F2C9ED072597115E380 /* heart.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = heart.png; path = DOFavoriteButton/heart.png; sourceTree = "<group>"; };
+		8B08963CB0740D56647CB5347479EDD5 /* DOFavoriteButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DOFavoriteButton-Private.xcconfig"; sourceTree = "<group>"; };
+		8C2AECF100C661AA459515FAD96B0E79 /* TMSDKUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMSDKUserAgent.m; path = TMTumblrSDK/Core/TMSDKUserAgent.m; sourceTree = "<group>"; };
+		8D56441CEA5804C89C86A6AC27954466 /* SwiftyUserDefaults-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyUserDefaults-dummy.m"; sourceTree = "<group>"; };
+		8DA72A3C72CDB6D902A71FD2DC00E65F /* TMTumblrSDK.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = TMTumblrSDK.podspec.json; sourceTree = "<group>"; };
+		8E1A4C561918B2D40CFCC05558D9F4DB /* JXHTTPOperation+Convenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JXHTTPOperation+Convenience.h"; path = "JXHTTP/JXHTTPOperation+Convenience.h"; sourceTree = "<group>"; };
+		8ECE0410E56C142162DCE7C4D555EDFB /* Spectacles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spectacles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5AFE511A9E45C777425F5C8706F923 /* JXHTTPOperationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPOperationDelegate.h; path = JXHTTP/JXHTTPOperationDelegate.h; sourceTree = "<group>"; };
+		9039893D9B1CD7F7517AA98F41B948DF /* Pods_Tumbleweed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tumbleweed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E0E001BE579E1C176ED55A6E50FEDD /* smile.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = smile.png; path = DOFavoriteButton/smile.png; sourceTree = "<group>"; };
+		942E9215C23F4A0EA2A7BF289C8E2587 /* INAppStoreWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = INAppStoreWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DEFB4DC6C532BF436C42B8DFF7E360 /* JXHTTPFileBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPFileBody.h; path = JXHTTP/JXHTTPFileBody.h; sourceTree = "<group>"; };
+		9B9E7FFB32201D19EC340092B6DC7BF6 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1BEA348D56E0AB59B7C32D3A0E904D /* DOFavoriteButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOFavoriteButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E05DBA68CB69E42C54D89121EECCF9F /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCNPreferencesWindowController.h; path = CCNPreferencesWindowController/CCNPreferencesWindowController.h; sourceTree = "<group>"; };
+		9FD46B13EFAC82154D1544AC16F7D7CD /* TMPodspec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMPodspec.h; path = Pod/Classes/TMPodspec.h; sourceTree = "<group>"; };
+		A002BF0778F859443B77424DDA0A5468 /* like.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = like.png; path = DOFavoriteButton/like.png; sourceTree = "<group>"; };
+		A59C4151763629DC7B0EA3985A97E666 /* SwiftyUserDefaults-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUserDefaults-prefix.pch"; sourceTree = "<group>"; };
+		A7CEE3F1DB2D7635AF1890051BBF6424 /* INAppStoreWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INAppStoreWindow.m; path = INAppStoreWindow/INAppStoreWindow.m; sourceTree = "<group>"; };
+		AAA6634876C43DE30DC591735EEB83C6 /* TMTumblrSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMTumblrSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF951DA32E1EFA18AFC45F691C4BD0A /* TMTumblrSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMTumblrSDK-umbrella.h"; sourceTree = "<group>"; };
+		ABF2D878077D3923257865F25A8B4FF2 /* CCNPreferencesWindowController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CCNPreferencesWindowController.modulemap; sourceTree = "<group>"; };
+		ACB60C9138CE705E6A31417522BC59FD /* DOFavoriteButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DOFavoriteButton.modulemap; sourceTree = "<group>"; };
+		B3CE381DC4A06A569399240970DDBA34 /* INWindowButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INWindowButton.m; path = INAppStoreWindow/INWindowButton.m; sourceTree = "<group>"; };
+		B45D61E6DFA545FD67D13376F27DD9E7 /* JXURLEncoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXURLEncoding.m; path = JXHTTP/JXURLEncoding.m; sourceTree = "<group>"; };
+		B6902FE2C6703CD327581D467479BF76 /* JXHTTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTP.h; path = JXHTTP/JXHTTP.h; sourceTree = "<group>"; };
+		B744D0EABDC14B4D2F08DF47E95E73AF /* TMTumblrSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TMTumblrSDK.xcconfig; sourceTree = "<group>"; };
+		B74DD95C6032A61C2768BE204ED4647A /* CCNPreferencesWindowController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CCNPreferencesWindowController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9CEC842D3FE5C7784D1DA7271A19E93 /* TMTumblrSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TMTumblrSDK-dummy.m"; sourceTree = "<group>"; };
+		BAAFCE7B626B768A7EED0A885AFFD1F6 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyUserDefaults.swift; path = SwiftyUserDefaults/SwiftyUserDefaults.swift; sourceTree = "<group>"; };
+		BC801AFF3BC611C1DEF6C5F6CBFB45A4 /* Pods-Tumbleweed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tumbleweed.release.xcconfig"; sourceTree = "<group>"; };
+		BDFA08D11E65A0B719AEE8BE1559579F /* INAppStoreWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INAppStoreWindow.h; path = INAppStoreWindow/INAppStoreWindow.h; sourceTree = "<group>"; };
+		BE2BA401DDEB04AB74A53A75C9B5191D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3525A9939502CE66435028E6C20DE6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69BEE3260BB09CB5386104D90E6073F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C810AFDEB5071650C4813D59700089FB /* TMTumblrSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMTumblrSDK-prefix.pch"; sourceTree = "<group>"; };
+		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C88C60561FCB3AF795A4163E0A7891B4 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCNPreferencesWindowControllerProtocol.h; path = CCNPreferencesWindowController/CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
+		C9A410E700C7A8A5D0AC853312F2ADC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9EA5C11FC36384A2A58BAAABAC04DFE /* JXHTTPRequestBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPRequestBody.h; path = JXHTTP/JXHTTPRequestBody.h; sourceTree = "<group>"; };
+		CBFBEE5CBA6C88EDA6719B2A12F3DCE6 /* SwiftyUserDefaults-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUserDefaults-umbrella.h"; sourceTree = "<group>"; };
+		CEFEACB85357E43708D9133D09F519C5 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCNPreferencesWindowController.m; path = CCNPreferencesWindowController/CCNPreferencesWindowController.m; sourceTree = "<group>"; };
+		D619C77BBDDA0945D0447CFD47BCAC0A /* Spectacles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spectacles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BCABA70FA9B9AB6368DFA2663A2AD2 /* JXHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXHTTP.xcconfig; sourceTree = "<group>"; };
+		D6FE0C6AFD5B801C5492BA034725AE0A /* TMSDKUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMSDKUserAgent.h; path = TMTumblrSDK/Core/TMSDKUserAgent.h; sourceTree = "<group>"; };
+		D750DBBA4286001D89B35CAACBBCEC0A /* DOFavoriteButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DOFavoriteButton.xcconfig; sourceTree = "<group>"; };
+		D9AD678C3E6EDB7BF0252A7288ED37B1 /* JXHTTPJSONBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPJSONBody.h; path = JXHTTP/JXHTTPJSONBody.h; sourceTree = "<group>"; };
+		DB5EE354805BD775B534E8956616A8BB /* INAppStoreWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "INAppStoreWindow-dummy.m"; sourceTree = "<group>"; };
+		DCBCC658749DBB2BAAF27D4C13CD5FFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE314A6D22E1CE72DE71085EDF71002 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E853D378D4A0D162B8EF436DAA0222 /* JXHTTPOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPOperationQueue.m; path = JXHTTP/JXHTTPOperationQueue.m; sourceTree = "<group>"; };
+		E3AA4E87890703AF5FDF061DB1A7EA28 /* JXHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXHTTP-prefix.pch"; sourceTree = "<group>"; };
+		E481C7C310C1F056DD489A42BD1FB0E4 /* INAppStoreWindow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "INAppStoreWindow-umbrella.h"; sourceTree = "<group>"; };
+		ED744DB18441CF67D97D1D4081B1A22C /* INAppStoreWindow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = INAppStoreWindow.xcconfig; sourceTree = "<group>"; };
+		F106CEC0FC6CF29E131B5FBDE76D28AC /* JXHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F29215E8B2110E577EA7412F59A6E9 /* TMOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMOAuth.h; path = TMTumblrSDK/Authentication/TMOAuth.h; sourceTree = "<group>"; };
+		F5FB1D2B3D62F9932289587FC1BEEFD7 /* JXHTTPDataBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXHTTPDataBody.h; path = JXHTTP/JXHTTPDataBody.h; sourceTree = "<group>"; };
+		F6A743923301AFCBB8E3D4117B08422D /* JXHTTPFileBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPFileBody.m; path = JXHTTP/JXHTTPFileBody.m; sourceTree = "<group>"; };
+		FB8DCB9920ED05C3F07B10A80033B7D8 /* JXHTTPJSONBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXHTTPJSONBody.m; path = JXHTTP/JXHTTPJSONBody.m; sourceTree = "<group>"; };
+		FE0A04BA2345D54306802801B48930D5 /* JXNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXNetworkActivityIndicatorManager.h; path = JXHTTP/JXNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		423F1F1962C8A381084613D1A8127815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BBCB704A7F4DE100476E2E8469B86E4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		502483EEED5863AA1115CD32A2A66BF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5341826086C46D5DB1A1946EB46DF4 /* Cocoa.framework in Frameworks */,
+				95956F2DC9B5C3C4117E3FBAD513FA71 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1D1C8B51D8F805E9A65F84A0DC97CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAF9CBAF4E9747B59014B2B8058F0CB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA174A2F5EDC34DCAAC84C96DB003E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE45CEDBA72F6E92B8F1F8D089657FE3 /* Cocoa.framework in Frameworks */,
+				CBE3B54BA3C66ECFAA951127C8CFE6F9 /* Foundation.framework in Frameworks */,
+				D299C3AEC3FBF4464A84D6CFA794D24F /* JXHTTP.framework in Frameworks */,
+				7E13633AF9DD801736B225066C1414FC /* Spectacles.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E86BF0390939B58D4660F06A4AB57A66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240F333689BA926D6AAAD0CFDB9CE8BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B490353E4EC5D5CEB1FF188FCD8A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27626B1D04C58D4A10DFFEF23612201 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F41FC8B3C9838BEED9F50C5CF8E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C6E6DBEE8618F3896202BF432D5501 /* AppKit.framework in Frameworks */,
+				E45355974976BD6201A88D6EF70B1B38 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6D9855FF2D736AE6677BB76410FFD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE2095E26A9B61CD953C360AD8A95BD7 /* Cocoa.framework in Frameworks */,
+				94DB5C4F8E81A858B42BA7E8074BC51A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		020AFC575186CC2792CBDF07744CF37F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DA72A3C72CDB6D902A71FD2DC00E65F /* TMTumblrSDK.podspec.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		086CC426C16C831EBC3129C9682A06E6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F1F29215E8B2110E577EA7412F59A6E9 /* TMOAuth.h */,
+				4355C4DA24127AADBE2E655F344F0E45 /* TMOAuth.m */,
+				65316B11F65FE8D47119F38BF6424567 /* TMTumblrAuthenticator.h */,
+				57D9509D0045A0675C5D275A35F95620 /* TMTumblrAuthenticator.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		16B81B7B61B8D0150EB97B322DA6AE7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A379C5BE75D6DCE08457CEE09181E /* CCNPreferencesWindowController */,
+				97D520D509BE1E86902E640E47FED794 /* DOFavoriteButton */,
+				208761BC7DD6C4EED2BC3B8182130A38 /* INAppStoreWindow */,
+				40EDCF95A9E1F013FA19CF0E0C912D6D /* JXHTTP */,
+				1E5170637D94F0B73FC2F30AC8D18E04 /* Spectacles */,
+				FA91EF6AD6B4B6C99B3CD4A5C708CA71 /* SwiftyUserDefaults */,
+				390BDA5B93E9C3EB6955BAFE4C8556F7 /* TMTumblrSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1E5170637D94F0B73FC2F30AC8D18E04 /* Spectacles */ = {
+			isa = PBXGroup;
+			children = (
+				9FD46B13EFAC82154D1544AC16F7D7CD /* TMPodspec.h */,
+				5FB4706111001E2A9EE760817C7AC371 /* TMPodspec.m */,
+				BC2562648D71FBD50EA7B6CFAEDB50EF /* Support Files */,
+			);
+			path = Spectacles;
+			sourceTree = "<group>";
+		};
+		208761BC7DD6C4EED2BC3B8182130A38 /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				BDFA08D11E65A0B719AEE8BE1559579F /* INAppStoreWindow.h */,
+				A7CEE3F1DB2D7635AF1890051BBF6424 /* INAppStoreWindow.m */,
+				39F399FD0DDBF55F04CA3A827504CB33 /* INWindowButton.h */,
+				B3CE381DC4A06A569399240970DDBA34 /* INWindowButton.m */,
+				A672A8B1AA705ECB823E59C1CC06DBAB /* Support Files */,
+			);
+			path = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
+		2D6B36D3A8F3C577DBF0F0D0B0800258 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A410E700C7A8A5D0AC853312F2ADC0 /* Info.plist */,
+				678C534BF8B1180A3F545654D19FA3E6 /* JXHTTP.modulemap */,
+				D6BCABA70FA9B9AB6368DFA2663A2AD2 /* JXHTTP.xcconfig */,
+				254BE9E46B70003AA8757714757B9A30 /* JXHTTP-Private.xcconfig */,
+				3B4E6DDBC5AB56AF3BD0BC724F09048D /* JXHTTP-dummy.m */,
+				E3AA4E87890703AF5FDF061DB1A7EA28 /* JXHTTP-prefix.pch */,
+				7890BB3DAFC457BB813895E8D4D7BE99 /* JXHTTP-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JXHTTP";
+			sourceTree = "<group>";
+		};
+		390BDA5B93E9C3EB6955BAFE4C8556F7 /* TMTumblrSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4A557BD2DBF2794275CDB604D199DCDF /* APIClient */,
+				EEEFD6BFE9751F9A40908AE61276BC68 /* Core */,
+				3D4AC23B54F0F8B6A753034277811BAB /* Support Files */,
+			);
+			path = TMTumblrSDK;
+			sourceTree = "<group>";
+		};
+		3D4AC23B54F0F8B6A753034277811BAB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE2BA401DDEB04AB74A53A75C9B5191D /* Info.plist */,
+				5D57CDF7C23AD4BA6E7BEB19484074DC /* TMTumblrSDK.modulemap */,
+				B744D0EABDC14B4D2F08DF47E95E73AF /* TMTumblrSDK.xcconfig */,
+				855142A7B62EDEFE46353D38AB95700F /* TMTumblrSDK-Private.xcconfig */,
+				B9CEC842D3FE5C7784D1DA7271A19E93 /* TMTumblrSDK-dummy.m */,
+				C810AFDEB5071650C4813D59700089FB /* TMTumblrSDK-prefix.pch */,
+				AAF951DA32E1EFA18AFC45F691C4BD0A /* TMTumblrSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TMTumblrSDK";
+			sourceTree = "<group>";
+		};
+		40EDCF95A9E1F013FA19CF0E0C912D6D /* JXHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				564105D698E194AB7E1702304E3639BF /* JXBackgroundTaskManager.h */,
+				B6902FE2C6703CD327581D467479BF76 /* JXHTTP.h */,
+				F5FB1D2B3D62F9932289587FC1BEEFD7 /* JXHTTPDataBody.h */,
+				29E652473896AB0136234862084EBC42 /* JXHTTPDataBody.m */,
+				97DEFB4DC6C532BF436C42B8DFF7E360 /* JXHTTPFileBody.h */,
+				F6A743923301AFCBB8E3D4117B08422D /* JXHTTPFileBody.m */,
+				66DF1460364E5D4DD5CFE32AD5F293A3 /* JXHTTPFormEncodedBody.h */,
+				86AAF6C7D2D831324EDB3C6FBE044223 /* JXHTTPFormEncodedBody.m */,
+				D9AD678C3E6EDB7BF0252A7288ED37B1 /* JXHTTPJSONBody.h */,
+				FB8DCB9920ED05C3F07B10A80033B7D8 /* JXHTTPJSONBody.m */,
+				0FE9B4348A500DF8DE71132741A71C63 /* JXHTTPMultipartBody.h */,
+				679FCD996D5F3F83CD2B5F8C494AC7AD /* JXHTTPMultipartBody.m */,
+				15AD28D927F3C862E867C1423D3471AF /* JXHTTPOperation.h */,
+				6879824266FE4A9BEDE37F184EF20175 /* JXHTTPOperation.m */,
+				8E1A4C561918B2D40CFCC05558D9F4DB /* JXHTTPOperation+Convenience.h */,
+				61FED12A974D228C669F68C601A9D31A /* JXHTTPOperation+Convenience.m */,
+				8F5AFE511A9E45C777425F5C8706F923 /* JXHTTPOperationDelegate.h */,
+				7B9CF2BF33146D8EB2192C10EA25AC2A /* JXHTTPOperationQueue.h */,
+				E0E853D378D4A0D162B8EF436DAA0222 /* JXHTTPOperationQueue.m */,
+				87A43E9F3422D355E14D8FE1568ABA80 /* JXHTTPOperationQueueDelegate.h */,
+				C9EA5C11FC36384A2A58BAAABAC04DFE /* JXHTTPRequestBody.h */,
+				FE0A04BA2345D54306802801B48930D5 /* JXNetworkActivityIndicatorManager.h */,
+				3BAC75B1061093512AA40F669FE68ADD /* JXOperation.h */,
+				72EE974048094DEAB15B0974B5A12659 /* JXOperation.m */,
+				72EB13141D5CD0660325C2458263A5D7 /* JXURLConnectionOperation.h */,
+				551C6F2C1CD6F09B5DA83A1606517996 /* JXURLConnectionOperation.m */,
+				7637A27DB87382940D6E9F19779742FF /* JXURLEncoding.h */,
+				B45D61E6DFA545FD67D13376F27DD9E7 /* JXURLEncoding.m */,
+				2D6B36D3A8F3C577DBF0F0D0B0800258 /* Support Files */,
+			);
+			path = JXHTTP;
+			sourceTree = "<group>";
+		};
+		4A557BD2DBF2794275CDB604D199DCDF /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				335FB22360549B37BF93C1B9F9841CAA /* TMAPIClient.h */,
+				75BB0BA51E00D82B8C3DC9A3DDF353EA /* TMAPIClient.m */,
+				086CC426C16C831EBC3129C9682A06E6 /* Authentication */,
+			);
+			name = APIClient;
+			sourceTree = "<group>";
+		};
+		54F3114FB2E523255F5EDD668478DDBA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACB60C9138CE705E6A31417522BC59FD /* DOFavoriteButton.modulemap */,
+				D750DBBA4286001D89B35CAACBBCEC0A /* DOFavoriteButton.xcconfig */,
+				8B08963CB0740D56647CB5347479EDD5 /* DOFavoriteButton-Private.xcconfig */,
+				445D580CC8E15B9AE9280B177634D242 /* DOFavoriteButton-dummy.m */,
+				56256F3901CF3CDDA7336A44D2432284 /* DOFavoriteButton-prefix.pch */,
+				500D95B2927A50BD22DC520FD890D9AB /* DOFavoriteButton-umbrella.h */,
+				DCBCC658749DBB2BAAF27D4C13CD5FFA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DOFavoriteButton";
+			sourceTree = "<group>";
+		};
+		755BC60FE8702416AADC64367EE75ED8 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				867FF739454F584A4E3F6C1AC50E8359 /* AppKit.framework */,
+				495B27972C85D02498925A7BD01F2AEE /* Cocoa.framework */,
+				254306F49905E10E644A1817A0624E90 /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				AB79EFBCAA7BF7F573B6BCC8E6DA2B4D /* Frameworks */,
+				16B81B7B61B8D0150EB97B322DA6AE7A /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B859C8E9AD1FF3683F63F66606840F7A /* Pods-Tumbleweed */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		97D520D509BE1E86902E640E47FED794 /* DOFavoriteButton */ = {
+			isa = PBXGroup;
+			children = (
+				7C9894A9EDE75C3998DF8281EF724285 /* DOFavoriteButton.swift */,
+				FC8AE0E2B9CCAF06DEBDF2A28109A9CC /* Resources */,
+				54F3114FB2E523255F5EDD668478DDBA /* Support Files */,
+			);
+			path = DOFavoriteButton;
+			sourceTree = "<group>";
+		};
+		A672A8B1AA705ECB823E59C1CC06DBAB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CD000BBFDCE1D59107757404F039375 /* INAppStoreWindow.modulemap */,
+				ED744DB18441CF67D97D1D4081B1A22C /* INAppStoreWindow.xcconfig */,
+				1C52E998F0FCB337A80122BB7B384D99 /* INAppStoreWindow-Private.xcconfig */,
+				DB5EE354805BD775B534E8956616A8BB /* INAppStoreWindow-dummy.m */,
+				5CEE213C7628924F551B6793951B7B39 /* INAppStoreWindow-prefix.pch */,
+				E481C7C310C1F056DD489A42BD1FB0E4 /* INAppStoreWindow-umbrella.h */,
+				C69BEE3260BB09CB5386104D90E6073F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/INAppStoreWindow";
+			sourceTree = "<group>";
+		};
+		AB79EFBCAA7BF7F573B6BCC8E6DA2B4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F106CEC0FC6CF29E131B5FBDE76D28AC /* JXHTTP.framework */,
+				8ECE0410E56C142162DCE7C4D555EDFB /* Spectacles.framework */,
+				755BC60FE8702416AADC64367EE75ED8 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B859C8E9AD1FF3683F63F66606840F7A /* Pods-Tumbleweed */ = {
+			isa = PBXGroup;
+			children = (
+				5CEBB34A479628A20FFD0841422EFF20 /* Info.plist */,
+				2B684FA67F80DBE0A28E7CC916155E47 /* Pods-Tumbleweed.modulemap */,
+				6D4AC7D677E9A8E18B32FD8D4F68ED82 /* Pods-Tumbleweed-acknowledgements.markdown */,
+				54796A85C1D1D404AA17427785977D98 /* Pods-Tumbleweed-acknowledgements.plist */,
+				5609A3C06DEA4142FC937C088FEF7904 /* Pods-Tumbleweed-dummy.m */,
+				69DB3EF16C05B372DC251ED5A8D0A40C /* Pods-Tumbleweed-frameworks.sh */,
+				530D9CDE42ABCD93ADCF3B0329278F6A /* Pods-Tumbleweed-resources.sh */,
+				71B6D8F6BDAC982B04B2F6737F14EE38 /* Pods-Tumbleweed-umbrella.h */,
+				0314A12DB41DB41F39935FABA51F1AE0 /* Pods-Tumbleweed.debug.xcconfig */,
+				BC801AFF3BC611C1DEF6C5F6CBFB45A4 /* Pods-Tumbleweed.release.xcconfig */,
+			);
+			name = "Pods-Tumbleweed";
+			path = "Target Support Files/Pods-Tumbleweed";
+			sourceTree = "<group>";
+		};
+		BC2562648D71FBD50EA7B6CFAEDB50EF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFE314A6D22E1CE72DE71085EDF71002 /* Info.plist */,
+				1C7E0AB9A3EC647457DAA682345A6753 /* Spectacles.modulemap */,
+				05CFA5566A86D1D1319AFB74F2DDBF9F /* Spectacles.xcconfig */,
+				71A9BCCA293136E3E057BACBBCC30B84 /* Spectacles-Private.xcconfig */,
+				2D6062B9EA4B59B971C691F752A121A4 /* Spectacles-dummy.m */,
+				133284EE92DB8EDD341562F3A7FAE70A /* Spectacles-prefix.pch */,
+				0E3402B7D6C9529215DD48A8DBDFD060 /* Spectacles-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spectacles";
+			sourceTree = "<group>";
+		};
+		C5285DC085EE48A515A2FEDA7667395D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3525A9939502CE66435028E6C20DE6A /* Info.plist */,
+				198795290FDD307073D72F6DC02D83B4 /* SwiftyUserDefaults.modulemap */,
+				2647EA6D62031A9231B5DBA5594720FD /* SwiftyUserDefaults.xcconfig */,
+				4B9A55268FFE227167850CC5447C355C /* SwiftyUserDefaults-Private.xcconfig */,
+				8D56441CEA5804C89C86A6AC27954466 /* SwiftyUserDefaults-dummy.m */,
+				A59C4151763629DC7B0EA3985A97E666 /* SwiftyUserDefaults-prefix.pch */,
+				CBFBEE5CBA6C88EDA6719B2A12F3DCE6 /* SwiftyUserDefaults-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyUserDefaults";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B74DD95C6032A61C2768BE204ED4647A /* CCNPreferencesWindowController.framework */,
+				9D1BEA348D56E0AB59B7C32D3A0E904D /* DOFavoriteButton.framework */,
+				942E9215C23F4A0EA2A7BF289C8E2587 /* INAppStoreWindow.framework */,
+				00E98CC77B9E91125F5C803E41C128EE /* JXHTTP.framework */,
+				9039893D9B1CD7F7517AA98F41B948DF /* Pods_Tumbleweed.framework */,
+				D619C77BBDDA0945D0447CFD47BCAC0A /* Spectacles.framework */,
+				9B9E7FFB32201D19EC340092B6DC7BF6 /* SwiftyUserDefaults.framework */,
+				AAA6634876C43DE30DC591735EEB83C6 /* TMTumblrSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8733C698970A685A3447313439CB4E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2D878077D3923257865F25A8B4FF2 /* CCNPreferencesWindowController.modulemap */,
+				510B43645C6F8CAC727BF08D1065F7AD /* CCNPreferencesWindowController.xcconfig */,
+				56DA42D7EB9F672B200076EE9D3FA93C /* CCNPreferencesWindowController-Private.xcconfig */,
+				1F81ED65A8371D0B2ADCC338DFAE6DCF /* CCNPreferencesWindowController-dummy.m */,
+				1B836BCBEFDABF9219C50722EBC990B8 /* CCNPreferencesWindowController-prefix.pch */,
+				376E759CFC4019250823DBFA773EF56B /* CCNPreferencesWindowController-umbrella.h */,
+				099DE72ABEE87C57AC5F12F68E9906A3 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CCNPreferencesWindowController";
+			sourceTree = "<group>";
+		};
+		EEEFD6BFE9751F9A40908AE61276BC68 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				313A681E25899C0ECB8B4B7F9EB8CEA9 /* TMSDKFunctions.h */,
+				65D542135717149F6BC9F16B38B085DC /* TMSDKFunctions.m */,
+				D6FE0C6AFD5B801C5492BA034725AE0A /* TMSDKUserAgent.h */,
+				8C2AECF100C661AA459515FAD96B0E79 /* TMSDKUserAgent.m */,
+				020AFC575186CC2792CBDF07744CF37F /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FA91EF6AD6B4B6C99B3CD4A5C708CA71 /* SwiftyUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFCE7B626B768A7EED0A885AFFD1F6 /* SwiftyUserDefaults.swift */,
+				C5285DC085EE48A515A2FEDA7667395D /* Support Files */,
+			);
+			path = SwiftyUserDefaults;
+			sourceTree = "<group>";
+		};
+		FC8AE0E2B9CCAF06DEBDF2A28109A9CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8898D8CBC5532F2C9ED072597115E380 /* heart.png */,
+				A002BF0778F859443B77424DDA0A5468 /* like.png */,
+				91E0E001BE579E1C176ED55A6E50FEDD /* smile.png */,
+				4897F65EBA76835FCB5D29518814746C /* star.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FD3A379C5BE75D6DCE08457CEE09181E /* CCNPreferencesWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				9E05DBA68CB69E42C54D89121EECCF9F /* CCNPreferencesWindowController.h */,
+				CEFEACB85357E43708D9133D09F519C5 /* CCNPreferencesWindowController.m */,
+				C88C60561FCB3AF795A4163E0A7891B4 /* CCNPreferencesWindowControllerProtocol.h */,
+				D8733C698970A685A3447313439CB4E7 /* Support Files */,
+			);
+			path = CCNPreferencesWindowController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		291FB5A0E528921EFC703811BC3A829F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C14E539C7414726A98B9E27A3DE0311 /* TMAPIClient.h in Headers */,
+				DC6448E0D864FB5501D33D6B4B715BAB /* TMOAuth.h in Headers */,
+				25759DEA2948E838F7B3CE1B0EC2965B /* TMSDKFunctions.h in Headers */,
+				7022833206C6216532FF919C89AE01E8 /* TMSDKUserAgent.h in Headers */,
+				97B8402EF6C58779348118BC995CBDFC /* TMTumblrAuthenticator.h in Headers */,
+				161C393D50DA95BC2BFECEC9B5A163F3 /* TMTumblrSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4227955C2428EAFA3ECC6468766239D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F19FC43FA9DCA302A11231187DDCABB /* Pods-Tumbleweed-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		430D9C768C8FD5EC21F37AE22C3A4791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB52B16A63A1000EE255769DD4B394E /* JXBackgroundTaskManager.h in Headers */,
+				346059ABCF36CCF74D9C360BA3ED84BE /* JXHTTP-umbrella.h in Headers */,
+				679D209FACE9F0E169DB5A0C76709AFD /* JXHTTP.h in Headers */,
+				359A30FBD00A1A5EA0771A70EBC45798 /* JXHTTPDataBody.h in Headers */,
+				4FB6AF51C9831E74896E2C20E104A62C /* JXHTTPFileBody.h in Headers */,
+				B6392FD38F81398B6958E6BAB2EC5234 /* JXHTTPFormEncodedBody.h in Headers */,
+				05828372F8EEA2A5CCEADBAAE1361F3C /* JXHTTPJSONBody.h in Headers */,
+				107A6615A6754B0B1B5526AC2E15D58E /* JXHTTPMultipartBody.h in Headers */,
+				BD800AE5870CE8A5F857E0BE9C075EC4 /* JXHTTPOperation+Convenience.h in Headers */,
+				B71E33D2B52D10F0406C4BECA87B3546 /* JXHTTPOperation.h in Headers */,
+				7E9692C3AA068F7EF704902D07C5AF73 /* JXHTTPOperationDelegate.h in Headers */,
+				633E54EEDFE5C25C7C5F3A39560648EA /* JXHTTPOperationQueue.h in Headers */,
+				6F26184B619AA9C737A8C897CFC8875D /* JXHTTPOperationQueueDelegate.h in Headers */,
+				7AF3FBE92130D4EB90EF5AF49DE90F2D /* JXHTTPRequestBody.h in Headers */,
+				EF71D651513441A0FA35AB9B8F5D80A8 /* JXNetworkActivityIndicatorManager.h in Headers */,
+				ACD1594035D4BC27D302ADAFE3B2E96C /* JXOperation.h in Headers */,
+				FFBE556961A59589F130153E2D4D6C2A /* JXURLConnectionOperation.h in Headers */,
+				FE78C880ACE6EF70B12EA0347CF8183C /* JXURLEncoding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56709EA02E86BC72B2EA3B9DE7E94701 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B89734C956BF0CFC8CDC5F396067806 /* Spectacles-umbrella.h in Headers */,
+				24BEE40AE0EC96B590B5A5948F15A21D /* TMPodspec.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91AC161FBE5A061DF23ECD01CB7E4F47 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9C802DAC778618AFAEE6AE5A20BEE /* DOFavoriteButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A191B5B49D493B914573F82351AB4A6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F1302B067A93CB6E4F2B24C8857BB8 /* INAppStoreWindow-umbrella.h in Headers */,
+				4179F04F6B4F3999A1564D261806049F /* INAppStoreWindow.h in Headers */,
+				238A4996A9C9D7EA87F46A2AD8E8AE83 /* INWindowButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF74859CB4E292F4B85CE34CB3142723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C4DE294142B78995AA94E8C09539F5 /* CCNPreferencesWindowController-umbrella.h in Headers */,
+				8D223D28BAA9D8DA4F0EBB3E34D494E0 /* CCNPreferencesWindowController.h in Headers */,
+				B27483E37433ED7DBB9A259106DAFD23 /* CCNPreferencesWindowControllerProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C654444959AE80D0D35F1792D1A299BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB4A27DD6918FEB3EEA7D3CADB63BD2 /* SwiftyUserDefaults-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		10F05C687A17E9EC83CEF06B589BFBAA /* Pods-Tumbleweed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 126DFBE41D900E3F1C0575C73B529A9A /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed" */;
+			buildPhases = (
+				31FDD594ACCF5828C8062CC612F0FBB8 /* Sources */,
+				CB1D1C8B51D8F805E9A65F84A0DC97CC /* Frameworks */,
+				4227955C2428EAFA3ECC6468766239D9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8B5E0944AEE7411DB79DADF35547FB1 /* PBXTargetDependency */,
+				C2A4E2D7EC83BBEA6348C512F45BAA76 /* PBXTargetDependency */,
+				34F2BB386A4B0A6B90DB4D6893C1D710 /* PBXTargetDependency */,
+				15B228599CA3D6E0A96C9DA8172EEE5E /* PBXTargetDependency */,
+				20E4386EEDB499A78F77BCCD0B732C00 /* PBXTargetDependency */,
+				C03FADCC569D9F601DD4F0F2687F1AAE /* PBXTargetDependency */,
+				40F5D323B23AE1E832F998BD5C35EA65 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tumbleweed";
+			productName = "Pods-Tumbleweed";
+			productReference = 9039893D9B1CD7F7517AA98F41B948DF /* Pods_Tumbleweed.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1A767130BC2A6A3A8A4048CF0B0D5F00 /* Spectacles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C7F2ABAC3C117CAE313DA1D861DE5C /* Build configuration list for PBXNativeTarget "Spectacles" */;
+			buildPhases = (
+				0475D162A02EEB5088620631D4CD2C3B /* Sources */,
+				502483EEED5863AA1115CD32A2A66BF9 /* Frameworks */,
+				56709EA02E86BC72B2EA3B9DE7E94701 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spectacles;
+			productName = Spectacles;
+			productReference = D619C77BBDDA0945D0447CFD47BCAC0A /* Spectacles.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		211F23F332FBE148848E2BD3F31EB007 /* JXHTTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9A79EA55EEBFD2EE471A02F5247F816 /* Build configuration list for PBXNativeTarget "JXHTTP" */;
+			buildPhases = (
+				57EC785E42A28B2EDEF78FA58B7A6D35 /* Sources */,
+				FB6D9855FF2D736AE6677BB76410FFD5 /* Frameworks */,
+				430D9C768C8FD5EC21F37AE22C3A4791 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JXHTTP;
+			productName = JXHTTP;
+			productReference = 00E98CC77B9E91125F5C803E41C128EE /* JXHTTP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3CA4D2A1483649BB943D671738066AC7 /* DOFavoriteButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BE1872F9725C60852952781AB84B503 /* Build configuration list for PBXNativeTarget "DOFavoriteButton" */;
+			buildPhases = (
+				BC4A1A6B488657D1CCFAFBFECA3E5777 /* Sources */,
+				F54F41FC8B3C9838BEED9F50C5CF8E28 /* Frameworks */,
+				17B501B93D3CC8754F8D8067AD4CCB77 /* Resources */,
+				91AC161FBE5A061DF23ECD01CB7E4F47 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DOFavoriteButton;
+			productName = DOFavoriteButton;
+			productReference = 9D1BEA348D56E0AB59B7C32D3A0E904D /* DOFavoriteButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3D23B78D5EC78B6BFFB7BAEAD41B23B9 /* CCNPreferencesWindowController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3291D68F618B993CE5D4188136E4144A /* Build configuration list for PBXNativeTarget "CCNPreferencesWindowController" */;
+			buildPhases = (
+				F653B2A472554238E55F461FAAB8F835 /* Sources */,
+				423F1F1962C8A381084613D1A8127815 /* Frameworks */,
+				BF74859CB4E292F4B85CE34CB3142723 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCNPreferencesWindowController;
+			productName = CCNPreferencesWindowController;
+			productReference = B74DD95C6032A61C2768BE204ED4647A /* CCNPreferencesWindowController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		46A9C477BF0409F7890E477E6D86FFB3 /* TMTumblrSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E9A60BD1D9877D9D71F37670CBA16C6 /* Build configuration list for PBXNativeTarget "TMTumblrSDK" */;
+			buildPhases = (
+				5C3D3F2F011D3277FDB3642FC3829A1E /* Sources */,
+				DA174A2F5EDC34DCAAC84C96DB003E0F /* Frameworks */,
+				291FB5A0E528921EFC703811BC3A829F /* Headers */,
+				AD85136A1A4892716290B315FD887F9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4444162259BB14C7AA93670157503478 /* PBXTargetDependency */,
+				B9DD6AF6284ADC92BC35185125BF329C /* PBXTargetDependency */,
+			);
+			name = TMTumblrSDK;
+			productName = TMTumblrSDK;
+			productReference = AAA6634876C43DE30DC591735EEB83C6 /* TMTumblrSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		86B1E030B401229B99CA761FCE83DCA5 /* INAppStoreWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A4FD521A9CBCE87BB751100E309339 /* Build configuration list for PBXNativeTarget "INAppStoreWindow" */;
+			buildPhases = (
+				AE8BEEB6BB19E9811E4BEAB48D7844C2 /* Sources */,
+				E86BF0390939B58D4660F06A4AB57A66 /* Frameworks */,
+				A191B5B49D493B914573F82351AB4A6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = INAppStoreWindow;
+			productName = INAppStoreWindow;
+			productReference = 942E9215C23F4A0EA2A7BF289C8E2587 /* INAppStoreWindow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F994699199A14757C72B986EB1209644 /* SwiftyUserDefaults */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EE8200E06B6A7BABFFA7C05CCFA354 /* Build configuration list for PBXNativeTarget "SwiftyUserDefaults" */;
+			buildPhases = (
+				F9F9ED0F3602C92BC4347A3D4FE6C299 /* Sources */,
+				F2B490353E4EC5D5CEB1FF188FCD8A26 /* Frameworks */,
+				C654444959AE80D0D35F1792D1A299BB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyUserDefaults;
+			productName = SwiftyUserDefaults;
+			productReference = 9B9E7FFB32201D19EC340092B6DC7BF6 /* SwiftyUserDefaults.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D23B78D5EC78B6BFFB7BAEAD41B23B9 /* CCNPreferencesWindowController */,
+				3CA4D2A1483649BB943D671738066AC7 /* DOFavoriteButton */,
+				86B1E030B401229B99CA761FCE83DCA5 /* INAppStoreWindow */,
+				211F23F332FBE148848E2BD3F31EB007 /* JXHTTP */,
+				10F05C687A17E9EC83CEF06B589BFBAA /* Pods-Tumbleweed */,
+				1A767130BC2A6A3A8A4048CF0B0D5F00 /* Spectacles */,
+				F994699199A14757C72B986EB1209644 /* SwiftyUserDefaults */,
+				46A9C477BF0409F7890E477E6D86FFB3 /* TMTumblrSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17B501B93D3CC8754F8D8067AD4CCB77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F67DC71B31BEB9A21AA602864D4AEC0 /* heart.png in Resources */,
+				0BBAB6C41822126F5591BB1AD9133DE8 /* like.png in Resources */,
+				4FF991F2207B23949E0803BC316C802B /* smile.png in Resources */,
+				B01A282BEA15EDB2AFC16BD108860805 /* star.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD85136A1A4892716290B315FD887F9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3C614AEEE6E8C498DCB7B9BC535CE /* TMTumblrSDK.podspec.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0475D162A02EEB5088620631D4CD2C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF18A8AF37E7439065308EF05D5CD1F /* Spectacles-dummy.m in Sources */,
+				9F8E66D03D397550DD8C15664F8AE76A /* TMPodspec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FDD594ACCF5828C8062CC612F0FBB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DBABD0F80471D254DA693F150960CA /* Pods-Tumbleweed-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57EC785E42A28B2EDEF78FA58B7A6D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C607B9C7AC0DCFFB4AF9CEF4EEEE9E5F /* JXHTTP-dummy.m in Sources */,
+				1694D4AF20E79F18D48643F0BDD8CEAF /* JXHTTPDataBody.m in Sources */,
+				DC8B1D727E5A7071DAF926824F724851 /* JXHTTPFileBody.m in Sources */,
+				C1CC3DE35F8BCDD37350633B26BC1811 /* JXHTTPFormEncodedBody.m in Sources */,
+				E960DC135DE984D9E4D94708BF17F061 /* JXHTTPJSONBody.m in Sources */,
+				8C3612C78E6326938658A0824978529D /* JXHTTPMultipartBody.m in Sources */,
+				6A1EF5A3106E4A5214138F68677AEAFC /* JXHTTPOperation+Convenience.m in Sources */,
+				4E52ECAA68AF80A8A7A9E909ADC8E3D5 /* JXHTTPOperation.m in Sources */,
+				1585862A8C093F468D06611A51A12D27 /* JXHTTPOperationQueue.m in Sources */,
+				64313C8D6512AD562F016D914ED64F2C /* JXOperation.m in Sources */,
+				375047B816672FB1A03CF2594455835A /* JXURLConnectionOperation.m in Sources */,
+				0A854048027DDE61653BCABD4494F7E9 /* JXURLEncoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C3D3F2F011D3277FDB3642FC3829A1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8D6147179E06524D7552D791028554 /* TMAPIClient.m in Sources */,
+				11F435FDEECB0B2962DD8F0C6FEFBB1D /* TMOAuth.m in Sources */,
+				67BE92AFA55A00C805A8EFE75D461582 /* TMSDKFunctions.m in Sources */,
+				22D40DAD57993EFB590E299223FA11A6 /* TMSDKUserAgent.m in Sources */,
+				0D3F4778E49EC92DD19C40E6ECC07C5D /* TMTumblrAuthenticator.m in Sources */,
+				33EA174DC6A52F0D005665737F88BF7E /* TMTumblrSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE8BEEB6BB19E9811E4BEAB48D7844C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20A41854D229C1BBC5318CFFB8ABF70E /* INAppStoreWindow-dummy.m in Sources */,
+				91ABABF3DBAAD7A257F6F7EFD89A3AE6 /* INAppStoreWindow.m in Sources */,
+				4DD6ECB7763F27B01C1065ED942E67E2 /* INWindowButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4A1A6B488657D1CCFAFBFECA3E5777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A7EBDE120908EE4B0656B091649B5F /* DOFavoriteButton-dummy.m in Sources */,
+				92A155DE61A84DB22E386740D04D873C /* DOFavoriteButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F653B2A472554238E55F461FAAB8F835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D84D7451A4D814599555575C03EE36 /* CCNPreferencesWindowController-dummy.m in Sources */,
+				F973F68E60F5E46318CF3DA14A49E045 /* CCNPreferencesWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9ED0F3602C92BC4347A3D4FE6C299 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BABFD63A1E2F489BEFF93DC4A1770DE /* SwiftyUserDefaults-dummy.m in Sources */,
+				ABFD8ECA51466A084869962F6F225333 /* SwiftyUserDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15B228599CA3D6E0A96C9DA8172EEE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JXHTTP;
+			target = 211F23F332FBE148848E2BD3F31EB007 /* JXHTTP */;
+			targetProxy = C4BF2CDA0C1E9C3CD0B80F7FE72ACDE2 /* PBXContainerItemProxy */;
+		};
+		20E4386EEDB499A78F77BCCD0B732C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spectacles;
+			target = 1A767130BC2A6A3A8A4048CF0B0D5F00 /* Spectacles */;
+			targetProxy = D22B9825ECDE9CEA20ED549BA8516034 /* PBXContainerItemProxy */;
+		};
+		34F2BB386A4B0A6B90DB4D6893C1D710 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = INAppStoreWindow;
+			target = 86B1E030B401229B99CA761FCE83DCA5 /* INAppStoreWindow */;
+			targetProxy = 52DBE45B7B18C8023D9EC4DB13487BCC /* PBXContainerItemProxy */;
+		};
+		40F5D323B23AE1E832F998BD5C35EA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TMTumblrSDK;
+			target = 46A9C477BF0409F7890E477E6D86FFB3 /* TMTumblrSDK */;
+			targetProxy = 47534BB52B1A84725E1BA22C4FBB60DE /* PBXContainerItemProxy */;
+		};
+		4444162259BB14C7AA93670157503478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JXHTTP;
+			target = 211F23F332FBE148848E2BD3F31EB007 /* JXHTTP */;
+			targetProxy = 47CCE60FF5F5BF38474D74E609F13D99 /* PBXContainerItemProxy */;
+		};
+		B9DD6AF6284ADC92BC35185125BF329C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spectacles;
+			target = 1A767130BC2A6A3A8A4048CF0B0D5F00 /* Spectacles */;
+			targetProxy = 1BA70B8F0D1F960A367D2A1C6395046C /* PBXContainerItemProxy */;
+		};
+		C03FADCC569D9F601DD4F0F2687F1AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyUserDefaults;
+			target = F994699199A14757C72B986EB1209644 /* SwiftyUserDefaults */;
+			targetProxy = E61D05A609CA86202A115CA07B3F857C /* PBXContainerItemProxy */;
+		};
+		C2A4E2D7EC83BBEA6348C512F45BAA76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DOFavoriteButton;
+			target = 3CA4D2A1483649BB943D671738066AC7 /* DOFavoriteButton */;
+			targetProxy = 35AF3394115E46D6301D4A09A7EAB9F2 /* PBXContainerItemProxy */;
+		};
+		E8B5E0944AEE7411DB79DADF35547FB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CCNPreferencesWindowController;
+			target = 3D23B78D5EC78B6BFFB7BAEAD41B23B9 /* CCNPreferencesWindowController */;
+			targetProxy = EFAD7873409652ABCB1A20EB777988AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CD1723DCA3E7A151D14D1570E459797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C52E998F0FCB337A80122BB7B384D99 /* INAppStoreWindow-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/INAppStoreWindow/INAppStoreWindow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/INAppStoreWindow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/INAppStoreWindow/INAppStoreWindow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = INAppStoreWindow;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		12F13B0CCA0E1427A2EF021D366236D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855142A7B62EDEFE46353D38AB95700F /* TMTumblrSDK-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/TMTumblrSDK/TMTumblrSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TMTumblrSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/TMTumblrSDK/TMTumblrSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TMTumblrSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1A088E0549965F7D1356114BF3F22127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C52E998F0FCB337A80122BB7B384D99 /* INAppStoreWindow-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/INAppStoreWindow/INAppStoreWindow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/INAppStoreWindow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/INAppStoreWindow/INAppStoreWindow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = INAppStoreWindow;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		204F15EEEB01DED9053A12FFD42EE2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56DA42D7EB9F672B200076EE9D3FA93C /* CCNPreferencesWindowController-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/CCNPreferencesWindowController/CCNPreferencesWindowController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CCNPreferencesWindowController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/CCNPreferencesWindowController/CCNPreferencesWindowController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CCNPreferencesWindowController;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C213B035087E42DD2FCF4ED9D4F7C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 254BE9E46B70003AA8757714757B9A30 /* JXHTTP-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/JXHTTP/JXHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JXHTTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/JXHTTP/JXHTTP.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JXHTTP;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FBB304DFC7B0F68F010F0A549EB1A94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855142A7B62EDEFE46353D38AB95700F /* TMTumblrSDK-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/TMTumblrSDK/TMTumblrSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TMTumblrSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/TMTumblrSDK/TMTumblrSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TMTumblrSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CAC92555D9A66890DC429562FE6039E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0314A12DB41DB41F39935FABA51F1AE0 /* Pods-Tumbleweed.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tumbleweed/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Tumbleweed;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		537AF3E4E97444B081C17FFF2025C159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56DA42D7EB9F672B200076EE9D3FA93C /* CCNPreferencesWindowController-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/CCNPreferencesWindowController/CCNPreferencesWindowController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CCNPreferencesWindowController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/CCNPreferencesWindowController/CCNPreferencesWindowController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CCNPreferencesWindowController;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E397FC53AE1DB693B9A88DAD013A6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A9BCCA293136E3E057BACBBCC30B84 /* Spectacles-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Spectacles/Spectacles-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spectacles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Spectacles/Spectacles.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spectacles;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78174F4A601CFAD94F4C20967BFAAB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7B5A2706AC504C1C0F992BBD124C1311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9A55268FFE227167850CC5447C355C /* SwiftyUserDefaults-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyUserDefaults/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyUserDefaults;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		911A0A64A9D1A616FACDA3E5AD36AF61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B08963CB0740D56647CB5347479EDD5 /* DOFavoriteButton-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/DOFavoriteButton/DOFavoriteButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DOFavoriteButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/DOFavoriteButton/DOFavoriteButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DOFavoriteButton;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91A613279B8DFC3FEBBB02714C8E517C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B08963CB0740D56647CB5347479EDD5 /* DOFavoriteButton-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/DOFavoriteButton/DOFavoriteButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DOFavoriteButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/DOFavoriteButton/DOFavoriteButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DOFavoriteButton;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		95F92E4170CF6E1D3470EDEB30BEE7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A9BCCA293136E3E057BACBBCC30B84 /* Spectacles-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Spectacles/Spectacles-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spectacles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Spectacles/Spectacles.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spectacles;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ABC01B1101018C9B29E5B0F762CEB0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC801AFF3BC611C1DEF6C5F6CBFB45A4 /* Pods-Tumbleweed.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tumbleweed/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Tumbleweed;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E03E7244626632DE9924801AFD48A0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9A55268FFE227167850CC5447C355C /* SwiftyUserDefaults-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyUserDefaults/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyUserDefaults;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF4D9C28078729171546A99D03136AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 254BE9E46B70003AA8757714757B9A30 /* JXHTTP-Private.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/JXHTTP/JXHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JXHTTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/JXHTTP/JXHTTP.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JXHTTP;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8BA96F0A61F0DE03CF3629D04BF6110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		126DFBE41D900E3F1C0575C73B529A9A /* Build configuration list for PBXNativeTarget "Pods-Tumbleweed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CAC92555D9A66890DC429562FE6039E /* Debug */,
+				ABC01B1101018C9B29E5B0F762CEB0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78174F4A601CFAD94F4C20967BFAAB2A /* Debug */,
+				F8BA96F0A61F0DE03CF3629D04BF6110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3291D68F618B993CE5D4188136E4144A /* Build configuration list for PBXNativeTarget "CCNPreferencesWindowController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204F15EEEB01DED9053A12FFD42EE2D6 /* Debug */,
+				537AF3E4E97444B081C17FFF2025C159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43EE8200E06B6A7BABFFA7C05CCFA354 /* Build configuration list for PBXNativeTarget "SwiftyUserDefaults" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5A2706AC504C1C0F992BBD124C1311 /* Debug */,
+				E03E7244626632DE9924801AFD48A0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E9A60BD1D9877D9D71F37670CBA16C6 /* Build configuration list for PBXNativeTarget "TMTumblrSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBB304DFC7B0F68F010F0A549EB1A94 /* Debug */,
+				12F13B0CCA0E1427A2EF021D366236D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A4FD521A9CBCE87BB751100E309339 /* Build configuration list for PBXNativeTarget "INAppStoreWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A088E0549965F7D1356114BF3F22127 /* Debug */,
+				0CD1723DCA3E7A151D14D1570E459797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BE1872F9725C60852952781AB84B503 /* Build configuration list for PBXNativeTarget "DOFavoriteButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911A0A64A9D1A616FACDA3E5AD36AF61 /* Debug */,
+				91A613279B8DFC3FEBBB02714C8E517C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9A79EA55EEBFD2EE471A02F5247F816 /* Build configuration list for PBXNativeTarget "JXHTTP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4D9C28078729171546A99D03136AF7 /* Debug */,
+				3C213B035087E42DD2FCF4ED9D4F7C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C7F2ABAC3C117CAE313DA1D861DE5C /* Build configuration list for PBXNativeTarget "Spectacles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F92E4170CF6E1D3470EDEB30BEE7AA /* Debug */,
+				5E397FC53AE1DB693B9A88DAD013A6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

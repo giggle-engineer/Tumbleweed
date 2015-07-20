@@ -1,0 +1,47 @@
+PODS:
+  - CCNPreferencesWindowController (1.2.2)
+  - DOFavoriteButton (0.0.2)
+  - INAppStoreWindow (1.4)
+  - JXHTTP (2.0.2)
+  - Spectacles (1.0.1)
+  - SwiftyUserDefaults (1.3.0)
+  - TMTumblrSDK (2.2.0):
+    - TMTumblrSDK/Activity (= 2.2.0)
+    - TMTumblrSDK/APIClient (= 2.2.0)
+    - TMTumblrSDK/AppClient (= 2.2.0)
+    - TMTumblrSDK/Core (= 2.2.0)
+  - TMTumblrSDK/APIClient (2.2.0):
+    - JXHTTP (~> 2.0.1)
+    - TMTumblrSDK/APIClient/Authentication (= 2.2.0)
+  - TMTumblrSDK/APIClient/Authentication (2.2.0):
+    - JXHTTP (~> 2.0.1)
+    - TMTumblrSDK/Core
+  - TMTumblrSDK/Core (2.2.0):
+    - Spectacles (~> 1.0)
+
+DEPENDENCIES:
+  - CCNPreferencesWindowController (~> 1.2.2)
+  - DOFavoriteButton (from `https://github.com/hachidorii/DOFavoriteButton`)
+  - INAppStoreWindow (~> 1.4)
+  - SwiftyUserDefaults (~> 1.3.0)
+  - TMTumblrSDK (~> 2.2.0)
+
+EXTERNAL SOURCES:
+  DOFavoriteButton:
+    :git: https://github.com/hachidorii/DOFavoriteButton
+
+CHECKOUT OPTIONS:
+  DOFavoriteButton:
+    :commit: 8bff94bbcf2062075d764b13b22da8bfcfa36b3f
+    :git: https://github.com/hachidorii/DOFavoriteButton
+
+SPEC CHECKSUMS:
+  CCNPreferencesWindowController: 2162438b1328d1d15ce5ee50289a57c7b3857c7a
+  DOFavoriteButton: a8fa20530969ece524cb5445dfb1bfd67aa0195b
+  INAppStoreWindow: 4fd569f7435557239e78316de139e886ccbaec4d
+  JXHTTP: 7e3fde3d226e865531703b0e4ea4b6e1c22d9b16
+  Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
+  SwiftyUserDefaults: 507da0dcabec653f76ecab845635a6d220c1484a
+  TMTumblrSDK: 9eea12c96d2f41f448379cb3239c4e31f977a83e
+
+COCOAPODS: 0.38.0

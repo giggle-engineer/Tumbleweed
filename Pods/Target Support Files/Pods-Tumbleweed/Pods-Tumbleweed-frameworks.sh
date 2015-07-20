@@ -58,6 +58,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Tumbleweed/JXHTTP.framework'
   install_framework 'Pods-Tumbleweed/Spectacles.framework'
   install_framework 'Pods-Tumbleweed/SwiftyUserDefaults.framework'
+  install_framework 'Pods-Tumbleweed/TMCache.framework'
   install_framework 'Pods-Tumbleweed/TMTumblrSDK.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -67,5 +68,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Tumbleweed/JXHTTP.framework'
   install_framework 'Pods-Tumbleweed/Spectacles.framework'
   install_framework 'Pods-Tumbleweed/SwiftyUserDefaults.framework'
+  install_framework 'Pods-Tumbleweed/TMCache.framework'
   install_framework 'Pods-Tumbleweed/TMTumblrSDK.framework'
 fi

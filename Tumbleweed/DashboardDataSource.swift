@@ -30,6 +30,7 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
             postControllers.append(ImagePostController())
         }
     }
+    
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
 //        let type = posts.objectAtIndex(row)["type"] as! String
         let postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
@@ -39,9 +40,11 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         postControllers[row].view = postView
         return postView
     }
+    
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
         return 300
     }
+    
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return posts.count
     }

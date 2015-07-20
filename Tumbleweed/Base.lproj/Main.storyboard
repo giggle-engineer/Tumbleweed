@@ -755,7 +755,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="photo" id="xAc-Cw-XZ5" customClass="PostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                        <tableCellView identifier="photo" id="xAc-Cw-XZ5" customClass="ImagePostView" customModule="Tumbleweed" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="275" height="232"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -834,6 +834,20 @@
                                                                 </customView>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Y4M-Nb-krM">
                                                                     <rect key="frame" x="0.0" y="31" width="275" height="170"/>
+                                                                    <subviews>
+                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F5a-Zd-pY7">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+                                                                            <animations/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="smw-4w-gHN"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="F5a-Zd-pY7" firstAttribute="leading" secondItem="Y4M-Nb-krM" secondAttribute="leading" id="fSd-pb-aKp"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="F5a-Zd-pY7" secondAttribute="bottom" id="hth-5I-NFq"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="F5a-Zd-pY7" secondAttribute="trailing" id="ihP-EB-Lkr"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="lQ3-mZ-oMS"/>
+                                                                        <constraint firstItem="F5a-Zd-pY7" firstAttribute="top" secondItem="Y4M-Nb-krM" secondAttribute="top" id="xi5-pZ-fHj"/>
+                                                                    </constraints>
                                                                     <animations/>
                                                                 </customView>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="yAH-pR-ChZ">
@@ -906,6 +920,8 @@
                                                                 <outlet property="avatar" destination="oOq-Cm-o1f" id="R2C-Ni-DGu"/>
                                                                 <outlet property="blogger" destination="AyC-R6-Gew" id="Qdz-Q9-nu8"/>
                                                                 <outlet property="noteCount" destination="Xkw-Q5-CLr" id="HqR-Oo-gb2"/>
+                                                                <outlet property="photoView" destination="F5a-Zd-pY7" id="TT0-QD-gMe"/>
+                                                                <outlet property="reblog" destination="go8-f7-5Pr" id="FlL-EH-zv7"/>
                                                                 <outlet property="reblogedFrom" destination="Gmu-jm-8ja" id="Fhe-M3-oCo"/>
                                                             </connections>
                                                         </tableCellView>

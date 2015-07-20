@@ -14,6 +14,7 @@ class PostView : NSTableCellView {
     @IBOutlet var avatar : NSImageView!
     @IBOutlet var blogger : NSTextField!
     @IBOutlet var reblogedFrom : NSTextField!
+    @IBOutlet var reblog : NSImageView!
     @IBOutlet var noteCount : NSTextField!
     var postId : String!
     var reblogKey : String!
@@ -23,12 +24,14 @@ class PostView : NSTableCellView {
         let liked = !sender.selected
         
         if(liked) {
+            NSLog("postId:%@ reblogKey:%@", postId, reblogKey)
             TMAPIClient.sharedInstance().like(postId, reblogKey: reblogKey, callback: { (result : AnyObject!, error: NSError!)  -> Void in
                 if(error == nil) {
-                    sender.deselect()
+                    NSLog("Post was liked!")
                 }
                 else {
-                    NSLog("Post was liked!")
+                    NSLog("like error:%@", error.description)
+                    sender.deselect()
                 }
             })
         }

@@ -20,24 +20,25 @@ class PostController {
     func fillContent() {
 //        print("filling default content for PostController")
         let blogName = post?["blog_name"] as! String
-        let id = String(post?["id"])
-        let reblogKey = String(post?["reblog_key"])
+        let id = post?["id"] as! Int
+        let idString = String(id)
+        let reblogKey = post?["reblog_key"] as! String
         let count = post?["note_count"] as! Int
         
-        view?.postId = id
+        view?.postId = idString
         view?.reblogKey = reblogKey
         view?.blogger.stringValue = blogName
         view?.noteCount.stringValue = "\(count) notes"
         if (post?["source_title"] != nil) {
-            view?.reblogedFrom.stringValue = post?["source_title"] as! String
+            if(post?["source_title"] is String) {
+                view?.reblogedFrom.stringValue = post?["source_title"] as! String
+            }
         }
         
         TMAPIClient.sharedInstance().avatar(blogName, size: 48) { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
-//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let image = NSImage(data: result as! NSData)
-                    self.view?.avatar.image = image
-//                })
+                let image = NSImage(data: result as! NSData)
+                self.view?.avatar.image = image
             }
             else {
                 print("error: \(error.description)")

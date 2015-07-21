@@ -12,6 +12,10 @@ import TMCache
 class AudioPostController : PostController {
     override func fillContent() {
         super.fillContent()
+        if post?["player"] == nil {
+            // I just, I don't know what to say here, this actually happens
+            return
+        }
         let player = post?["player"] as! String
         let audioView = self.view as! AudioPostView
         audioView.webView?.mainFrame.loadHTMLString(player, baseURL: nil)
@@ -28,32 +32,35 @@ class AudioPostController : PostController {
             audioView.albumName?.hidden = true
         }
         
-        let url = post?["album_art"] as! String
-        TMCache.sharedCache().objectForKey(url, block: { (cache: TMCache!, key:String!, object:AnyObject!) -> Void in
-            let audioPostView = self.view as! AudioPostView
-            audioPostView.artworkView?.image = nil
-            if object == nil {
-                let session = NSURLSession.sharedSession()
-                let dataTask = session.dataTaskWithURL(NSURL(string: url)!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-                    if error == nil {
-                        let image = NSImage(data: data!)
-                        
-                        TMCache.sharedCache().setObject(image, forKey: url, block: { (cache: TMCache!, key: String!, object: AnyObject!) -> Void in })
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            audioPostView.artworkView?.image = image
-                        })
-                    }
-                    else {
-                        print("image error: \(error!.description)")
-                    }
-                })
-                dataTask?.resume()
-            }
-            else {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    audioPostView.artworkView?.image = object as? NSImage
-                })
-            }
-        })
+        
+        if post?["album_art"] != nil {
+            let url = post?["album_art"] as! String
+            TMCache.sharedCache().objectForKey(url, block: { (cache: TMCache!, key:String!, object:AnyObject!) -> Void in
+                let audioPostView = self.view as! AudioPostView
+                audioPostView.artworkView?.image = nil
+                if object == nil {
+                    let session = NSURLSession.sharedSession()
+                    let dataTask = session.dataTaskWithURL(NSURL(string: url)!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+                        if error == nil {
+                            let image = NSImage(data: data!)
+                            
+                            TMCache.sharedCache().setObject(image, forKey: url, block: { (cache: TMCache!, key: String!, object: AnyObject!) -> Void in })
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                audioPostView.artworkView?.image = image
+                            })
+                        }
+                        else {
+                            print("image error: \(error!.description)")
+                        }
+                    })
+                    dataTask?.resume()
+                }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        audioPostView.artworkView?.image = object as? NSImage
+                    })
+                }
+            })
+        }
     }
 }

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tumblr_lz7pfj12aD1qi8uvyo1_1280.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tag.png",
       "scale" : "2x"
     },
     {

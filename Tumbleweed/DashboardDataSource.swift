@@ -15,6 +15,10 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         switch type {
             case "audio":
                 return AudioPostController()
+            case "chat":
+                return TextPostController()
+//            case "quote":
+//                return TextPostController()
             case "text":
                 return TextPostController()
             case "photo":
@@ -25,18 +29,7 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
     }
     
     var postControllers = Array<PostController>()
-    var posts : Array<AnyObject> = [] /*{
-        didSet {
-            // Initialize View Controllers for each post type
-            postControllers.removeAll()
-            postControllers.reserveCapacity(posts.count)
-            for i in 0...posts.count-1 {
-                let type = posts[i]["type"] as! String
-                postControllers.append(postControllerForType(type))
-                postControllers[i].row = i
-            }
-        }
-    }*/
+    var posts : Array<AnyObject> = []
     
     func processNewPosts(newPosts : Array<AnyObject>) {
         var postsInRange = false
@@ -85,6 +78,8 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         
         postControllers = newPostControllers + postControllers
         
+        // attempting to debug a weird issue where the controller gets associated with a wrong post index
+        // I suspect it's a mutation bug, I don't call insert rows until I'm done though *shrugs*
         for (index,postController) in postControllers.enumerate() {
             if (postController is TextPostController) {
                 print("TextPostController")
@@ -103,11 +98,16 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
     }
     
     func processOldPosts(oldPosts : Array<AnyObject>) {
+        let range = NSMakeRange(posts.count, oldPosts.count)
+        var newPostControllers = Array<PostController>()
+        for post in oldPosts {
+            let type = post["type"] as! String
+            newPostControllers.append(postControllerForType(type))
+        }
         
-    }
-
-    func insertPostsAtEnd(newPosts : NSArray) {
-        tableView.insertRowsAtIndexes(NSIndexSet(indexesInRange: NSMakeRange(self.posts.count, self.posts.count+newPosts.count)), withAnimation: .SlideRight)
+        postControllers = postControllers + newPostControllers
+        posts = posts + oldPosts
+        tableView.insertRowsAtIndexes(NSIndexSet(indexesInRange: range), withAnimation: .SlideUp)
     }
     
     func typeForRow(row: Int) -> String {
@@ -126,6 +126,12 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
             case "audio":
                 postView = tableView.makeViewWithIdentifier("audio", owner: self) as? PostView
                 break
+            case "chat":
+                postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
+                break
+            case "quote":
+                postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
+                break
             case "text":
                 postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
                 break
@@ -136,9 +142,6 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
                 print("type: \(type) at row: \(row)")
                 postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
         }
-//        postView.row = row
-//        print("row: \(row) type: \(type)")
-//        let controller = postControllers[row] as PostController
         postControllers[row].post = posts[row] as? NSDictionary
         postControllers[row].view = postView
         return postView
@@ -149,9 +152,20 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         {
             case "audio":
                 return 172
-//            case "text":
-//                let body = postControllers[row].post?["body"] as! String
-//                let textPost = tableView.viewAtColumn(0, row: row, makeIfNecessary: true)
+            case "chat":
+                let body = posts[row]["body"] as! String
+                let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
+                attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
+                let heightOfText = attributedString?.heightForWidth(260)
+                return heightOfText!+62
+//            case "quote":
+//                continue
+            case "text":
+                let body = posts[row]["body"] as! String
+                let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
+                attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
+                let heightOfText = attributedString?.heightForWidth(260)
+                return heightOfText!+62
 //                return 62 + height of text
             default:
                 return 300

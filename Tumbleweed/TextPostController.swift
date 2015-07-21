@@ -25,7 +25,7 @@ class TextPostController : PostController {
 //        let attributedString = engine.parse(body)
         let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
         attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
-        textPostView.body?.attributedStringValue = attributedString!
+        textPostView.body?.textStorage?.appendAttributedString(attributedString!)
         
     }
     

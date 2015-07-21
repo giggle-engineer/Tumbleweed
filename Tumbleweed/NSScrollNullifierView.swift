@@ -6,4 +6,10 @@
 //  Copyright © 2015 Chloe Stars. All rights reserved.
 //
 
-import Foundation
+import Cocoa
+
+class NSScrollNullifierView : NSScrollView {
+    override func scrollWheel(theEvent: NSEvent) {
+        self.nextResponder?.scrollWheel(theEvent)
+    }
+}

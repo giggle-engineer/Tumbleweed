@@ -32,5 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func refreshDashboard(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("refreshDashboard", object: self)
     }
-}
+    
+    @IBAction func loadOlder(sender: AnyObject)
+    {
+        NSNotificationCenter.defaultCenter().postNotificationName("loadOlder", object: self)
+    }}
 

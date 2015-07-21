@@ -70,6 +70,11 @@
                                                 <action selector="refreshDashboard:" target="Voe-Tx-rLC" id="EV9-VI-1oy"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Load Older" keyEquivalent="O" id="9bB-l5-faa">
+                                            <connections>
+                                                <action selector="loadOlder:" target="Voe-Tx-rLC" id="cbt-B4-KFm"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                             <connections>
                                                 <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
@@ -777,7 +782,7 @@
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
                                                                             <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="retweet"/>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="reblog"/>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
                                                                                     <color key="value" red="0.096181611580000007" green="1" blue="0.29442336549999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </userDefinedRuntimeAttribute>
@@ -790,6 +795,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="xAc-Cw-XZ5" id="nJi-rS-cMm"/>
+                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="oBH-vl-y7o"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-SD-VHc" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -873,7 +879,7 @@
                                                                                 <constraint firstAttribute="width" constant="18" id="d8g-rm-XiV"/>
                                                                             </constraints>
                                                                             <animations/>
-                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="retweet" id="xH9-D3-XMf"/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="reblog" id="xH9-D3-XMf"/>
                                                                         </imageView>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gmu-jm-8ja">
                                                                             <rect key="frame" x="100" y="7" width="37" height="17"/>
@@ -948,7 +954,7 @@
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
                                                                             <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="retweet"/>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="reblog"/>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
                                                                                     <color key="value" red="0.096181611580000007" green="1" blue="0.29442336549999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </userDefinedRuntimeAttribute>
@@ -961,6 +967,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="SIc-v5-4fF" id="XzC-t8-bqP"/>
+                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="05S-7z-rrn"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-eU-lKt" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -998,28 +1005,6 @@
                                                                     </constraints>
                                                                     <animations/>
                                                                 </customView>
-                                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="kq7-vl-DMH">
-                                                                    <rect key="frame" x="0.0" y="31" width="275" height="170"/>
-                                                                    <subviews>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-PQ-1Mu">
-                                                                            <rect key="frame" x="6" y="8" width="263" height="153"/>
-                                                                            <animations/>
-                                                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="VYR-s0-faF">
-                                                                                <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                            </textFieldCell>
-                                                                        </textField>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="lv0-PQ-1Mu" firstAttribute="top" secondItem="kq7-vl-DMH" secondAttribute="top" constant="9" id="69j-5n-AGZ"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="lv0-PQ-1Mu" secondAttribute="bottom" constant="8" id="6wV-0M-g2h"/>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="NMe-5I-l8n"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="lv0-PQ-1Mu" secondAttribute="trailing" constant="8" id="jkj-yB-ACf"/>
-                                                                        <constraint firstItem="lv0-PQ-1Mu" firstAttribute="leading" secondItem="kq7-vl-DMH" secondAttribute="leading" constant="8" id="msb-bz-ggC"/>
-                                                                    </constraints>
-                                                                    <animations/>
-                                                                </customView>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="75h-ru-S3h">
                                                                     <rect key="frame" x="0.0" y="201" width="275" height="31"/>
                                                                     <subviews>
@@ -1048,7 +1033,7 @@
                                                                                 <constraint firstAttribute="height" constant="18" id="LHo-87-Vgw"/>
                                                                             </constraints>
                                                                             <animations/>
-                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="retweet" id="1iF-pg-hsS"/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="reblog" id="1iF-pg-hsS"/>
                                                                         </imageView>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hel-u3-Oii">
                                                                             <rect key="frame" x="100" y="7" width="37" height="17"/>
@@ -1069,27 +1054,59 @@
                                                                     </constraints>
                                                                     <animations/>
                                                                 </customView>
+                                                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-Oq-ANH" customClass="NSScrollNullifierView" customModule="Tumbleweed" customModuleProvider="target">
+                                                                    <rect key="frame" x="2" y="31" width="270" height="170"/>
+                                                                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="49a-dL-mFB">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <textView ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="LaN-VK-BkY">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="272" height="170"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <animations/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <size key="minSize" width="270" height="170"/>
+                                                                                <size key="maxSize" width="463" height="10000000"/>
+                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <size key="minSize" width="270" height="170"/>
+                                                                                <size key="maxSize" width="463" height="10000000"/>
+                                                                            </textView>
+                                                                        </subviews>
+                                                                        <animations/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </clipView>
+                                                                    <animations/>
+                                                                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="eak-iU-KmO">
+                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <animations/>
+                                                                    </scroller>
+                                                                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="79B-Mb-ptW">
+                                                                        <rect key="frame" x="-100" y="-100" width="16" height="170"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <animations/>
+                                                                    </scroller>
+                                                                </scrollView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="aMY-Ka-7W1" firstAttribute="top" secondItem="kq7-vl-DMH" secondAttribute="bottom" id="7qi-6o-umW"/>
-                                                                <constraint firstItem="kq7-vl-DMH" firstAttribute="top" secondItem="75h-ru-S3h" secondAttribute="bottom" id="FaO-pk-UV3"/>
+                                                                <constraint firstItem="6KD-Oq-ANH" firstAttribute="leading" secondItem="SIc-v5-4fF" secondAttribute="leading" constant="2" id="EsN-Nl-UZX"/>
                                                                 <constraint firstAttribute="bottom" secondItem="aMY-Ka-7W1" secondAttribute="bottom" id="G00-mq-4H2"/>
+                                                                <constraint firstItem="aMY-Ka-7W1" firstAttribute="top" secondItem="6KD-Oq-ANH" secondAttribute="bottom" id="Hmv-ZS-kG4"/>
                                                                 <constraint firstItem="75h-ru-S3h" firstAttribute="top" secondItem="SIc-v5-4fF" secondAttribute="top" id="HvB-8j-6oe"/>
-                                                                <constraint firstItem="aMY-Ka-7W1" firstAttribute="top" secondItem="kq7-vl-DMH" secondAttribute="bottom" id="J0E-oc-ekS"/>
-                                                                <constraint firstItem="kq7-vl-DMH" firstAttribute="top" secondItem="75h-ru-S3h" secondAttribute="bottom" id="K1d-B9-kre"/>
                                                                 <constraint firstAttribute="trailing" secondItem="aMY-Ka-7W1" secondAttribute="trailing" id="KPd-OY-BAh"/>
+                                                                <constraint firstItem="aMY-Ka-7W1" firstAttribute="top" secondItem="LaN-VK-BkY" secondAttribute="bottom" constant="1" id="ROJ-dv-HbB"/>
                                                                 <constraint firstItem="aMY-Ka-7W1" firstAttribute="leading" secondItem="SIc-v5-4fF" secondAttribute="leading" id="StG-2Y-G9X"/>
-                                                                <constraint firstItem="kq7-vl-DMH" firstAttribute="leading" secondItem="SIc-v5-4fF" secondAttribute="leading" id="az7-Bf-UVG"/>
                                                                 <constraint firstItem="75h-ru-S3h" firstAttribute="leading" secondItem="SIc-v5-4fF" secondAttribute="leading" id="dIy-xb-T2h"/>
                                                                 <constraint firstAttribute="trailing" secondItem="75h-ru-S3h" secondAttribute="trailing" id="kqE-px-TAx"/>
-                                                                <constraint firstAttribute="trailing" secondItem="kq7-vl-DMH" secondAttribute="trailing" id="ni8-eW-h1P"/>
+                                                                <constraint firstAttribute="trailing" secondItem="6KD-Oq-ANH" secondAttribute="trailing" constant="3" id="qJq-pp-O7U"/>
+                                                                <constraint firstItem="6KD-Oq-ANH" firstAttribute="top" secondItem="75h-ru-S3h" secondAttribute="bottom" id="v25-nY-uJY"/>
                                                                 <constraint firstItem="aMY-Ka-7W1" firstAttribute="leading" secondItem="SIc-v5-4fF" secondAttribute="leading" id="vZl-zo-Sxs"/>
                                                             </constraints>
                                                             <animations/>
                                                             <connections>
                                                                 <outlet property="avatar" destination="xOH-NK-nsu" id="GXX-E6-uVB"/>
                                                                 <outlet property="blogger" destination="7u1-yI-vnL" id="RQj-J5-gh3"/>
-                                                                <outlet property="body" destination="lv0-PQ-1Mu" id="Q95-Iq-u13"/>
+                                                                <outlet property="body" destination="LaN-VK-BkY" id="RXz-9f-1Cb"/>
                                                                 <outlet property="favoriteButton" destination="AJ7-eU-lKt" id="qPe-O4-VqU"/>
                                                                 <outlet property="noteCount" destination="GD4-AK-Ziw" id="36T-Um-yG3"/>
                                                                 <outlet property="reblog" destination="ow2-P4-joO" id="I8n-uv-jov"/>
@@ -1128,7 +1145,7 @@
                                                                                 <constraint firstAttribute="height" constant="18" id="tbb-gn-Hq1"/>
                                                                             </constraints>
                                                                             <animations/>
-                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="retweet" id="At6-z6-Hbc"/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="reblog" id="At6-z6-Hbc"/>
                                                                         </imageView>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8S7-vY-onD">
                                                                             <rect key="frame" x="100" y="7" width="37" height="17"/>
@@ -1210,7 +1227,7 @@
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
                                                                             <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="retweet"/>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="reblog"/>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
                                                                                     <color key="value" red="0.096181611580000007" green="1" blue="0.29442336549999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </userDefinedRuntimeAttribute>
@@ -1223,6 +1240,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="zE9-mr-5xc" id="qcd-sD-YV1"/>
+                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="f5R-JD-yoV"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-hC-u7c" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -1286,12 +1304,11 @@
                                                                 <outlet property="artworkView" destination="k49-dh-ZNJ" id="h2H-Re-qZm"/>
                                                                 <outlet property="avatar" destination="CrC-Z9-7ra" id="yRL-UQ-qVL"/>
                                                                 <outlet property="blogger" destination="g9u-Cl-EHi" id="WoJ-hb-yNm"/>
-                                                                <outlet property="caption" destination="qfI-mt-Z6H" id="4LX-TF-RaO"/>
                                                                 <outlet property="favoriteButton" destination="7e8-hC-u7c" id="WwK-qS-McN"/>
                                                                 <outlet property="noteCount" destination="Lag-rj-UQT" id="LMh-DU-FFg"/>
                                                                 <outlet property="reblog" destination="KRV-sT-4cG" id="XGK-z0-Voa"/>
                                                                 <outlet property="reblogedFrom" destination="8S7-vY-onD" id="UoN-GY-u8I"/>
-                                                                <outlet property="trackName" destination="qfI-mt-Z6H" id="jkJ-eh-oVg"/>
+                                                                <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>
                                                                 <outlet property="webView" destination="GGs-iz-6z0" id="KBl-DG-8nH"/>
                                                             </connections>
                                                         </tableCellView>
@@ -1337,6 +1354,7 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="avatarView" destination="lFX-do-L9q" id="gwW-en-XN6"/>
                         <outlet property="dashboardDataSource" destination="aPN-ZX-ffa" id="LI9-Kz-gXX"/>
                         <outlet property="tableView" destination="Ny1-07-JOG" id="r0w-UK-pJl"/>
                     </connections>
@@ -1350,11 +1368,106 @@
             </objects>
             <point key="canvasLocation" x="-4" y="899.5"/>
         </scene>
+        <!--Reblog Controller-->
+        <scene sceneID="gMA-q3-G3m">
+            <objects>
+                <customObject id="LhB-zL-Qnd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="P6W-5A-Lli" customClass="ReblogController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="mAv-zg-CMg">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="115"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-rZ-Dai">
+                                <rect key="frame" x="0.0" y="26" width="361" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="F4f-QM-mxV"/>
+                                </constraints>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" drawsBackground="YES" id="qm1-5v-Mw3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-wq-mHs">
+                                <rect key="frame" x="0.0" y="23" width="361" height="5"/>
+                                <animations/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <tokenField focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-jS-sOd">
+                                <rect key="frame" x="31" y="0.0" width="198" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qkH-B2-6C3"/>
+                                </constraints>
+                                <animations/>
+                                <tokenFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="QDI-pI-M4W">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </tokenFieldCell>
+                            </tokenField>
+                            <imageView translatesAutoresizingMaskIntoConstraints="NO" id="XVo-SQ-dFy">
+                                <rect key="frame" x="0.0" y="2" width="23" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="L55-yG-w7e"/>
+                                    <constraint firstAttribute="height" constant="21" id="NSH-Bv-CxB"/>
+                                </constraints>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="tag" id="Uxh-1S-0Yt"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-GW-P5T">
+                                <rect key="frame" x="292" y="-5" width="69" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Reblog" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9v6-Kt-mFJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-aI-AG0">
+                                <rect key="frame" x="231" y="-5" width="69" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gnA-ve-F2a">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="P6W-5A-Lli" id="2G6-e1-7A4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="CK7-GW-P5T" firstAttribute="leading" secondItem="0eT-aI-AG0" secondAttribute="trailing" constant="4" id="0U0-ks-Lxe"/>
+                            <constraint firstItem="aKq-rZ-Dai" firstAttribute="top" secondItem="mAv-zg-CMg" secondAttribute="top" id="25s-fO-kjB"/>
+                            <constraint firstItem="XVo-SQ-dFy" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="3dA-Xv-onn"/>
+                            <constraint firstAttribute="bottom" secondItem="XVo-SQ-dFy" secondAttribute="bottom" constant="2" id="Gr2-If-Og2"/>
+                            <constraint firstItem="XVo-SQ-dFy" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="HE9-4O-MLN"/>
+                            <constraint firstAttribute="trailing" secondItem="aKq-rZ-Dai" secondAttribute="trailing" id="MUJ-K8-0va"/>
+                            <constraint firstAttribute="trailing" secondItem="CK7-GW-P5T" secondAttribute="trailing" constant="6" id="STs-1x-WU4"/>
+                            <constraint firstItem="0eT-aI-AG0" firstAttribute="leading" secondItem="Q19-jS-sOd" secondAttribute="trailing" constant="8" id="Tch-bW-6qv"/>
+                            <constraint firstItem="Q19-jS-sOd" firstAttribute="leading" secondItem="XVo-SQ-dFy" secondAttribute="trailing" constant="8" id="hph-Xo-d0a"/>
+                            <constraint firstItem="8bg-wq-mHs" firstAttribute="top" secondItem="aKq-rZ-Dai" secondAttribute="bottom" id="itD-fv-JqK"/>
+                            <constraint firstItem="aKq-rZ-Dai" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="txJ-L2-Niu"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="425.5" y="1143.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="like" width="128" height="128"/>
         <image name="mainTab" width="540" height="536"/>
-        <image name="retweet" width="589" height="589"/>
+        <image name="reblog" width="557" height="557"/>
+        <image name="tag" width="562" height="562"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="05S-7z-rrn"/>
+    </inferredMetricsTieBreakers>
 </document>

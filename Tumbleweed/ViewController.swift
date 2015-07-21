@@ -11,6 +11,7 @@ import TMTumblrSDK
 import SwiftyUserDefaults
 
 class ViewController: NSViewController {
+    @IBOutlet var avatarView : NSImageView!
     @IBOutlet var tableView : NSTableView!
     @IBOutlet var dashboardDataSource : DashboardDataSource!
     
@@ -25,24 +26,45 @@ class ViewController: NSViewController {
                     Defaults["OAuthTokenSecret"] = TMAPIClient.sharedInstance().OAuthTokenSecret
                 }
                 else {
-                    NSLog("not authenticated")
+                    NSLog("there was an error authenticating")
                 }
             }
         }
         else {
-            print("already authenticated")
             TMAPIClient.sharedInstance().OAuthToken = Defaults["OAuthToken"].stringValue
             TMAPIClient.sharedInstance().OAuthTokenSecret = Defaults["OAuthTokenSecret"].stringValue
         }
         self.loadDashboard()
+        self.loadUserAvatar()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadDashboard", name: "refreshDashboard", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadOlder", name: "loadOlder", object: nil)
         NSTimer.scheduledTimerWithTimeInterval(60*5, target: self, selector: "loadDashboard", userInfo: nil, repeats: true)
+    }
+    
+    func loadUserAvatar() {
+        avatarView.wantsLayer = true
+        avatarView.layer!.cornerRadius = 3.0
+        avatarView.layer!.masksToBounds = true
+        TMAPIClient.sharedInstance().userInfo { (result: AnyObject!, error: NSError!) -> Void in
+            if error == nil {
+                let userInfo = result as! NSDictionary
+                let user = userInfo["user"] as! NSDictionary
+                let blogs = user["blogs"] as! NSArray
+                let blog = blogs[0]["name"] as! String
+                TMAPIClient.sharedInstance().avatar(blog, size: UInt(96), callback: { (result: AnyObject!, error: NSError!) -> Void in
+                    if error == nil {
+                        let avatarData = result as! NSData
+                        self.avatarView.image = NSImage(data: avatarData)
+                    }
+                })
+            }
+        }
     }
     
     func loadDashboard() {
         let parameters = ["limit":20]//["before_id":124634106921]//["since_id": "124627523585"] //["type":"audio"]
 //        let parameters = ["before_id":124634106921]
-        TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result : AnyObject!, error: NSError!) -> Void in
+        TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
 //                self.dashboardDataSource.posts = Array(posts)
@@ -52,7 +74,19 @@ class ViewController: NSViewController {
         })
     }
     
-    @IBAction func refresh (sender: AnyObject) {
+    func loadOlder() {
+        let lastPostId = dashboardDataSource.posts[dashboardDataSource.posts.endIndex-1]["id"] as! Int
+        let parameters = ["before_id": lastPostId]
+        print("last post id: \(lastPostId)")
+        TMAPIClient.sharedInstance().dashboard(parameters) { (result: AnyObject!, error: NSError!) -> Void in
+            if error == nil {
+                let posts = (result as! NSDictionary)["posts"] as! NSArray
+                self.dashboardDataSource.processOldPosts(Array(posts))
+            }
+        }
+    }
+    
+    @IBAction func refresh(sender: AnyObject) {
         self.loadDashboard()
     }
 

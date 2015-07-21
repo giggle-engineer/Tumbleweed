@@ -28,16 +28,25 @@ class PostView : NSTableCellView {
         if(liked) {
             NSLog("postId:%@ reblogKey:%@", postId, reblogKey)
             TMAPIClient.sharedInstance().like(postId, reblogKey: reblogKey, callback: { (result : AnyObject!, error: NSError!)  -> Void in
-                if(error == nil) {
+                if error == nil {
                     NSLog("Post was liked!")
                 }
                 else {
                     NSLog("like error:%@", error.description)
-                    sender.deselect()
+                    sender.selected = false
                 }
             })
         }
         else {
+            TMAPIClient.sharedInstance().unlike(postId, reblogKey: "", callback: { (result: AnyObject!, error: NSError!) -> Void in
+                if error == nil {
+                    NSLog("Post was unliked.")
+                }
+                else {
+                    NSLog("unlike error:%@", error.description)
+                    sender.selected = true
+                }
+            })
             NSLog("Post was unliked")
         }
     }

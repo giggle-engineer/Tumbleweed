@@ -10,8 +10,14 @@ import Cocoa
 import DCTextEngine
 
 class TextPostController : PostController {
+    private var body : NSString!
     override func fillContent() {
         super.fillContent()
+        if (self.view is TextPostView) {
+        }
+        else {
+            return
+        }
         let textPostView = self.view as! TextPostView
         let body = post?["body"] as! NSString
 //        detect format type
@@ -22,4 +28,11 @@ class TextPostController : PostController {
         textPostView.body?.attributedStringValue = attributedString!
         
     }
+    
+//    func heightForBody() -> Int {
+//        let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
+//        attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
+////        attributedString.height
+////        [attributedStatus heightForWidth:[[self window] frame].size.width-distanceToLeftSuperview-distanceToRightSuperview]
+//    }
 }

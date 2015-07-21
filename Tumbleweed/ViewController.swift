@@ -36,15 +36,18 @@ class ViewController: NSViewController {
         }
         self.loadDashboard()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadDashboard", name: "refreshDashboard", object: nil)
+        NSTimer.scheduledTimerWithTimeInterval(60*5, target: self, selector: "loadDashboard", userInfo: nil, repeats: true)
     }
     
     func loadDashboard() {
-        print("boop")
-        TMAPIClient.sharedInstance().dashboard(nil, callback: { (result : AnyObject!, error: NSError!) -> Void in
+        let parameters = ["limit":20]//["before_id":124634106921]//["since_id": "124627523585"] //["type":"audio"]
+//        let parameters = ["before_id":124634106921]
+        TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result : AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
-                self.dashboardDataSource.posts = posts
-                self.tableView.reloadData()
+//                self.dashboardDataSource.posts = Array(posts)
+                self.dashboardDataSource.processNewPosts(Array(posts))
+//                self.tableView.reloadData()
             }
         })
     }

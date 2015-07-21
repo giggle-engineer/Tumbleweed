@@ -11,7 +11,7 @@ import TMTumblrSDK
 
 class PostController {
     var row : Int?
-    var tableView : NSTableView?
+//    var tableView : NSTableView?
     var post : NSDictionary?
     var view : PostView? {
         didSet {
@@ -19,9 +19,9 @@ class PostController {
         }
     }
     
-    init(tableView : NSTableView) {
-        self.tableView = tableView
-    }
+//    init(tableView : NSTableView) {
+//        self.tableView = tableView
+//    }
 
     func fillContent() {
         let blogName = post?["blog_name"] as! String
@@ -39,7 +39,13 @@ class PostController {
         if (post?["source_title"] != nil) {
             if(post?["source_title"] is String) {
                 view?.reblogedFrom.stringValue = post?["source_title"] as! String
+                view?.reblog.hidden = false
+                view?.reblogedFrom.hidden = false
             }
+        }
+        else {
+            view?.reblog.hidden = true
+            view?.reblogedFrom.hidden = true
         }
         
         TMAPIClient.sharedInstance().avatar(blogName, size: 48) { (result: AnyObject!, error: NSError!) -> Void in

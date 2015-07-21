@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0818CC561B5CF86A00685A61 /* AudioPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818CC551B5CF86A00685A61 /* AudioPostController.swift */; };
 		083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FA24C1B5B5D6900D37DA7 /* PostView.swift */; };
 		0845087D1B5B75E5001AF7FA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845087C1B5B75E5001AF7FA /* Post.swift */; };
 		087413E01B5BCC5500EE2FDF /* ImagePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */; };
@@ -21,6 +22,8 @@
 		08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */; };
 		08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */; };
 		08C31F791B5CDBE50089C13E /* TextPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C31F781B5CDBE50089C13E /* TextPostView.swift */; };
+		08C31F7B1B5CF7150089C13E /* AudioPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C31F7A1B5CF7150089C13E /* AudioPostView.swift */; };
+		08C31F7D1B5CF7540089C13E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C31F7C1B5CF7540089C13E /* WebKit.framework */; };
 		0E55DA44A639C43746C1D182 /* Pods_Tumbleweed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0818CC551B5CF86A00685A61 /* AudioPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPostController.swift; sourceTree = "<group>"; };
 		083FA24C1B5B5D6900D37DA7 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		0845087C1B5B75E5001AF7FA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostController.swift; sourceTree = "<group>"; };
 		08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostController.swift; sourceTree = "<group>"; };
 		08C31F781B5CDBE50089C13E /* TextPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostView.swift; sourceTree = "<group>"; };
+		08C31F7A1B5CF7150089C13E /* AudioPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPostView.swift; sourceTree = "<group>"; };
+		08C31F7C1B5CF7540089C13E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1D9AD972092C1BF1E39AF48A /* Pods-Tumbleweed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbleweed.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.release.xcconfig"; sourceTree = "<group>"; };
 		D14BF02B5E30D414D4647D93 /* Pods-Tumbleweed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbleweed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbleweed/Pods-Tumbleweed.debug.xcconfig"; sourceTree = "<group>"; };
 		E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tumbleweed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C31F7D1B5CF7540089C13E /* WebKit.framework in Frameworks */,
 				0E55DA44A639C43746C1D182 /* Pods_Tumbleweed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +115,7 @@
 				08BCA9C91B5A625400A23CA6 /* PostController.swift */,
 				08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */,
 				08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */,
+				0818CC551B5CF86A00685A61 /* AudioPostController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				083FA24C1B5B5D6900D37DA7 /* PostView.swift */,
 				087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */,
 				08C31F781B5CDBE50089C13E /* TextPostView.swift */,
+				08C31F7A1B5CF7150089C13E /* AudioPostView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 		F6C226C56CC95AD35E009FE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08C31F7C1B5CF7540089C13E /* WebKit.framework */,
 				E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */,
 			);
 			name = Frameworks;
@@ -379,6 +389,8 @@
 				08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */,
 				083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */,
 				089714491B59F6C100DC25D7 /* ViewController.swift in Sources */,
+				0818CC561B5CF86A00685A61 /* AudioPostController.swift in Sources */,
+				08C31F7B1B5CF7150089C13E /* AudioPostView.swift in Sources */,
 				08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */,
 				08C31F791B5CDBE50089C13E /* TextPostView.swift in Sources */,
 				08BCA9CA1B5A625400A23CA6 /* PostController.swift in Sources */,

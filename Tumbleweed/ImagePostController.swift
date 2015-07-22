@@ -41,7 +41,7 @@ class ImagePostController : PostController {
                             print("image error: \(error!.description)")
                         }
                     })
-                    dataTask?.resume()
+                    dataTask.resume()
                 }
                 else {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in

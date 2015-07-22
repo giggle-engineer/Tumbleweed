@@ -53,13 +53,13 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         if !postsInRange {
             // there was a gap in the new posts between now and what we have
             // we can do something like tweetbot and have a gap button
-            newPostIndex = newPosts.count
+            newPostIndex = newPosts.count-1
         }
         
         // we're adding to what we have
         if posts.count > 0 && newPostIndex > 0 {
             print("new posts")
-            posts = newPosts[0...newPostIndex] + posts
+            posts = newPosts[0...(newPostIndex-1)] + posts
         }
         else {
             // we have no current posts but new posts, we're starting fresh

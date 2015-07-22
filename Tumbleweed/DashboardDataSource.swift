@@ -17,8 +17,6 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
                 return AudioPostController()
             case "chat":
                 return TextPostController()
-//            case "quote":
-//                return TextPostController()
             case "text":
                 return TextPostController()
             case "photo":

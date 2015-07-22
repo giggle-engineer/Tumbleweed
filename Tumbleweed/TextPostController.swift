@@ -23,6 +23,7 @@ class TextPostController : PostController {
 //        detect format type
 //        let engine = DCTextEngine.engineWithMarkdown()
 //        let attributedString = engine.parse(body)
+        textPostView.body?.string = ""
         let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUnicodeStringEncoding)!, documentAttributes: nil)
         attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
         textPostView.body?.textStorage?.appendAttributedString(attributedString!)

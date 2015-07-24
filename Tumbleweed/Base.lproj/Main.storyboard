@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A216g" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A226f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="8152.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8164.2"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="8164.2"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -661,7 +661,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -675,7 +675,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="275"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -728,14 +728,14 @@
                                 </subviews>
                                 <animations/>
                             </visualEffectView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="234" horizontalPageScroll="10" verticalLineScroll="234" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Fv-AuI">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="234" horizontalPageScroll="10" verticalLineScroll="234" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Fv-AuI" customClass="AutoloadingScrollView" customModule="Tumbleweed" customModuleProvider="target">
                                 <rect key="frame" x="59" y="0.0" width="275" height="729"/>
                                 <clipView key="contentView" id="60Z-lH-tdN">
                                     <rect key="frame" x="0.0" y="0.0" width="275" height="729"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="232" rowSizeStyle="automatic" viewBased="YES" id="Ny1-07-JOG">
-                                            <rect key="frame" x="0.0" y="0.0" width="278" height="729"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1070,7 +1070,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
-                                                                            <textView ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="LaN-VK-BkY">
+                                                                            <textView ambiguous="YES" editable="NO" drawsBackground="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="LaN-VK-BkY">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="170"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <animations/>
@@ -1386,6 +1386,7 @@
                     <connections>
                         <outlet property="avatarView" destination="lFX-do-L9q" id="gwW-en-XN6"/>
                         <outlet property="dashboardDataSource" destination="aPN-ZX-ffa" id="LI9-Kz-gXX"/>
+                        <outlet property="scrollView" destination="cKg-Fv-AuI" id="anA-BE-e6h"/>
                         <outlet property="tableView" destination="Ny1-07-JOG" id="r0w-UK-pJl"/>
                     </connections>
                 </viewController>
@@ -1420,7 +1421,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-wq-mHs">
-                                <rect key="frame" x="0.0" y="23" width="361" height="5"/>
+                                <rect key="frame" x="0.0" y="23" width="361" height="4"/>
                                 <animations/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1433,7 +1434,7 @@
                                 </constraints>
                                 <animations/>
                                 <tokenFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="QDI-pI-M4W">
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </tokenFieldCell>

@@ -17,8 +17,7 @@ class AutoloadingScrollView : NSScrollView {
     var isLoading = false
     override func scrollWheel(theEvent: NSEvent) {
         super.scrollWheel(theEvent)
-        if self.documentView is NSTableView {
-            let tableView = self.documentView as! NSTableView
+        if let tableView = self.documentView as? NSTableView {
             let range = tableView.rowsInRect(self.contentView.visibleRect)
             if(range.location+range.length >= tableView.numberOfRows) {
                 if !isLoading {
@@ -27,7 +26,6 @@ class AutoloadingScrollView : NSScrollView {
                     delegate?.reachedEndOfRows()
                 }
             }
-//            NSLog("visible range: %@", range)
         }
     }
 }

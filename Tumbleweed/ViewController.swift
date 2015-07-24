@@ -20,8 +20,8 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
         super.viewDidLoad()
         scrollView.delegate = self
         
-        TMAPIClient.sharedInstance().OAuthConsumerKey = "7Wi4PfAJwnXKFnu0WTz1uFBfg4HuV2WLJlrWE8b4SbVcgPMdPO"
-        TMAPIClient.sharedInstance().OAuthConsumerSecret = "zLVu1OMwX7a13aXncEj9Dq9Zn8kXJo8D2sQU3rFBHp8iNyryU4"
+        TMAPIClient.sharedInstance().OAuthConsumerKey = OAuthConsumerKey
+        TMAPIClient.sharedInstance().OAuthConsumerSecret = OAuthConsumerSecret
         if(Defaults["OAuthToken"].stringValue=="") {
             TMAPIClient.sharedInstance().authenticate("tumbleweed") { (NSError error) -> Void in
                 if(error == nil) {

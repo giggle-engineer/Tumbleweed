@@ -22,16 +22,16 @@ class AudioPostController : PostController {
             else {
                 audioView.trackName?.hidden = true
             }
-            if post?["album_name"] != nil {
-                audioView.albumName?.stringValue = post?["album_name"] as! String
+            if let albumName = post?["album_name"] as? String {
+                audioView.albumName?.stringValue = albumName
             }
             else {
+                audioView.albumName?.stringValue = ""
                 audioView.albumName?.hidden = true
             }
             
             
-            if post?["album_art"] != nil {
-                let url = post?["album_art"] as! String
+            if let url = post?["album_art"] as? String {
                 TMCache.sharedCache().objectForKey(url, block: { (cache: TMCache!, key:String!, object:AnyObject!) -> Void in
                     let audioPostView = self.view as! AudioPostView
                     audioPostView.artworkView?.image = nil

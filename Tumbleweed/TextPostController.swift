@@ -13,23 +13,20 @@ class TextPostController : PostController {
     private var body : NSString!
     override func fillContent() {
         super.fillContent()
-        if (self.view is TextPostView) {
-        }
-        else {
-            return
-        }
-        let textPostView = self.view as! TextPostView
-        if let body = post?["body"] as? NSString {
-            //        detect format type
-            //        let engine = DCTextEngine.engineWithMarkdown()
-            //        let attributedString = engine.parse(body)
-            textPostView.body?.string = ""
-            let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUnicodeStringEncoding)!, documentAttributes: nil)
-            attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
-            textPostView.body?.textStorage?.appendAttributedString(attributedString!)
-        }
-        else {
-            textPostView.body?.string = ""
+        if let textPostView = self.view as? TextPostView
+        {
+            if let body = post?["body"] as? NSString {
+                //        detect format type
+                //        let engine = DCTextEngine.engineWithMarkdown()
+                //        let attributedString = engine.parse(body)
+                textPostView.body?.string = ""
+                let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUnicodeStringEncoding)!, documentAttributes: nil)
+                attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
+                textPostView.body?.textStorage?.appendAttributedString(attributedString!)
+            }
+            else {
+                textPostView.body?.string = ""
+            }
         }
     }
     

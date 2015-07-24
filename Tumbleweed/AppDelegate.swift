@@ -19,6 +19,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
+    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        self.handleReopen()
+        return true;
+    }
+    
     func applicationWillFinishLaunching(notification: NSNotification) {
         let appleEventManger = NSAppleEventManager.sharedAppleEventManager()
         appleEventManger.setEventHandler(self, andSelector: "handleURLEvent:withReplyEvent:", forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
@@ -27,6 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func handleURLEvent(event : NSAppleEventDescriptor, withReplyEvent replyEvent : NSAppleEventDescriptor) {
         let calledURL = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue
         TMAPIClient.sharedInstance().handleOpenURL(NSURL(string: calledURL!))
+    }
+    
+    func handleReopen() {
+        NSNotificationCenter.defaultCenter().postNotificationName("handleReopen", object: self)
     }
     
     @IBAction func refreshDashboard(sender: AnyObject) {

@@ -6,4 +6,14 @@
 //  Copyright © 2015 Chloe Stars. All rights reserved.
 //
 
-import Foundation
+import Cocoa
+
+class WindowController : NSWindowController {
+    override func windowWillLoad() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleReopen", name: "handleReopen", object: nil)
+    }
+    
+    func handleReopen() {
+        self.showWindow(nil)
+    }
+}

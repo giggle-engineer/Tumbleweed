@@ -10,13 +10,16 @@ import Cocoa
 import TMTumblrSDK
 import SwiftyUserDefaults
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, AutoloadingScrollViewDelegate {
     @IBOutlet var avatarView : NSImageView!
     @IBOutlet var tableView : NSTableView!
     @IBOutlet var dashboardDataSource : DashboardDataSource!
+    @IBOutlet var scrollView : AutoloadingScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.delegate = self
+        
         TMAPIClient.sharedInstance().OAuthConsumerKey = "***REMOVED***"
         TMAPIClient.sharedInstance().OAuthConsumerSecret = "***REMOVED***"
         if(Defaults["OAuthToken"].stringValue=="") {
@@ -62,15 +65,15 @@ class ViewController: NSViewController {
     }
     
     func loadDashboard() {
+        // prevent from loading older posts and refreshing at the same time.. there's probably a better way.. like queueing these up
+        scrollView.isLoading = true
         let parameters = ["limit":20]//["before_id":124634106921]//["since_id": "124627523585"] //["type":"audio"]
-//        let parameters = ["before_id":124634106921]
         TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
-//                self.dashboardDataSource.posts = Array(posts)
                 self.dashboardDataSource.processNewPosts(Array(posts))
-//                self.tableView.reloadData()
             }
+            self.scrollView.isLoading = false
         })
     }
     
@@ -83,12 +86,22 @@ class ViewController: NSViewController {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
                 self.dashboardDataSource.processOldPosts(Array(posts))
             }
+            // the scroll view will wait for this before autoloading again
+            self.scrollView.isLoading = false
         }
     }
     
     @IBAction func refresh(sender: AnyObject) {
         self.loadDashboard()
     }
+    
+    // MARK: AutoloadingScrollViewDelegate
+    
+    func reachedEndOfRows() {
+        self.loadOlder()
+    }
+    
+    // MARK: -
 
     override var representedObject: AnyObject? {
         didSet {

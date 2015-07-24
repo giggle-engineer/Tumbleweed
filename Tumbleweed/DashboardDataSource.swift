@@ -78,25 +78,25 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         
         // attempting to debug a weird issue where the controller gets associated with a wrong post index
         // I suspect it's a mutation bug, I don't call insert rows until I'm done though *shrugs*
-        for (index,postController) in postControllers.enumerate() {
-            if (postController is TextPostController) {
-                print("TextPostController")
-            }
-            if (postController is ImagePostController) {
-                print("ImagePostController")
-            }
-            if (postController is AudioPostController) {
-                print("AudioPostController")
-            }
-            let type = posts[index]["type"] as! String
-            print("for \(type)")
-        }
+//        for (index,postController) in postControllers.enumerate() {
+//            if (postController is TextPostController) {
+//                print("TextPostController")
+//            }
+//            if (postController is ImagePostController) {
+//                print("ImagePostController")
+//            }
+//            if (postController is AudioPostController) {
+//                print("AudioPostController")
+//            }
+//            let type = posts[index]["type"] as! String
+//            print("for \(type)")
+//        }
         
         tableView.insertRowsAtIndexes(NSIndexSet(indexesInRange: NSMakeRange(0, newPostIndex)), withAnimation: .SlideDown)
     }
     
     func processOldPosts(oldPosts : Array<AnyObject>) {
-        let range = NSMakeRange(posts.count, oldPosts.count)
+        let range = NSMakeRange(posts.count-1, oldPosts.count)
         var newPostControllers = Array<PostController>()
         for post in oldPosts {
             let type = post["type"] as! String
@@ -173,5 +173,4 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return posts.count
     }
-    // makeViewWithIdentifier with different identifiers for different post types
 }

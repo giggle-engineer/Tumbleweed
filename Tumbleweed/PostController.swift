@@ -33,7 +33,7 @@ class PostController {
                 }
             }
         }
-        if let count = post?["note_countt"] as? Int {
+        if let count = post?["note_count"] as? Int {
             self.view.noteCount.stringValue = "\(count) notes"
         }
         if let id = post?["id"] as? Int {
@@ -45,15 +45,30 @@ class PostController {
         if let reblogKey = post?["reblog_key"] as? String {
             self.view.reblogKey = reblogKey
         }
-        if let sourceTitle = post?["source_title"] as? String {
-            self.view.reblogedFrom.stringValue = sourceTitle
-            self.view.reblog.hidden = false
-            self.view.reblogedFrom.hidden = false
-        }
-        else {
-            self.view.reblogedFrom.stringValue = ""
-            self.view.reblog.hidden = true
-            self.view.reblogedFrom.hidden = true
+        
+        if let trail = post?["trail"] as? NSArray {
+            for blog in trail {
+                if let trailBlog = blog as? NSDictionary {
+                    if let sourceBlog = trailBlog["blog"] as? NSDictionary {
+                        if let name = sourceBlog["name"] as? String {
+                            self.view.reblogedFrom.stringValue = name
+                            self.view.reblog.hidden = false
+                            self.view.reblogedFrom.hidden = false
+                        }
+                        else {
+                            self.view.reblogedFrom.stringValue = ""
+                            self.view.reblog.hidden = true
+                            self.view.reblogedFrom.hidden = true
+                        }
+                    }
+                }
+                else {
+                    self.view.reblogedFrom.stringValue = ""
+                    self.view.reblog.hidden = true
+                    self.view.reblogedFrom.hidden = true
+                }
+                break
+            }
         }
     }
 }

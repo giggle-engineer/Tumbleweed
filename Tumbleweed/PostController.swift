@@ -10,55 +10,50 @@ import Cocoa
 import TMTumblrSDK
 
 class PostController {
-    var row : Int?
-//    var tableView : NSTableView?
     var post : NSDictionary?
-    var view : PostView? {
+    var view : PostView! {
         didSet {
             self.fillContent()
         }
     }
-    
-//    init(tableView : NSTableView) {
-//        self.tableView = tableView
-//    }
 
     func fillContent() {
-        let blogName = post?["blog_name"] as! String
-        let id = post?["id"] as! Int
-        let idString = String(id)
-        let reblogKey = post?["reblog_key"] as! String
-        let count = post?["note_count"] as! Int
-        let liked = post?["liked"] as! Bool
-        
-        view?.favoriteButton.selected = liked
-        view?.postId = idString
-        view?.reblogKey = reblogKey
-        view?.blogger.stringValue = blogName
-        view?.noteCount.stringValue = "\(count) notes"
-        if (post?["source_title"] != nil) {
-            if(post?["source_title"] is String) {
-                view?.reblogedFrom.stringValue = post?["source_title"] as! String
-                view?.reblog.hidden = false
-                view?.reblogedFrom.hidden = false
+        if let blogName = post?["blog_name"] as? String {
+            self.view.blogger.stringValue = blogName
+            TMAPIClient.sharedInstance().avatar(blogName, size: 48) { (result: AnyObject!, error: NSError!) -> Void in
+                if error == nil {
+                    let image = NSImage(data: result as! NSData)
+                    self.view.avatar.image = image
+                    self.view.avatar.wantsLayer = true
+                    self.view.avatar.layer!.cornerRadius = 3.0
+                    self.view.avatar.layer!.masksToBounds = true
+                }
+                else {
+                    print("error: \(error.description)")
+                }
             }
+        }
+        if let count = post?["note_countt"] as? Int {
+            self.view.noteCount.stringValue = "\(count) notes"
+        }
+        if let id = post?["id"] as? Int {
+            self.view.postId = String(id)
+        }
+        if let liked = post?["liked"] as? Bool {
+            self.view.favoriteButton.selected = liked
+        }
+        if let reblogKey = post?["reblog_key"] as? String {
+            self.view.reblogKey = reblogKey
+        }
+        if let sourceTitle = post?["source_title"] as? String {
+            self.view.reblogedFrom.stringValue = sourceTitle
+            self.view.reblog.hidden = false
+            self.view.reblogedFrom.hidden = false
         }
         else {
-            view?.reblog.hidden = true
-            view?.reblogedFrom.hidden = true
-        }
-        
-        TMAPIClient.sharedInstance().avatar(blogName, size: 48) { (result: AnyObject!, error: NSError!) -> Void in
-            if error == nil {
-                let image = NSImage(data: result as! NSData)
-                self.view?.avatar.image = image
-                self.view?.avatar.wantsLayer = true
-                self.view?.avatar.layer!.cornerRadius = 3.0
-                self.view?.avatar.layer!.masksToBounds = true
-            }
-            else {
-                print("error: \(error.description)")
-            }
+            self.view.reblogedFrom.stringValue = ""
+            self.view.reblog.hidden = true
+            self.view.reblogedFrom.hidden = true
         }
     }
 }

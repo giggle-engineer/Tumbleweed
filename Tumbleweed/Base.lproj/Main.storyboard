@@ -763,9 +763,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="275" height="31"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xkw-Q5-CLr">
-                                                                            <rect key="frame" x="7" y="7" width="49" height="17"/>
+                                                                            <rect key="frame" x="7" y="7" width="50" height="17"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="x notes" id="SeS-hO-o9u">
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 notes" id="SeS-hO-o9u">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -945,9 +945,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="275" height="31"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD4-AK-Ziw">
-                                                                            <rect key="frame" x="7" y="7" width="49" height="17"/>
+                                                                            <rect key="frame" x="7" y="7" width="50" height="17"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="x notes" id="1cI-Dr-ZpR">
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 notes" id="1cI-Dr-ZpR">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1228,9 +1228,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="275" height="31"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-rj-UQT">
-                                                                            <rect key="frame" x="7" y="7" width="49" height="17"/>
+                                                                            <rect key="frame" x="7" y="7" width="50" height="17"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="x notes" id="P1m-5C-nFx">
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 notes" id="P1m-5C-nFx">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

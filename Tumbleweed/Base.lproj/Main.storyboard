@@ -669,7 +669,6 @@
                         <value key="minSize" type="size" width="335" height="450"/>
                     </window>
                     <connections>
-                        <outlet property="appWindow" destination="IQv-IB-iLA" id="Hzc-4h-bck"/>
                         <outlet property="titleBarView" destination="S5T-WS-oeQ" id="QMq-3A-yVF"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>

@@ -655,13 +655,13 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Tumbleweed" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="49" y="-158"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="INAppStoreWindow">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -669,10 +669,42 @@
                         <value key="minSize" type="size" width="335" height="450"/>
                     </window>
                     <connections>
+                        <outlet property="appWindow" destination="IQv-IB-iLA" id="Hzc-4h-bck"/>
+                        <outlet property="titleBarView" destination="S5T-WS-oeQ" id="QMq-3A-yVF"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customView id="S5T-WS-oeQ">
+                    <rect key="frame" x="0.0" y="0.0" width="483" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <visualEffectView appearanceType="vibrantDark" ambiguous="YES" misplaced="YES" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="ede-Od-UbZ">
+                            <rect key="frame" x="0.0" y="0.0" width="79" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="79" id="Jvu-Ca-liE"/>
+                            </constraints>
+                            <animations/>
+                        </visualEffectView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sd4-lB-ZcJ">
+                            <rect key="frame" x="231" y="8" width="143" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="139" id="xbv-SC-Luf"/>
+                            </constraints>
+                            <animations/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Dashboard" id="kJT-Lu-2Rw">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ede-Od-UbZ" firstAttribute="leading" secondItem="S5T-WS-oeQ" secondAttribute="leading" id="Jb9-IZ-6Xv"/>
+                        <constraint firstItem="sd4-lB-ZcJ" firstAttribute="centerX" secondItem="S5T-WS-oeQ" secondAttribute="centerX" id="Wap-Sf-Nb2"/>
+                    </constraints>
+                    <animations/>
+                </customView>
             </objects>
             <point key="canvasLocation" x="75" y="275"/>
         </scene>
@@ -681,14 +713,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="729"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" ambiguous="YES" misplaced="YES" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="7pK-hl-Xwh">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="729"/>
+                                <rect key="frame" x="0.0" y="0.0" width="79" height="729"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOl-Ek-sUo">
-                                        <rect key="frame" x="7" y="608" width="47" height="47"/>
+                                        <rect key="frame" x="16" y="628" width="47" height="47"/>
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="mainTab" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="URQ-9K-3pR">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -696,7 +728,7 @@
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r8-ZR-MMj">
-                                        <rect key="frame" x="7" y="555" width="47" height="47"/>
+                                        <rect key="frame" x="16" y="575" width="47" height="47"/>
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ose-g8-g3G">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -704,32 +736,32 @@
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-oc-BgS">
-                                        <rect key="frame" x="7" y="502" width="47" height="47"/>
+                                        <rect key="frame" x="16" y="522" width="47" height="47"/>
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bgb-yT-vWK">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-do-L9q">
+                                        <rect key="frame" x="16" y="682" width="47" height="47"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="grp-qe-UYu"/>
+                                    </imageView>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Q8-Ht-VPE">
-                                        <rect key="frame" x="7" y="449" width="47" height="47"/>
+                                        <rect key="frame" x="16" y="469" width="47" height="47"/>
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I0M-cR-86j">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-do-L9q">
-                                        <rect key="frame" x="7" y="662" width="47" height="47"/>
-                                        <animations/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="grp-qe-UYu"/>
-                                    </imageView>
                                 </subviews>
                                 <animations/>
                             </visualEffectView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="234" horizontalPageScroll="10" verticalLineScroll="234" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Fv-AuI" customClass="AutoloadingScrollView" customModule="Tumbleweed" customModuleProvider="target">
-                                <rect key="frame" x="59" y="0.0" width="275" height="729"/>
-                                <clipView key="contentView" id="60Z-lH-tdN">
+                            <scrollView ambiguous="YES" misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="234" horizontalPageScroll="10" verticalLineScroll="234" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Fv-AuI" customClass="AutoloadingScrollView" customModule="Tumbleweed" customModuleProvider="target">
+                                <rect key="frame" x="79" y="0.0" width="275" height="729"/>
+                                <clipView key="contentView" ambiguous="YES" id="60Z-lH-tdN">
                                     <rect key="frame" x="0.0" y="0.0" width="275" height="729"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1304,18 +1336,25 @@
                                                                         <action selector="playPause:" target="zE9-mr-5xc" id="j2i-fb-Y8F"/>
                                                                     </connections>
                                                                 </button>
+                                                                <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crc-SF-ArK">
+                                                                    <rect key="frame" x="3" y="33" width="269" height="44"/>
+                                                                    <animations/>
+                                                                </customView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="cpB-VG-x40" secondAttribute="bottom" constant="51" id="6qI-9J-oQ3"/>
                                                                 <constraint firstItem="kOu-8W-yx3" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="25" id="93s-M5-0OG"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="CfF-xz-7Cx"/>
+                                                                <constraint firstAttribute="trailing" secondItem="crc-SF-ArK" secondAttribute="trailing" constant="3" id="D6p-wB-Wbi"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="top" secondItem="tvu-4w-ozk" secondAttribute="bottom" constant="8" id="Egj-Nz-UJN"/>
                                                                 <constraint firstItem="k49-dh-ZNJ" firstAttribute="top" secondItem="wd5-kG-YMk" secondAttribute="bottom" constant="8" id="Gfa-41-fxZ"/>
+                                                                <constraint firstItem="crc-SF-ArK" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="3" id="K7a-Bz-cSL"/>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="PHN-vp-TLE"/>
                                                                 <constraint firstAttribute="trailing" secondItem="cpB-VG-x40" secondAttribute="trailing" constant="27" id="RZ9-PF-1fN"/>
                                                                 <constraint firstItem="tvu-4w-ozk" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="UUL-bw-8kA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Wbd-t1-6Nt" secondAttribute="trailing" id="UYL-gb-AnE"/>
                                                                 <constraint firstItem="wd5-kG-YMk" firstAttribute="top" secondItem="zE9-mr-5xc" secondAttribute="top" id="d9a-c0-OE5"/>
+                                                                <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="crc-SF-ArK" secondAttribute="bottom" constant="2" id="dsD-Y4-aZ3"/>
                                                                 <constraint firstAttribute="bottom" secondItem="kOu-8W-yx3" secondAttribute="bottom" id="fhq-kR-a3O"/>
                                                                 <constraint firstAttribute="trailing" secondItem="wd5-kG-YMk" secondAttribute="trailing" id="gYt-MQ-HCh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="kOu-8W-yx3" secondAttribute="trailing" constant="24" id="hA1-vR-PJy"/>
@@ -1333,6 +1372,7 @@
                                                                 <outlet property="favoriteButton" destination="7e8-hC-u7c" id="WwK-qS-McN"/>
                                                                 <outlet property="noteCount" destination="Lag-rj-UQT" id="LMh-DU-FFg"/>
                                                                 <outlet property="playPauseButton" destination="cpB-VG-x40" id="QK0-1k-xOX"/>
+                                                                <outlet property="plotView" destination="crc-SF-ArK" id="GCq-r1-3hx"/>
                                                                 <outlet property="reblog" destination="KRV-sT-4cG" id="XGK-z0-Voa"/>
                                                                 <outlet property="reblogedFrom" destination="8S7-vY-onD" id="UoN-GY-u8I"/>
                                                                 <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>
@@ -1368,11 +1408,10 @@
                             <constraint firstItem="7pK-hl-Xwh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="EyW-9W-dMv"/>
                             <constraint firstAttribute="bottom" secondItem="7pK-hl-Xwh" secondAttribute="bottom" id="Lf6-07-Crv"/>
                             <constraint firstItem="cKg-Fv-AuI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="O3U-hl-Z0N"/>
-                            <constraint firstItem="cKg-Fv-AuI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="59" id="Qlo-Nj-cYJ"/>
                             <constraint firstAttribute="trailing" secondItem="cKg-Fv-AuI" secondAttribute="trailing" id="RGH-mD-d78"/>
                             <constraint firstAttribute="trailing" secondItem="cKg-Fv-AuI" secondAttribute="trailing" id="WUe-XX-Qdt"/>
                             <constraint firstAttribute="bottom" secondItem="cKg-Fv-AuI" secondAttribute="bottom" id="X6j-cr-qJV"/>
-                            <constraint firstItem="cKg-Fv-AuI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="59" id="chr-W5-7dm"/>
+                            <constraint firstItem="cKg-Fv-AuI" firstAttribute="leading" secondItem="7pK-hl-Xwh" secondAttribute="trailing" id="XdX-FH-2II"/>
                             <constraint firstItem="cKg-Fv-AuI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="hub-Nd-SkX"/>
                             <constraint firstAttribute="bottom" secondItem="cKg-Fv-AuI" secondAttribute="bottom" id="xX8-64-QPR"/>
                             <constraint firstAttribute="bottom" secondItem="cKg-Fv-AuI" secondAttribute="bottom" id="zIw-P2-txK"/>
@@ -1393,7 +1432,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-4" y="899.5"/>
+            <point key="canvasLocation" x="6" y="899.5"/>
         </scene>
         <!--Reblog Controller-->
         <scene sceneID="gMA-q3-G3m">

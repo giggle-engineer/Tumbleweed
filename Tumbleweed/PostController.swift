@@ -9,7 +9,7 @@
 import Cocoa
 import TMTumblrSDK
 
-class PostController {
+class PostController : NSObject {
     var post : NSDictionary?
     var view : PostView! {
         didSet {
@@ -55,19 +55,14 @@ class PostController {
                             self.view.reblog.hidden = false
                             self.view.reblogedFrom.hidden = false
                         }
-                        else {
-                            self.view.reblogedFrom.stringValue = ""
-                            self.view.reblog.hidden = true
-                            self.view.reblogedFrom.hidden = true
-                        }
                     }
                 }
-                else {
-                    self.view.reblogedFrom.stringValue = ""
-                    self.view.reblog.hidden = true
-                    self.view.reblogedFrom.hidden = true
-                }
                 break
+            }
+            if trail.count == 0 {
+                self.view.reblogedFrom.stringValue = ""
+                self.view.reblog.hidden = true
+                self.view.reblogedFrom.hidden = true
             }
         }
     }

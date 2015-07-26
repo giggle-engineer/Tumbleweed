@@ -9,5 +9,5 @@
 import Cocoa
 
 class TextPostView : PostView {
-    @IBOutlet var body : NSTextView?
+    @IBOutlet var body : NSTextView!
 }

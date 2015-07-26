@@ -9,5 +9,5 @@
 import Cocoa
 
 class ImagePostView : PostView {
-    @IBOutlet var photoView : NSImageView?
+    @IBOutlet var photoView : NSImageView!
 }

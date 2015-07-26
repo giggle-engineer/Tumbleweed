@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8164.2"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="8164.2"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -1186,17 +1185,6 @@
                                                                     </constraints>
                                                                     <animations/>
                                                                 </customView>
-                                                                <webView maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGs-iz-6z0">
-                                                                    <rect key="frame" x="34" y="39" width="207" height="35"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="207" id="CqB-ae-e0Q"/>
-                                                                        <constraint firstAttribute="height" constant="35" id="mGg-rK-nRI"/>
-                                                                    </constraints>
-                                                                    <animations/>
-                                                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
-                                                                        <nil key="identifier"/>
-                                                                    </webPreferences>
-                                                                </webView>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k49-dh-ZNJ">
                                                                     <rect key="frame" x="3" y="85" width="48" height="48"/>
                                                                     <constraints>
@@ -1305,18 +1293,26 @@
                                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <font key="titleFont" metaFont="system"/>
                                                                 </box>
+                                                                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-VG-x40">
+                                                                    <rect key="frame" x="199" y="82" width="49" height="45"/>
+                                                                    <animations/>
+                                                                    <buttonCell key="cell" type="square" title="Play" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TlI-6f-1em">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="playPause:" target="zE9-mr-5xc" id="j2i-fb-Y8F"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="GGs-iz-6z0" secondAttribute="bottom" constant="8" id="8uD-Ct-Tpu"/>
+                                                                <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="cpB-VG-x40" secondAttribute="bottom" constant="51" id="6qI-9J-oQ3"/>
                                                                 <constraint firstItem="kOu-8W-yx3" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="25" id="93s-M5-0OG"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="CfF-xz-7Cx"/>
-                                                                <constraint firstItem="GGs-iz-6z0" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="34" id="Cor-1a-5bT"/>
-                                                                <constraint firstItem="GGs-iz-6z0" firstAttribute="top" secondItem="k49-dh-ZNJ" secondAttribute="bottom" constant="11" id="DUq-BG-qbN"/>
-                                                                <constraint firstItem="GGs-iz-6z0" firstAttribute="top" secondItem="qfI-mt-Z6H" secondAttribute="bottom" constant="11" id="Dha-km-zOZ"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="top" secondItem="tvu-4w-ozk" secondAttribute="bottom" constant="8" id="Egj-Nz-UJN"/>
-                                                                <constraint firstAttribute="trailing" secondItem="GGs-iz-6z0" secondAttribute="trailing" constant="34" id="Fm1-nj-fg0"/>
                                                                 <constraint firstItem="k49-dh-ZNJ" firstAttribute="top" secondItem="wd5-kG-YMk" secondAttribute="bottom" constant="8" id="Gfa-41-fxZ"/>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="PHN-vp-TLE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cpB-VG-x40" secondAttribute="trailing" constant="27" id="RZ9-PF-1fN"/>
                                                                 <constraint firstItem="tvu-4w-ozk" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="UUL-bw-8kA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Wbd-t1-6Nt" secondAttribute="trailing" id="UYL-gb-AnE"/>
                                                                 <constraint firstItem="wd5-kG-YMk" firstAttribute="top" secondItem="zE9-mr-5xc" secondAttribute="top" id="d9a-c0-OE5"/>
@@ -1336,10 +1332,10 @@
                                                                 <outlet property="blogger" destination="g9u-Cl-EHi" id="WoJ-hb-yNm"/>
                                                                 <outlet property="favoriteButton" destination="7e8-hC-u7c" id="WwK-qS-McN"/>
                                                                 <outlet property="noteCount" destination="Lag-rj-UQT" id="LMh-DU-FFg"/>
+                                                                <outlet property="playPauseButton" destination="cpB-VG-x40" id="QK0-1k-xOX"/>
                                                                 <outlet property="reblog" destination="KRV-sT-4cG" id="XGK-z0-Voa"/>
                                                                 <outlet property="reblogedFrom" destination="8S7-vY-onD" id="UoN-GY-u8I"/>
                                                                 <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>
-                                                                <outlet property="webView" destination="GGs-iz-6z0" id="KBl-DG-8nH"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>

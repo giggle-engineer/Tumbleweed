@@ -7,11 +7,14 @@
 //
 
 import Cocoa
-import WebKit
+import AVKit
 
 class AudioPostView : PostView {
-    @IBOutlet var webView : WebView?
-    @IBOutlet var artworkView : NSImageView?
-    @IBOutlet var trackName : NSTextField?
-    @IBOutlet var albumName : NSTextField?
+    @IBOutlet var playPauseButton : NSButton!
+    @IBOutlet var artworkView : NSImageView!
+    @IBOutlet var trackName : NSTextField!
+    @IBOutlet var albumName : NSTextField!
+    
+    var playPauseCallback: (() -> Void)!
+    @IBAction func playPause(sender : NSButton) { playPauseCallback() }
 }

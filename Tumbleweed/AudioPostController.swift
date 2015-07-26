@@ -8,14 +8,60 @@
 
 import Cocoa
 import TMCache
+import AVKit
+import AVFoundation
 
 class AudioPostController : PostController {
+    private var kvoContext: UInt8 = 1
+    var player : AVPlayer?
+    
     override func fillContent() {
         super.fillContent()
         if let audioView = self.view as? AudioPostView {
-            if let player = post?["player"] as? String {
-                audioView.webView?.mainFrame.loadHTMLString(player, baseURL: nil)
+            // this is for reused views because KVO won't work there
+            playPauseUpdate()
+            
+            if let audioUrl = post?["audio_url"] as? String {
+                var url = NSURL(string: audioUrl)
+                var playDirectly = true
+                if let type = post?["audio_type"] as? String {
+                    switch (type) {
+                        case "tumblr":
+                            // whoa, this output is actually inconsistent, the bogus ones are at tumblr.com
+                            if url?.host == "www.tumblr.com" {
+                                if let lastPathComponent = url?.lastPathComponent {
+                                    url = NSURL(string: "https://a.tumblr.com/\(lastPathComponent)o1.mp3")
+                                }
+                            }
+                            break
+                        case "spotify":
+                            playDirectly = false
+                            break
+                        default:
+                            break
+                    }
+                }
+                
+                audioView.playPauseCallback =  { () in
+                    if playDirectly {
+                        if self.player == nil {
+                            self.player = AVPlayer(URL: url!)
+                            self.player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: &self.kvoContext)
+                        }
+                        if let player = self.player {
+                            if player.rate == 0 {
+                                player.play()
+                            } else {
+                                player.pause()
+                            }
+                        }
+                    }
+                    else {
+                        NSWorkspace.sharedWorkspace().openURL(url!)
+                    }
+                }
             }
+            
             if let trackName = post?["track_name"] as? String {
                 audioView.trackName?.stringValue = trackName
             }
@@ -60,5 +106,28 @@ class AudioPostController : PostController {
                 })
             }
         }
+    }
+    
+    func playPauseUpdate() {
+        if let audioView = self.view as? AudioPostView where self.player != nil {
+            if self.player!.rate == 0 {
+                audioView.playPauseButton.title = "Play"
+            }
+            else {
+                audioView.playPauseButton.title = "Pause"
+            }
+        }
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]!, context: UnsafeMutablePointer<Void>) {
+        if context == &kvoContext {
+            if keyPath == "rate" {
+                self.playPauseUpdate()
+            }
+        }
+    }
+    
+    deinit {
+        self.player?.removeObserver(self, forKeyPath: "rate")
     }
 }

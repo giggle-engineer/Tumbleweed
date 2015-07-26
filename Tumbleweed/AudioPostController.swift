@@ -68,7 +68,7 @@ class AudioPostController : PostController {
             else {
                 audioView.trackName?.hidden = true
             }
-            if let albumName = post?["album_name"] as? String {
+            if let albumName = post?["album"] as? String {
                 audioView.albumName?.stringValue = albumName
             }
             else {

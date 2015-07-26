@@ -53,13 +53,18 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
                 let userInfo = result as! NSDictionary
                 let user = userInfo["user"] as! NSDictionary
                 let blogs = user["blogs"] as! NSArray
-                let blog = blogs[0]["name"] as! String
-                TMAPIClient.sharedInstance().avatar(blog, size: UInt(96), callback: { (result: AnyObject!, error: NSError!) -> Void in
-                    if error == nil {
-                        let avatarData = result as! NSData
-                        self.avatarView.image = NSImage(data: avatarData)
+                for blog in blogs {
+                    if blog["primary"] as? Int == 1 {
+                        let name = blog["name"] as! String
+                        TMAPIClient.sharedInstance().avatar(name, size: UInt(96), callback: { (result: AnyObject!, error: NSError!) -> Void in
+                            if error == nil {
+                                let avatarData = result as! NSData
+                                self.avatarView.image = NSImage(data: avatarData)
+                            }
+                        })
+                        break
                     }
-                })
+                }
             }
         }
     }

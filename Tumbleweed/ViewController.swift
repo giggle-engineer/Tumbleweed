@@ -84,7 +84,7 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
     
     func loadOlder() {
         let lastPostId = dashboardDataSource.posts[dashboardDataSource.posts.endIndex-1]["id"] as! Int
-        let parameters : Array = ["before_id":lastPostId, "reblog_info":"YES"]
+        let parameters : Dictionary<String,AnyObject> = ["before_id":lastPostId, "reblog_info":"YES"]
         print("last post id: \(lastPostId)")
         TMAPIClient.sharedInstance().dashboard(parameters, callback: {  (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {

@@ -1,4 +1,4 @@
-![Icon](/Tumbleweed/Assets.xcassets/AppIcon.appiconset/tumbleweed.png?raw=true) Tumbleweed
+<img src="/Tumbleweed/Assets.xcassets/AppIcon.appiconset/tumbleweed.png?raw=true" width="90" height="90" /> Tumbleweed
 ========
 
 An OS X dashboard Tumblr client.

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A226f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="8164.2"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8164.2"/>
     </dependencies>
     <scenes>
@@ -712,11 +713,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="354" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="916"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" ambiguous="YES" misplaced="YES" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="7pK-hl-Xwh">
-                                <rect key="frame" x="0.0" y="0.0" width="79" height="729"/>
+                                <rect key="frame" x="0.0" y="187" width="79" height="729"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOl-Ek-sUo">
                                         <rect key="frame" x="16" y="628" width="47" height="47"/>
@@ -759,13 +760,13 @@
                                 <animations/>
                             </visualEffectView>
                             <scrollView ambiguous="YES" misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="234" horizontalPageScroll="10" verticalLineScroll="234" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Fv-AuI" customClass="AutoloadingScrollView" customModule="Tumbleweed" customModuleProvider="target">
-                                <rect key="frame" x="79" y="0.0" width="275" height="729"/>
+                                <rect key="frame" x="79" y="20" width="275" height="896"/>
                                 <clipView key="contentView" ambiguous="YES" id="60Z-lH-tdN">
-                                    <rect key="frame" x="0.0" y="0.0" width="275" height="729"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="275" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="232" rowSizeStyle="automatic" viewBased="YES" id="Ny1-07-JOG">
-                                            <rect key="frame" x="0.0" y="0.0" width="278" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="896"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1369,6 +1370,186 @@
                                                                 <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>
                                                             </connections>
                                                         </tableCellView>
+                                                        <tableCellView identifier="video" misplaced="YES" id="8CB-mI-Vj1" customClass="VideoPostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="643" width="275" height="232"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-CA-Ss2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="31"/>
+                                                                    <subviews>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVH-oA-FDp">
+                                                                            <rect key="frame" x="7" y="7" width="50" height="17"/>
+                                                                            <animations/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 notes" id="ITs-6k-WFx">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-BE-e5v" userLabel="Reblog Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
+                                                                            <rect key="frame" x="207" y="-4" width="40" height="40"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="40" id="XhK-ZD-f9D"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="u5f-fs-7oI">
+                                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="reblog"/>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                                                    <color key="value" red="0.096181611580000007" green="1" blue="0.29442336549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.1080106524" green="0.77442392680000005" blue="0.2251040071" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                                                                    <color key="value" red="0.096181611580000007" green="1" blue="0.29442336549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="reblogPost:" target="8CB-mI-Vj1" id="3Kb-fQ-GQP"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                        <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-ol-OLY" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
+                                                                            <rect key="frame" x="240" y="-2" width="35" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="35" id="3Pv-VC-PQ2"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aXP-hK-K1D">
+                                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="like"/>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                                                    <color key="value" red="0.99607843139999996" green="0.43137254899999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8862745098" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                                                                    <color key="value" red="0.99607843139999996" green="0.43137254899999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="likePost:" target="8CB-mI-Vj1" id="DZq-52-QXl"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="31" id="M0T-aN-Y49"/>
+                                                                        <constraint firstItem="qVH-oA-FDp" firstAttribute="leading" secondItem="Thc-CA-Ss2" secondAttribute="leading" constant="9" id="lGe-VK-raV"/>
+                                                                        <constraint firstItem="nd9-ol-OLY" firstAttribute="leading" secondItem="Shi-BE-e5v" secondAttribute="trailing" constant="-7" id="nFe-YI-bQr"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="nd9-ol-OLY" secondAttribute="trailing" id="ny5-T9-pq5"/>
+                                                                    </constraints>
+                                                                    <animations/>
+                                                                </customView>
+                                                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTD-1R-Tkp">
+                                                                    <rect key="frame" x="0.0" y="31" width="275" height="170"/>
+                                                                    <subviews>
+                                                                        <avPlayerView misplaced="YES" controlsStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hTo-PI-Laf">
+                                                                            <rect key="frame" x="0.0" y="9" width="275" height="154"/>
+                                                                            <animations/>
+                                                                        </avPlayerView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="4Rb-Mb-fzV"/>
+                                                                        <constraint firstItem="hTo-PI-Laf" firstAttribute="leading" secondItem="qTD-1R-Tkp" secondAttribute="leading" id="eSo-u6-JJM"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="hTo-PI-Laf" secondAttribute="trailing" id="lpP-0X-6Jv"/>
+                                                                        <constraint firstItem="hTo-PI-Laf" firstAttribute="top" secondItem="qTD-1R-Tkp" secondAttribute="top" constant="7" id="rXl-Nk-tsE"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="hTo-PI-Laf" secondAttribute="bottom" constant="9" id="wKW-pm-3io"/>
+                                                                    </constraints>
+                                                                    <animations/>
+                                                                </customView>
+                                                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-XB-F5c">
+                                                                    <rect key="frame" x="0.0" y="201" width="275" height="31"/>
+                                                                    <subviews>
+                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkZ-WI-Pea">
+                                                                            <rect key="frame" x="7" y="3" width="24" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="24" id="Esl-hl-4VU"/>
+                                                                                <constraint firstAttribute="width" constant="24" id="Frc-je-BgM"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="7qT-6i-AYy"/>
+                                                                        </imageView>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-6O-XOr">
+                                                                            <rect key="frame" x="33" y="7" width="37" height="17"/>
+                                                                            <animations/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="D3K-RN-OuJ">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <imageView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-4P-fM8">
+                                                                            <rect key="frame" x="76" y="6" width="18" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="JVB-8H-Xsd"/>
+                                                                                <constraint firstAttribute="height" constant="18" id="iJl-wb-09u"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="reblog" id="oLg-G7-Jw0"/>
+                                                                        </imageView>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-r8-E5r">
+                                                                            <rect key="frame" x="100" y="7" width="37" height="17"/>
+                                                                            <animations/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Dpv-kE-kBl">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="JkZ-WI-Pea" firstAttribute="leading" secondItem="nyE-XB-F5c" secondAttribute="leading" constant="7" id="SCm-zf-Bjf"/>
+                                                                        <constraint firstAttribute="height" constant="31" id="bKC-Lu-7m3"/>
+                                                                        <constraint firstItem="vu7-6O-XOr" firstAttribute="leading" secondItem="JkZ-WI-Pea" secondAttribute="trailing" constant="4" id="bmZ-zI-y8J"/>
+                                                                        <constraint firstItem="b3l-4P-fM8" firstAttribute="leading" secondItem="vu7-6O-XOr" secondAttribute="trailing" constant="8" id="dca-wd-IoI"/>
+                                                                        <constraint firstItem="zCm-r8-E5r" firstAttribute="leading" secondItem="b3l-4P-fM8" secondAttribute="trailing" constant="8" id="qij-V5-Awq"/>
+                                                                    </constraints>
+                                                                    <animations/>
+                                                                </customView>
+                                                                <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="5mq-go-gfZ">
+                                                                    <rect key="frame" x="25" y="-2" width="226" height="5"/>
+                                                                    <animations/>
+                                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <font key="titleFont" metaFont="system"/>
+                                                                </box>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Thc-CA-Ss2" firstAttribute="leading" secondItem="8CB-mI-Vj1" secondAttribute="leading" id="10w-KB-wDG"/>
+                                                                <constraint firstItem="qTD-1R-Tkp" firstAttribute="top" secondItem="nyE-XB-F5c" secondAttribute="bottom" id="2Ea-t4-QfG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Thc-CA-Ss2" secondAttribute="trailing" id="49Z-tb-zvm"/>
+                                                                <constraint firstAttribute="trailing" secondItem="5mq-go-gfZ" secondAttribute="trailing" constant="24" id="Adt-ua-Oip"/>
+                                                                <constraint firstAttribute="trailing" secondItem="qTD-1R-Tkp" secondAttribute="trailing" id="N9B-k9-S6e"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Thc-CA-Ss2" secondAttribute="bottom" id="Rg8-3w-dRw"/>
+                                                                <constraint firstAttribute="trailing" secondItem="nyE-XB-F5c" secondAttribute="trailing" id="SoZ-HJ-rcO"/>
+                                                                <constraint firstItem="Thc-CA-Ss2" firstAttribute="top" secondItem="qTD-1R-Tkp" secondAttribute="bottom" id="WGL-2B-0KX"/>
+                                                                <constraint firstItem="Thc-CA-Ss2" firstAttribute="top" secondItem="qTD-1R-Tkp" secondAttribute="bottom" id="WMS-Yu-saC"/>
+                                                                <constraint firstItem="nyE-XB-F5c" firstAttribute="top" secondItem="8CB-mI-Vj1" secondAttribute="top" id="ajM-t9-ezX"/>
+                                                                <constraint firstItem="nyE-XB-F5c" firstAttribute="leading" secondItem="8CB-mI-Vj1" secondAttribute="leading" id="dod-nF-02J"/>
+                                                                <constraint firstItem="qTD-1R-Tkp" firstAttribute="leading" secondItem="8CB-mI-Vj1" secondAttribute="leading" id="eOQ-a4-QfL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="5mq-go-gfZ" secondAttribute="bottom" id="nOf-7v-NUV"/>
+                                                                <constraint firstItem="Thc-CA-Ss2" firstAttribute="leading" secondItem="8CB-mI-Vj1" secondAttribute="leading" id="niJ-E8-iM0"/>
+                                                                <constraint firstItem="qTD-1R-Tkp" firstAttribute="top" secondItem="nyE-XB-F5c" secondAttribute="bottom" id="w3B-FQ-Ks5"/>
+                                                                <constraint firstItem="5mq-go-gfZ" firstAttribute="leading" secondItem="8CB-mI-Vj1" secondAttribute="leading" constant="25" id="waw-dD-bOb"/>
+                                                            </constraints>
+                                                            <animations/>
+                                                            <connections>
+                                                                <outlet property="avatar" destination="JkZ-WI-Pea" id="PS2-Se-9HK"/>
+                                                                <outlet property="blogger" destination="vu7-6O-XOr" id="9dj-i4-ZJx"/>
+                                                                <outlet property="favoriteButton" destination="nd9-ol-OLY" id="xsh-aH-k8G"/>
+                                                                <outlet property="noteCount" destination="qVH-oA-FDp" id="p37-sF-cWD"/>
+                                                                <outlet property="playerView" destination="hTo-PI-Laf" id="IoA-Lh-dHm"/>
+                                                                <outlet property="reblog" destination="b3l-4P-fM8" id="nBI-wO-ROs"/>
+                                                                <outlet property="reblogedFrom" destination="zCm-r8-E5r" id="NfR-22-YoT"/>
+                                                            </connections>
+                                                        </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
@@ -1423,7 +1604,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="6" y="899.5"/>
+            <point key="canvasLocation" x="6" y="993"/>
         </scene>
         <!--Reblog Controller-->
         <scene sceneID="gMA-q3-G3m">

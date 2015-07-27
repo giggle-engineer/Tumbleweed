@@ -21,6 +21,8 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
                 return TextPostController()
             case "photo":
                 return ImagePostController()
+            case "video":
+                return VideoPostController()
             default:
                 return ImagePostController()
         }
@@ -97,6 +99,7 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
     
     func tableViewSelectionDidChange(notification: NSNotification) {
         let id = posts[tableView.selectedRow]["id"] as! Int
+        print("post: \(posts[tableView.selectedRow])")
         print("type of post: \(typeForRow(tableView.selectedRow)) id:\(id)")
     }
     
@@ -119,6 +122,8 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
             case "photo":
                 postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
                 break
+            case "video":
+                postView = tableView.makeViewWithIdentifier("video", owner: self) as? PostView
             default:
                 print("type: \(type) at row: \(row)")
                 postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView

@@ -19,6 +19,8 @@
 		0897144E1B59F6C100DC25D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0897144C1B59F6C100DC25D7 /* Main.storyboard */; };
 		089714591B59F6C100DC25D7 /* TumbleweedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714581B59F6C100DC25D7 /* TumbleweedTests.swift */; };
 		089714641B59F6C100DC25D7 /* TumbleweedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */; };
+		08BBAFFD1B65CF0900B87677 /* VideoPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */; };
+		08BBAFFF1B65CF8400B87677 /* VideoPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */; };
 		08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */; };
 		08BCA9CA1B5A625400A23CA6 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C91B5A625400A23CA6 /* PostController.swift */; };
 		08BCA9CC1B5A638200A23CA6 /* TextPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */; };
@@ -74,6 +76,8 @@
 		08BBAFF61B6599AF00B87677 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		08BBAFF81B6599B800B87677 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		08BBAFFA1B6599BE00B87677 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostView.swift; sourceTree = "<group>"; };
+		08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostController.swift; sourceTree = "<group>"; };
 		08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
 		08BCA9C91B5A625400A23CA6 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				08BCA9CB1B5A638200A23CA6 /* TextPostController.swift */,
 				08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */,
 				0818CC551B5CF86A00685A61 /* AudioPostController.swift */,
+				08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */,
 			);
 			name = "Post Controllers";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */,
 				08C31F781B5CDBE50089C13E /* TextPostView.swift */,
 				08C31F7A1B5CF7150089C13E /* AudioPostView.swift */,
+				08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */,
 			);
 			name = "Post Views";
 			sourceTree = "<group>";
@@ -437,11 +443,13 @@
 				083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */,
 				089714491B59F6C100DC25D7 /* ViewController.swift in Sources */,
 				0818CC561B5CF86A00685A61 /* AudioPostController.swift in Sources */,
+				08BBAFFF1B65CF8400B87677 /* VideoPostController.swift in Sources */,
 				08C31F7B1B5CF7150089C13E /* AudioPostView.swift in Sources */,
 				08BCA9CE1B5A638F00A23CA6 /* ImagePostController.swift in Sources */,
 				08C31F791B5CDBE50089C13E /* TextPostView.swift in Sources */,
 				08BCA9CA1B5A625400A23CA6 /* PostController.swift in Sources */,
 				0818CC5A1B5E372700685A61 /* NS(Attributed)String+Geometrics.swift in Sources */,
+				08BBAFFD1B65CF0900B87677 /* VideoPostView.swift in Sources */,
 				087413E01B5BCC5500EE2FDF /* ImagePostView.swift in Sources */,
 				08CEC6E51B6055050088FD31 /* WindowController.swift in Sources */,
 				089714471B59F6C100DC25D7 /* AppDelegate.swift in Sources */,
@@ -579,6 +587,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tumbleweed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.chloestars.Tumbleweed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -592,6 +601,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tumbleweed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.chloestars.Tumbleweed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

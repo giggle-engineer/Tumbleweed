@@ -1335,25 +1335,18 @@
                                                                         <action selector="playPause:" target="zE9-mr-5xc" id="j2i-fb-Y8F"/>
                                                                     </connections>
                                                                 </button>
-                                                                <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crc-SF-ArK">
-                                                                    <rect key="frame" x="3" y="33" width="269" height="44"/>
-                                                                    <animations/>
-                                                                </customView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="cpB-VG-x40" secondAttribute="bottom" constant="51" id="6qI-9J-oQ3"/>
                                                                 <constraint firstItem="kOu-8W-yx3" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="25" id="93s-M5-0OG"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="CfF-xz-7Cx"/>
-                                                                <constraint firstAttribute="trailing" secondItem="crc-SF-ArK" secondAttribute="trailing" constant="3" id="D6p-wB-Wbi"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="top" secondItem="tvu-4w-ozk" secondAttribute="bottom" constant="8" id="Egj-Nz-UJN"/>
                                                                 <constraint firstItem="k49-dh-ZNJ" firstAttribute="top" secondItem="wd5-kG-YMk" secondAttribute="bottom" constant="8" id="Gfa-41-fxZ"/>
-                                                                <constraint firstItem="crc-SF-ArK" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="3" id="K7a-Bz-cSL"/>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="PHN-vp-TLE"/>
                                                                 <constraint firstAttribute="trailing" secondItem="cpB-VG-x40" secondAttribute="trailing" constant="27" id="RZ9-PF-1fN"/>
                                                                 <constraint firstItem="tvu-4w-ozk" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="UUL-bw-8kA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Wbd-t1-6Nt" secondAttribute="trailing" id="UYL-gb-AnE"/>
                                                                 <constraint firstItem="wd5-kG-YMk" firstAttribute="top" secondItem="zE9-mr-5xc" secondAttribute="top" id="d9a-c0-OE5"/>
-                                                                <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="crc-SF-ArK" secondAttribute="bottom" constant="2" id="dsD-Y4-aZ3"/>
                                                                 <constraint firstAttribute="bottom" secondItem="kOu-8W-yx3" secondAttribute="bottom" id="fhq-kR-a3O"/>
                                                                 <constraint firstAttribute="trailing" secondItem="wd5-kG-YMk" secondAttribute="trailing" id="gYt-MQ-HCh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="kOu-8W-yx3" secondAttribute="trailing" constant="24" id="hA1-vR-PJy"/>
@@ -1371,7 +1364,6 @@
                                                                 <outlet property="favoriteButton" destination="7e8-hC-u7c" id="WwK-qS-McN"/>
                                                                 <outlet property="noteCount" destination="Lag-rj-UQT" id="LMh-DU-FFg"/>
                                                                 <outlet property="playPauseButton" destination="cpB-VG-x40" id="QK0-1k-xOX"/>
-                                                                <outlet property="plotView" destination="crc-SF-ArK" id="GCq-r1-3hx"/>
                                                                 <outlet property="reblog" destination="KRV-sT-4cG" id="XGK-z0-Voa"/>
                                                                 <outlet property="reblogedFrom" destination="8S7-vY-onD" id="UoN-GY-u8I"/>
                                                                 <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>

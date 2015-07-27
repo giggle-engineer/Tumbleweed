@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import AVKit
 
 class AudioPostView : PostView {
     @IBOutlet var playPauseButton : NSButton!

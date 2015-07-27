@@ -72,7 +72,7 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
     func loadDashboard() {
         // prevent from loading older posts and refreshing at the same time.. there's probably a better way.. like queueing these up
         scrollView.isLoading = true
-        let parameters = ["limit":20]//["before_id":124634106921]//["since_id": "124627523585"] //["type":"audio"]
+        let parameters = ["limit":20, "reblog_info":"YES"]
         TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
@@ -84,16 +84,16 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
     
     func loadOlder() {
         let lastPostId = dashboardDataSource.posts[dashboardDataSource.posts.endIndex-1]["id"] as! Int
-        let parameters = ["before_id": lastPostId]
+        let parameters : Array = ["before_id":lastPostId, "reblog_info":"YES"]
         print("last post id: \(lastPostId)")
-        TMAPIClient.sharedInstance().dashboard(parameters) { (result: AnyObject!, error: NSError!) -> Void in
+        TMAPIClient.sharedInstance().dashboard(parameters, callback: {  (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray
                 self.dashboardDataSource.processOldPosts(Array(posts))
             }
             // the scroll view will wait for this before autoloading again
             self.scrollView.isLoading = false
-        }
+        })
     }
     
     @IBAction func refresh(sender: AnyObject) {

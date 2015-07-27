@@ -1,0 +1,61 @@
+{
+  "name": "INAppStoreWindow",
+  "version": "1.5",
+  "summary": "Mac App Store style NSWindow subclass.",
+  "homepage": "https://github.com/indragiek/INAppStoreWindow",
+  "authors": {
+    "Indragie Karunaratne": "i@indragie.com"
+  },
+  "source_files": "INAppStoreWindow",
+  "source": {
+    "git": "https://github.com/indragiek/INAppStoreWindow.git",
+    "tag": "v1.5"
+  },
+  "platforms": {
+    "osx": null
+  },
+  "requires_arc": true,
+  "license": {
+    "type": "BSD",
+    "text": "INAppStoreWindow is licensed under the BSD license."
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "INAppStoreWindow/*.{h,m}",
+      "header_dir": "INAppStoreWindow",
+      "exclude_files": "INAppStoreWindow/Extensions/**",
+      "requires_arc": true
+    },
+    {
+      "name": "Swizzling",
+      "dependencies": {
+        "INAppStoreWindow/Core": [
+
+        ]
+      },
+      "source_files": "INAppStoreWindow/Extensions/INAppStoreWindowSwizzling.{c,h}",
+      "requires_arc": true
+    },
+    {
+      "name": "CoreUIRendering",
+      "dependencies": {
+        "INAppStoreWindow/Swizzling": [
+
+        ]
+      },
+      "source_files": "INAppStoreWindow/Extensions/INWindowBackgroundView+CoreUIRendering.{h,m}",
+      "requires_arc": true
+    },
+    {
+      "name": "NSDocumentFixes",
+      "dependencies": {
+        "INAppStoreWindow/Swizzling": [
+
+        ]
+      },
+      "source_files": "INAppStoreWindow/Extensions/NSDocument+INAppStoreWindowFixes.{h,m}",
+      "requires_arc": true
+    }
+  ]
+}

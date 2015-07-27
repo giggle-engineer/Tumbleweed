@@ -46,24 +46,35 @@ class PostController : NSObject {
             self.view.reblogKey = reblogKey
         }
         
-        if let trail = post?["trail"] as? NSArray {
-            for blog in trail {
-                if let trailBlog = blog as? NSDictionary {
-                    if let sourceBlog = trailBlog["blog"] as? NSDictionary {
-                        if let name = sourceBlog["name"] as? String {
-                            self.view.reblogedFrom.stringValue = name
-                            self.view.reblog.hidden = false
-                            self.view.reblogedFrom.hidden = false
-                        }
-                    }
-                }
-                break
-            }
-            if trail.count == 0 {
-                self.view.reblogedFrom.stringValue = ""
-                self.view.reblog.hidden = true
-                self.view.reblogedFrom.hidden = true
-            }
+        if let rebloggedFromName = post?["reblogged_from_name"] as? String {
+            self.view.reblogedFrom.stringValue = rebloggedFromName
+            self.view.reblog.hidden = false
+            self.view.reblogedFrom.hidden = false
         }
+        else {
+            self.view.reblogedFrom.stringValue = ""
+            self.view.reblog.hidden = true
+            self.view.reblogedFrom.hidden = true
+        }
+        
+//        if let trail = post?["trail"] as? NSArray {
+//            for blog in trail {
+//                if let trailBlog = blog as? NSDictionary {
+//                    if let sourceBlog = trailBlog["blog"] as? NSDictionary {
+//                        if let name = sourceBlog["name"] as? String {
+//                            self.view.reblogedFrom.stringValue = name
+//                            self.view.reblog.hidden = false
+//                            self.view.reblogedFrom.hidden = false
+//                        }
+//                    }
+//                }
+//                break
+//            }
+//            if trail.count == 0 {
+//                self.view.reblogedFrom.stringValue = ""
+//                self.view.reblog.hidden = true
+//                self.view.reblogedFrom.hidden = true
+//            }
+//        }
     }
 }

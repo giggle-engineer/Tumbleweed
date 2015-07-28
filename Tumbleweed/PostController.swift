@@ -45,7 +45,6 @@ class PostController : NSObject {
         if let reblogKey = post?["reblog_key"] as? String {
             self.view.reblogKey = reblogKey
         }
-        
         if let rebloggedFromName = post?["reblogged_from_name"] as? String {
             self.view.reblogedFrom.stringValue = rebloggedFromName
             self.view.reblog.hidden = false
@@ -55,6 +54,21 @@ class PostController : NSObject {
             self.view.reblogedFrom.stringValue = ""
             self.view.reblog.hidden = true
             self.view.reblogedFrom.hidden = true
+        }
+        if let items = post?["tags"] as? Array<String> {
+            // do something with tags
+            if self.view.tags != nil {
+                var tagText = ""
+                for (index,tag) in items.enumerate() {
+                    if index < items.count {
+                        tagText += "#\(tag) "
+                    }
+                    else {
+                        tagText += "#\(tag)"
+                    }
+                }
+                self.view.tags?.stringValue = tagText
+            }
         }
         
 //        if let trail = post?["trail"] as? NSArray {

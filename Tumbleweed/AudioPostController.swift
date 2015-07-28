@@ -23,24 +23,20 @@ class AudioPostController : PostController {
         }
     }
     
-    func restartPlayer() {
-        player?.seekToTime(CMTimeMakeWithSeconds(0, 5))
+    func restartPlayer(note: NSNotification) {
+        self.player?.seekToTime(CMTimeMakeWithSeconds(0, 5))
     }
     
     func checkPlayer() {
-        NSLog("checking player")
         guard let previousPlayer = UserInfo.sharedUserInfo.currentPlayer else {
-            NSLog("no player")
             UserInfo.sharedUserInfo.currentPlayer = self.player
             return
         }
         if previousPlayer != player {
-            NSLog("pausing previous player")
             previousPlayer.pause()
             UserInfo.sharedUserInfo.currentPlayer = self.player
         }
         else {
-            NSLog("same player!")
         }
     }
     
@@ -77,6 +73,7 @@ class AudioPostController : PostController {
                             dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
                                 self.player = AVPlayer(URL: url!)
                                 self.player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: &self.kvoContext)
+                                NSNotificationCenter.defaultCenter().addObserver(self, selector: "restartPlayer:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
                                 self.togglePlayer()
                             }
                         }
@@ -140,9 +137,6 @@ class AudioPostController : PostController {
         if let audioView = self.view as? AudioPostView where self.player != nil {
             if self.player!.rate == 0 {
                 audioView.playPauseButton.title = "Play"
-                if self.player!.currentTime() == self.player!.currentItem!.asset.duration {
-                    self.restartPlayer()
-                }
             }
             else {
                 checkPlayer()
@@ -161,5 +155,6 @@ class AudioPostController : PostController {
     
     deinit {
         self.player?.removeObserver(self, forKeyPath: "rate")
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player)
     }
 }

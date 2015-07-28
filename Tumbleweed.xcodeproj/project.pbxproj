@@ -19,6 +19,7 @@
 		0897144E1B59F6C100DC25D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0897144C1B59F6C100DC25D7 /* Main.storyboard */; };
 		089714591B59F6C100DC25D7 /* TumbleweedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714581B59F6C100DC25D7 /* TumbleweedTests.swift */; };
 		089714641B59F6C100DC25D7 /* TumbleweedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */; };
+		08B634691B680180006E9786 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B634681B680180006E9786 /* UserInfo.swift */; };
 		08BBAFFD1B65CF0900B87677 /* VideoPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */; };
 		08BBAFFF1B65CF8400B87677 /* VideoPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */; };
 		08BCA9C81B5A5EF100A23CA6 /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */; };
@@ -69,6 +70,7 @@
 		0897145F1B59F6C100DC25D7 /* TumbleweedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumbleweedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumbleweedUITests.swift; sourceTree = "<group>"; };
 		089714651B59F6C100DC25D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B634681B680180006E9786 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostView.swift; sourceTree = "<group>"; };
 		08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostController.swift; sourceTree = "<group>"; };
 		08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				089714481B59F6C100DC25D7 /* ViewController.swift */,
 				08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */,
 				08F90F5B1B62CE840090173A /* Keys.swift */,
+				08B634681B680180006E9786 /* UserInfo.swift */,
 				08F90F5E1B62D1140090173A /* Other Controllers */,
 				0845087E1B5B75FA001AF7FA /* Post Controllers */,
 				0845087F1B5B7601001AF7FA /* Post Views */,
@@ -427,6 +430,7 @@
 				08F90F5A1B61DCE70090173A /* AutoloadingScrollView.swift in Sources */,
 				083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */,
 				089714491B59F6C100DC25D7 /* ViewController.swift in Sources */,
+				08B634691B680180006E9786 /* UserInfo.swift in Sources */,
 				0818CC561B5CF86A00685A61 /* AudioPostController.swift in Sources */,
 				08BBAFFF1B65CF8400B87677 /* VideoPostController.swift in Sources */,
 				08C31F7B1B5CF7150089C13E /* AudioPostView.swift in Sources */,

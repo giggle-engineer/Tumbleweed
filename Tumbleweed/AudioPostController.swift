@@ -15,6 +15,35 @@ class AudioPostController : PostController {
     private var kvoContext: UInt8 = 1
     var player : AVPlayer?
     
+    func togglePlayer() {
+        if player!.rate == 0 {
+            player!.play()
+        } else {
+            player!.pause()
+        }
+    }
+    
+    func restartPlayer() {
+        player?.seekToTime(CMTimeMakeWithSeconds(0, 5))
+    }
+    
+    func checkPlayer() {
+        NSLog("checking player")
+        guard let previousPlayer = UserInfo.sharedUserInfo.currentPlayer else {
+            NSLog("no player")
+            UserInfo.sharedUserInfo.currentPlayer = self.player
+            return
+        }
+        if previousPlayer != player {
+            NSLog("pausing previous player")
+            previousPlayer.pause()
+            UserInfo.sharedUserInfo.currentPlayer = self.player
+        }
+        else {
+            NSLog("same player!")
+        }
+    }
+    
     override func fillContent() {
         super.fillContent()
         if let audioView = self.view as? AudioPostView {
@@ -45,15 +74,14 @@ class AudioPostController : PostController {
                 audioView.playPauseCallback =  { () in
                     if playDirectly {
                         if self.player == nil {
-                            self.player = AVPlayer(URL: url!)
-                            self.player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: &self.kvoContext)
-                        }
-                        if let player = self.player {
-                            if player.rate == 0 {
-                                player.play()
-                            } else {
-                                player.pause()
+                            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+                                self.player = AVPlayer(URL: url!)
+                                self.player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: &self.kvoContext)
+                                self.togglePlayer()
                             }
+                        }
+                        else {
+                            self.togglePlayer()
                         }
                     }
                     else {
@@ -112,8 +140,12 @@ class AudioPostController : PostController {
         if let audioView = self.view as? AudioPostView where self.player != nil {
             if self.player!.rate == 0 {
                 audioView.playPauseButton.title = "Play"
+                if self.player!.currentTime() == self.player!.currentItem!.asset.duration {
+                    self.restartPlayer()
+                }
             }
             else {
+                checkPlayer()
                 audioView.playPauseButton.title = "Pause"
             }
         }

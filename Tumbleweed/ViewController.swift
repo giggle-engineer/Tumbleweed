@@ -72,7 +72,7 @@ class ViewController: NSViewController, AutoloadingScrollViewDelegate {
     func loadDashboard() {
         // prevent from loading older posts and refreshing at the same time.. there's probably a better way.. like queueing these up
         scrollView.isLoading = true
-        let parameters : Dictionary<String,AnyObject> = ["limit":20, "reblog_info":"YES"] //"type":"video",
+        let parameters : Dictionary<String,AnyObject> = ["type":"audio", "limit":20, "reblog_info":"YES"] //"type":"video",
         TMAPIClient.sharedInstance().dashboard(parameters, callback: { (result: AnyObject!, error: NSError!) -> Void in
             if error == nil {
                 let posts = (result as! NSDictionary)["posts"] as! NSArray

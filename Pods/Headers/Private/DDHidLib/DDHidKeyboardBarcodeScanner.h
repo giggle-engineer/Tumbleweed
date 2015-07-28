@@ -1,0 +1,1 @@
+../../../DDHidLib/lib/DDHidKeyboardBarcodeScanner.h

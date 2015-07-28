@@ -1,0 +1,26 @@
+{
+  "name": "DDHidLib",
+  "platforms": {
+    "osx": "10.6"
+  },
+  "version": "1.1.3",
+  "license": "MIT",
+  "summary": "An Objective-C wrapper around IOHIDLib by Dave Dribin",
+  "homepage": "https://github.com/arturphoenix/DDHidLib.git",
+  "authors": {
+    "Daij-Djan": "https://github.com/Daij-Djan/"
+  },
+  "source": {
+    "git": "https://github.com/arturphoenix/DDHidLib.git",
+    "tag": "1.1.3"
+  },
+  "source_files": [
+    "lib/*.{m,h}",
+    "vendor/**/*.{m,h}"
+  ],
+  "public_header_files": [
+    "lib/**/*.h",
+    "vendor/**/*.h"
+  ],
+  "requires_arc": false
+}

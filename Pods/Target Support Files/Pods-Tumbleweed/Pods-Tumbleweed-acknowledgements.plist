@@ -239,6 +239,195 @@ THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPR
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"&gt;
+
+&lt;head profile="http://www.w3.org/1999/xhtml/vocab"&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;link rel="shortcut icon" href="http://opensource.org/files/garland_favicon.png" type="image/png" /&gt;
+&lt;link rel="shortlink" href="/node/66" /&gt;
+&lt;link rel="canonical" href="/licenses/MIT" /&gt;
+&lt;meta name="Generator" content="Drupal 7 (http://drupal.org)" /&gt;
+  &lt;title&gt;The MIT License (MIT) | Open Source Initiative&lt;/title&gt;
+  &lt;link type="text/css" rel="stylesheet" href="http://opensource.org/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" /&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://opensource.org/files/css/css_Frms3llKkCDMuuCHUzEHGgSAc59B2At_Y3KWbmFS9k4.css" media="all" /&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://opensource.org/files/css/css_2wI77kyP-rJKVpFW5M3KFcj7Cb99lZalmubKIwWwsmU.css" media="all" /&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://opensource.org/files/css/css_k3snrbsthqot7V7ccRZHS9OkCZkwBv4adtNieIVlbEU.css" media="print" /&gt;
+
+&lt;!--[if lt IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://opensource.org/themes/garland/fix-ie.css?mg005b" media="all" /&gt;
+&lt;![endif]--&gt;
+  &lt;script type="text/javascript" src="http://opensource.org/files/js/js_3jHghlMLrjr9xXAC0JufqSSch3oAbkZstSqYdc4uuck.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+&lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"garland","theme_token":"oU3oKgkO9Kxh34R6sHTF4WSsGPlfgkgK1fMLCpEJ72I","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"themes\/garland\/style.css":1,"themes\/garland\/print.css":1,"themes\/garland\/fix-ie.css":1}}});
+//--&gt;&lt;!]]&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-66 node-type-page fluid-width" &gt;
+  &lt;div id="skip-link"&gt;
+    &lt;a href="#main-content" class="element-invisible element-focusable"&gt;Skip to main content&lt;/a&gt;
+  &lt;/div&gt;
+      
+  &lt;div id="wrapper"&gt;
+    &lt;div id="container" class="clearfix"&gt;
+
+      &lt;div id="header"&gt;
+        &lt;div id="logo-floater"&gt;
+                              &lt;div id="branding"&gt;&lt;strong&gt;&lt;a href="/"&gt;
+                          &lt;img src="http://opensource.org/files/garland_logo.png" alt="Open Source Initiative " title="Open Source Initiative " id="logo" /&gt;
+                        &lt;span&gt;Open Source Initiative&lt;/span&gt;            &lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;
+                          &lt;/div&gt;
+
+                      &lt;/div&gt; &lt;!-- /#header --&gt;
+
+              &lt;div id="sidebar-first" class="sidebar"&gt;
+            &lt;div class="region region-sidebar-first"&gt;
+    &lt;div id="block-search-form" class="block block-search clearfix"&gt;
+
+    &lt;h2 class="title"&gt;Search this site:&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form action="/licenses/mit-license.php" method="post" id="search-block-form" accept-charset="UTF-8"&gt;&lt;div&gt;&lt;div class="container-inline"&gt;
+    &lt;div class="form-item form-type-textfield form-item-search-block-form"&gt;
+  &lt;label class="element-invisible" for="edit-search-block-form--2"&gt;Search &lt;/label&gt;
+ &lt;input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" /&gt;
+&lt;/div&gt;
+&lt;div class="form-actions form-wrapper" id="edit-actions"&gt;&lt;input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /&gt;&lt;/div&gt;&lt;input type="hidden" name="form_build_id" value="form-ADm3Z4uyEPhRis8sKsUf9Oqq50FP1ae1rX3NnMchpDM" /&gt;
+&lt;input type="hidden" name="form_id" value="search_block_form" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-system-navigation" class="block block-system block-menu clearfix"&gt;
+
+    &lt;h2 class="title"&gt;Navigation&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;ul class="menu"&gt;&lt;li class="first collapsed"&gt;&lt;a href="/about" title="About the Open Source Initiative"&gt;About the OSI&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/osd" title="The actual OSD defining what constitutes an Open Source licence"&gt;The Open Source Definition&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/licenses"&gt;Open Source Licenses&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/trademark" title="Information about trademark and logo usage "&gt;Trademark and Logo Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li class="leaf"&gt;&lt;a href="/faq" title="Frequently Asked Questions about open source and about the OSI."&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/osr-intro" title="Open Standards Requirement for Software"&gt;Open Standards&lt;/a&gt;&lt;/li&gt;
+&lt;li class="leaf"&gt;&lt;a href="/osi-open-source-education" title="OSI&amp;#039;s Open Source Education Initiative and Activities"&gt;Open Source Education&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/lists" title="The virtual committees where the OSI&amp;#039;s work gets done"&gt;Mailing lists&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/help" title="Resources for questions and further exploration"&gt;Getting Help&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="http://opensource.org/donate" title=""&gt;Donate to the OSI&lt;/a&gt;&lt;/li&gt;
+&lt;li class="leaf"&gt;&lt;a href="/members"&gt;OSI Individual Membership&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/affiliates" title="Home page for OSI&amp;#039;s membership scheme for non-profits and not-for-profits"&gt;OSI Affiliate Membership&lt;/a&gt;&lt;/li&gt;
+&lt;li class="leaf"&gt;&lt;a href="/contact" title=""&gt;Contact OSI&lt;/a&gt;&lt;/li&gt;
+&lt;li class="last leaf"&gt;&lt;a href="/ToS" title="Rules for posting content on this site"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+        &lt;/div&gt;
+      
+      &lt;div id="center"&gt;&lt;div id="squeeze"&gt;&lt;div class="right-corner"&gt;&lt;div class="left-corner"&gt;
+          &lt;h2 class="element-invisible"&gt;You are here&lt;/h2&gt;&lt;div class="breadcrumb"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/div&gt;                    &lt;a id="main-content"&gt;&lt;/a&gt;
+          &lt;div id="tabs-wrapper" class="clearfix"&gt;                                &lt;h1 class="with-tabs"&gt;The MIT License (MIT)&lt;/h1&gt;
+                              &lt;/div&gt;                                                  &lt;div class="clearfix"&gt;
+              &lt;div class="region region-content"&gt;
+    &lt;div id="block-system-main" class="block block-system clearfix"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;div id="node-66" class="node node-page"&gt;
+
+  
+      
+  
+  &lt;div class="content clearfix"&gt;
+        &lt;img style="float: right; margin: 1em;" width="100" height="137" alt="[OSI Approved License]" src="/trademarks/opensource/OSI-Appro
+ved-License-100x137.png"/&gt;
+        &lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;h1&gt;The MIT License (MIT)&lt;/h1&gt;
+
+&lt;tt&gt;
+
+&lt;p&gt;Copyright (c) &amp;lt;year&amp;gt; &amp;lt;copyright holders&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p&gt;
+
+&lt;p&gt;The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.&lt;/p&gt;
+
+&lt;p&gt;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.&lt;/p&gt;
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;div class="clearfix"&gt;
+          &lt;div class="links"&gt;&lt;/div&gt;
+    
+      &lt;/div&gt;
+
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+          &lt;/div&gt;
+                      &lt;div class="region region-footer"&gt;
+    &lt;div id="block-block-11" class="block block-block clearfix"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;!-- Creative Commons License --&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;Opensource.org site content is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0  License&lt;/a&gt;.&lt;!-- /Creative Commons License --&gt;
+
+&lt;!-- &lt;rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+	&lt;Work rdf:about=""&gt;
+		&lt;license rdf:resource="http://creativecommons.org/licenses/by/3.0/" /&gt;
+	&lt;/Work&gt;
+	&lt;License rdf:about="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;permits rdf:resource="http://web.resource.org/cc/Reproduction"/&gt;&lt;permits rdf:resource="http://web.resource.org/cc/Distribution"/&gt;&lt;requires rdf:resource="http://web.resource.org/cc/Notice"/&gt;&lt;requires rdf:resource="http://web.resource.org/cc/Attribution"/&gt;&lt;permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/&gt;&lt;/License&gt;&lt;/rdf:RDF&gt;
+--&gt;
+
+| &lt;a href="../ToS"&gt;Terms of Service&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-block-7" class="block block-block clearfix"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;
+&lt;!--//--&gt;&lt;![CDATA[// &gt;&lt;!--
+
+
+//--&gt;&lt;!]]&gt;
+&lt;/script&gt;&lt;script type="text/javascript"&gt;
+&lt;!--//--&gt;&lt;![CDATA[// &gt;&lt;!--
+
+_uacct = "UA-3916956-1";
+urchinTracker();
+
+//--&gt;&lt;!]]&gt;
+&lt;/script&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;!-- /.left-corner, /.right-corner, /#squeeze, /#center --&gt;
+
+      
+    &lt;/div&gt; &lt;!-- /#container --&gt;
+  &lt;/div&gt; &lt;!-- /#wrapper --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</string>
+			<key>Title</key>
+			<string>DDHidLib</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2015 Daiki Okumura

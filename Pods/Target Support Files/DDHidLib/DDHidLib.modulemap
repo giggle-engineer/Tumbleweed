@@ -1,0 +1,6 @@
+framework module DDHidLib {
+  umbrella header "DDHidLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

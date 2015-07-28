@@ -69,13 +69,6 @@
 		0897145F1B59F6C100DC25D7 /* TumbleweedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumbleweedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089714631B59F6C100DC25D7 /* TumbleweedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumbleweedUITests.swift; sourceTree = "<group>"; };
 		089714651B59F6C100DC25D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08BBAFEE1B65998900B87677 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		08BBAFF01B65999400B87677 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		08BBAFF21B65999C00B87677 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		08BBAFF41B6599A600B87677 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		08BBAFF61B6599AF00B87677 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		08BBAFF81B6599B800B87677 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		08BBAFFA1B6599BE00B87677 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		08BBAFFC1B65CF0900B87677 /* VideoPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostView.swift; sourceTree = "<group>"; };
 		08BBAFFE1B65CF8400B87677 /* VideoPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPostController.swift; sourceTree = "<group>"; };
 		08BCA9C71B5A5EF100A23CA6 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
@@ -84,7 +77,6 @@
 		08BCA9CD1B5A638F00A23CA6 /* ImagePostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostController.swift; sourceTree = "<group>"; };
 		08C31F781B5CDBE50089C13E /* TextPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostView.swift; sourceTree = "<group>"; };
 		08C31F7A1B5CF7150089C13E /* AudioPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPostView.swift; sourceTree = "<group>"; };
-		08C31F7C1B5CF7540089C13E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		08CEC6E41B6055050088FD31 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		08F90F591B61DCE70090173A /* AutoloadingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoloadingScrollView.swift; sourceTree = "<group>"; };
 		08F90F5B1B62CE840090173A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -240,14 +232,6 @@
 		F6C226C56CC95AD35E009FE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08BBAFFA1B6599BE00B87677 /* GLKit.framework */,
-				08BBAFF81B6599B800B87677 /* OpenGL.framework */,
-				08BBAFF61B6599AF00B87677 /* QuartzCore.framework */,
-				08BBAFF41B6599A600B87677 /* CoreAudio.framework */,
-				08BBAFF21B65999C00B87677 /* AudioUnit.framework */,
-				08BBAFF01B65999400B87677 /* AudioToolbox.framework */,
-				08BBAFEE1B65998900B87677 /* Accelerate.framework */,
-				08C31F7C1B5CF7540089C13E /* WebKit.framework */,
 				E402EB5CAB5BD62EBDC0A5D8 /* Pods_Tumbleweed.framework */,
 			);
 			name = Frameworks;
@@ -324,6 +308,7 @@
 				TargetAttributes = {
 					089714421B59F6C100DC25D7 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7P78LN5MWN;
 					};
 					089714531B59F6C100DC25D7 = {
 						CreatedOnToolsVersion = 7.0;
@@ -584,12 +569,15 @@
 			baseConfigurationReference = D14BF02B5E30D414D4647D93 /* Pods-Tumbleweed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tumbleweed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.chloestars.Tumbleweed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -598,12 +586,15 @@
 			baseConfigurationReference = 1D9AD972092C1BF1E39AF48A /* Pods-Tumbleweed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tumbleweed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.chloestars.Tumbleweed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -54,6 +54,7 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Tumbleweed/CCNPreferencesWindowController.framework'
   install_framework 'Pods-Tumbleweed/DCTextEngine.framework'
+  install_framework 'Pods-Tumbleweed/DDHidLib.framework'
   install_framework 'Pods-Tumbleweed/DOFavoriteButton.framework'
   install_framework 'Pods-Tumbleweed/INAppStoreWindow.framework'
   install_framework 'Pods-Tumbleweed/JXHTTP.framework'
@@ -66,6 +67,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Tumbleweed/CCNPreferencesWindowController.framework'
   install_framework 'Pods-Tumbleweed/DCTextEngine.framework'
+  install_framework 'Pods-Tumbleweed/DDHidLib.framework'
   install_framework 'Pods-Tumbleweed/DOFavoriteButton.framework'
   install_framework 'Pods-Tumbleweed/INAppStoreWindow.framework'
   install_framework 'Pods-Tumbleweed/JXHTTP.framework'

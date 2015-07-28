@@ -140,18 +140,22 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
                 return 172
             case "chat":
                 let body = posts[row]["body"] as! String
-                let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
-                attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
-                let heightOfText = attributedString?.heightForWidth(260)
-                return heightOfText!+62
+                if let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil) {
+                    attributedString.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString.length))
+                    let heightOfText = attributedString.heightForWidth(260)
+                    return heightOfText+62
+                }
+                return 10
 //            case "quote":
 //                continue
             case "text":
                 let body = posts[row]["body"] as! String
-                let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil)
-                attributedString!.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString!.length))
-                let heightOfText = attributedString?.heightForWidth(260)
-                return heightOfText!+62
+                if let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil) {
+                    attributedString.addAttribute(NSFontAttributeName, value: NSFont.systemFontOfSize(14.0), range: NSRange(location:0,length:attributedString.length))
+                    let heightOfText = attributedString.heightForWidth(260)
+                    return heightOfText+62
+                }
+                return 10
 //                return 62 + height of text
             default:
                 return 300

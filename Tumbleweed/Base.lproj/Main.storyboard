@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A226f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A235d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="8164.2"/>
@@ -826,7 +826,6 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="xAc-Cw-XZ5" id="nJi-rS-cMm"/>
-                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="oBH-vl-y7o"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-SD-VHc" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -1008,7 +1007,6 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="SIc-v5-4fF" id="XzC-t8-bqP"/>
-                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="05S-7z-rrn"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-eU-lKt" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -1217,8 +1215,8 @@
                                                                     </constraints>
                                                                     <animations/>
                                                                 </customView>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k49-dh-ZNJ">
-                                                                    <rect key="frame" x="3" y="85" width="48" height="48"/>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k49-dh-ZNJ">
+                                                                    <rect key="frame" x="46" y="85" width="48" height="48"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="48" id="S4P-RG-DpX"/>
                                                                         <constraint firstAttribute="width" constant="48" id="nwx-fC-Btq"/>
@@ -1226,8 +1224,8 @@
                                                                     <animations/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="L79-Vc-lhA"/>
                                                                 </imageView>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfI-mt-Z6H">
-                                                                    <rect key="frame" x="57" y="85" width="37" height="17"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qfI-mt-Z6H">
+                                                                    <rect key="frame" x="100" y="85" width="37" height="17"/>
                                                                     <animations/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mzx-IM-cjr">
                                                                         <font key="font" metaFont="system"/>
@@ -1235,8 +1233,8 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvu-4w-ozk">
-                                                                    <rect key="frame" x="57" y="110" width="37" height="17"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tvu-4w-ozk">
+                                                                    <rect key="frame" x="100" y="110" width="37" height="17"/>
                                                                     <animations/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="xYO-JY-oRV">
                                                                         <font key="font" metaFont="system"/>
@@ -1280,7 +1278,6 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="reblogPost:" target="zE9-mr-5xc" id="qcd-sD-YV1"/>
-                                                                                <segue destination="P6W-5A-Lli" kind="sheet" id="f5R-JD-yoV"/>
                                                                             </connections>
                                                                         </button>
                                                                         <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-hC-u7c" userLabel="Like Button" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
@@ -1325,11 +1322,15 @@
                                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <font key="titleFont" metaFont="system"/>
                                                                 </box>
-                                                                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-VG-x40">
-                                                                    <rect key="frame" x="199" y="82" width="49" height="45"/>
+                                                                <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-VG-x40">
+                                                                    <rect key="frame" x="3" y="92" width="35" height="32"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="32" id="j0t-h6-hyu"/>
+                                                                        <constraint firstAttribute="width" constant="35" id="x3r-NU-XcI"/>
+                                                                    </constraints>
                                                                     <animations/>
-                                                                    <buttonCell key="cell" type="square" title="Play" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TlI-6f-1em">
-                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="TlI-6f-1em">
+                                                                        <behavior key="behavior" lightByContents="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
                                                                     <connections>
@@ -1338,13 +1339,12 @@
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="Wbd-t1-6Nt" firstAttribute="top" secondItem="cpB-VG-x40" secondAttribute="bottom" constant="51" id="6qI-9J-oQ3"/>
+                                                                <constraint firstItem="cpB-VG-x40" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="3" id="8fd-qx-BnP"/>
                                                                 <constraint firstItem="kOu-8W-yx3" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" constant="25" id="93s-M5-0OG"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="CfF-xz-7Cx"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="top" secondItem="tvu-4w-ozk" secondAttribute="bottom" constant="8" id="Egj-Nz-UJN"/>
                                                                 <constraint firstItem="k49-dh-ZNJ" firstAttribute="top" secondItem="wd5-kG-YMk" secondAttribute="bottom" constant="8" id="Gfa-41-fxZ"/>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="PHN-vp-TLE"/>
-                                                                <constraint firstAttribute="trailing" secondItem="cpB-VG-x40" secondAttribute="trailing" constant="27" id="RZ9-PF-1fN"/>
                                                                 <constraint firstItem="tvu-4w-ozk" firstAttribute="leading" secondItem="k49-dh-ZNJ" secondAttribute="trailing" constant="8" id="UUL-bw-8kA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Wbd-t1-6Nt" secondAttribute="trailing" id="UYL-gb-AnE"/>
                                                                 <constraint firstItem="wd5-kG-YMk" firstAttribute="top" secondItem="zE9-mr-5xc" secondAttribute="top" id="d9a-c0-OE5"/>
@@ -1352,6 +1352,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="wd5-kG-YMk" secondAttribute="trailing" id="gYt-MQ-HCh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="kOu-8W-yx3" secondAttribute="trailing" constant="24" id="hA1-vR-PJy"/>
                                                                 <constraint firstItem="qfI-mt-Z6H" firstAttribute="top" secondItem="wd5-kG-YMk" secondAttribute="bottom" constant="39" id="ihV-i6-Kms"/>
+                                                                <constraint firstItem="k49-dh-ZNJ" firstAttribute="leading" secondItem="cpB-VG-x40" secondAttribute="trailing" constant="8" id="kgb-75-yOG"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Wbd-t1-6Nt" secondAttribute="bottom" id="peJ-xE-vaD"/>
                                                                 <constraint firstItem="wd5-kG-YMk" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="sfN-CC-3Gd"/>
                                                                 <constraint firstItem="Wbd-t1-6Nt" firstAttribute="leading" secondItem="zE9-mr-5xc" secondAttribute="leading" id="wUp-vx-SYG"/>
@@ -1606,106 +1607,12 @@
             </objects>
             <point key="canvasLocation" x="6" y="993"/>
         </scene>
-        <!--Reblog Controller-->
-        <scene sceneID="gMA-q3-G3m">
-            <objects>
-                <customObject id="LhB-zL-Qnd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="P6W-5A-Lli" customClass="ReblogController" customModule="Tumbleweed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="mAv-zg-CMg">
-                        <rect key="frame" x="0.0" y="0.0" width="361" height="115"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-rZ-Dai">
-                                <rect key="frame" x="0.0" y="26" width="361" height="89"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="F4f-QM-mxV"/>
-                                </constraints>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" drawsBackground="YES" id="qm1-5v-Mw3">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-wq-mHs">
-                                <rect key="frame" x="0.0" y="23" width="361" height="4"/>
-                                <animations/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
-                            <tokenField focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-jS-sOd">
-                                <rect key="frame" x="31" y="0.0" width="198" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="qkH-B2-6C3"/>
-                                </constraints>
-                                <animations/>
-                                <tokenFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="QDI-pI-M4W">
-                                    <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </tokenFieldCell>
-                            </tokenField>
-                            <imageView translatesAutoresizingMaskIntoConstraints="NO" id="XVo-SQ-dFy">
-                                <rect key="frame" x="0.0" y="2" width="23" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="L55-yG-w7e"/>
-                                    <constraint firstAttribute="height" constant="21" id="NSH-Bv-CxB"/>
-                                </constraints>
-                                <animations/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="tag" id="Uxh-1S-0Yt"/>
-                            </imageView>
-                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-GW-P5T">
-                                <rect key="frame" x="292" y="-5" width="69" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Reblog" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9v6-Kt-mFJ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-aI-AG0">
-                                <rect key="frame" x="231" y="-5" width="69" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gnA-ve-F2a">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="dismissController:" target="P6W-5A-Lli" id="2G6-e1-7A4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="CK7-GW-P5T" firstAttribute="leading" secondItem="0eT-aI-AG0" secondAttribute="trailing" constant="4" id="0U0-ks-Lxe"/>
-                            <constraint firstItem="aKq-rZ-Dai" firstAttribute="top" secondItem="mAv-zg-CMg" secondAttribute="top" id="25s-fO-kjB"/>
-                            <constraint firstItem="XVo-SQ-dFy" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="3dA-Xv-onn"/>
-                            <constraint firstAttribute="bottom" secondItem="XVo-SQ-dFy" secondAttribute="bottom" constant="2" id="Gr2-If-Og2"/>
-                            <constraint firstItem="XVo-SQ-dFy" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="HE9-4O-MLN"/>
-                            <constraint firstAttribute="trailing" secondItem="aKq-rZ-Dai" secondAttribute="trailing" id="MUJ-K8-0va"/>
-                            <constraint firstAttribute="trailing" secondItem="CK7-GW-P5T" secondAttribute="trailing" constant="6" id="STs-1x-WU4"/>
-                            <constraint firstItem="0eT-aI-AG0" firstAttribute="leading" secondItem="Q19-jS-sOd" secondAttribute="trailing" constant="8" id="Tch-bW-6qv"/>
-                            <constraint firstItem="Q19-jS-sOd" firstAttribute="leading" secondItem="XVo-SQ-dFy" secondAttribute="trailing" constant="8" id="hph-Xo-d0a"/>
-                            <constraint firstItem="8bg-wq-mHs" firstAttribute="top" secondItem="aKq-rZ-Dai" secondAttribute="bottom" id="itD-fv-JqK"/>
-                            <constraint firstItem="aKq-rZ-Dai" firstAttribute="leading" secondItem="mAv-zg-CMg" secondAttribute="leading" id="txJ-L2-Niu"/>
-                        </constraints>
-                        <animations/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="425.5" y="1143.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="like" width="128" height="128"/>
         <image name="mainTab" width="540" height="536"/>
+        <image name="play" width="495" height="600"/>
         <image name="reblog" width="557" height="557"/>
-        <image name="tag" width="562" height="562"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="05S-7z-rrn"/>
-    </inferredMetricsTieBreakers>
 </document>

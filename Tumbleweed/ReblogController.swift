@@ -12,8 +12,8 @@ import TMTumblrSDK
 class ReblogController : NSViewController {
     @IBOutlet var tagsField : NSTokenField?
     @IBOutlet var commentsField : NSTextField?
-    var id : Int?
-    var reblogKey : Int?
+    var postId : String?
+    var reblogKey : String?
     
     @IBAction func reblog (sender: AnyObject) {
         

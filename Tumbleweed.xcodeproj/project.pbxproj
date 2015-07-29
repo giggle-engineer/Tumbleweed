@@ -12,6 +12,7 @@
 		0818CC5A1B5E372700685A61 /* NS(Attributed)String+Geometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818CC591B5E372700685A61 /* NS(Attributed)String+Geometrics.swift */; };
 		0818CC601B5E405100685A61 /* NSScrollNullifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818CC5F1B5E405100685A61 /* NSScrollNullifierView.swift */; };
 		083FA24D1B5B5D6900D37DA7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FA24C1B5B5D6900D37DA7 /* PostView.swift */; };
+		0847BE281B684C5B001BFE21 /* ReblogPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0847BE271B684C5B001BFE21 /* ReblogPopover.xib */; };
 		087413E01B5BCC5500EE2FDF /* ImagePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */; };
 		089714471B59F6C100DC25D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714461B59F6C100DC25D7 /* AppDelegate.swift */; };
 		089714491B59F6C100DC25D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089714481B59F6C100DC25D7 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		0818CC591B5E372700685A61 /* NS(Attributed)String+Geometrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NS(Attributed)String+Geometrics.swift"; sourceTree = "<group>"; };
 		0818CC5F1B5E405100685A61 /* NSScrollNullifierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScrollNullifierView.swift; sourceTree = "<group>"; };
 		083FA24C1B5B5D6900D37DA7 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		0847BE271B684C5B001BFE21 /* ReblogPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReblogPopover.xib; sourceTree = "<group>"; };
 		087413DF1B5BCC5500EE2FDF /* ImagePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostView.swift; sourceTree = "<group>"; };
 		089714431B59F6C100DC25D7 /* Tumbleweed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbleweed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089714461B59F6C100DC25D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				0818CC5B1B5E3BA800685A61 /* Extensions */,
 				0897144A1B59F6C100DC25D7 /* Assets.xcassets */,
 				0897144C1B59F6C100DC25D7 /* Main.storyboard */,
+				0847BE271B684C5B001BFE21 /* ReblogPopover.xib */,
 				0897144F1B59F6C100DC25D7 /* Info.plist */,
 			);
 			path = Tumbleweed;
@@ -253,6 +256,7 @@
 				089714411B59F6C100DC25D7 /* Resources */,
 				7CC5498D5987B8FFFCBE7D47 /* Embed Pods Frameworks */,
 				C5865D4D7829C5A3BD8B8DF5 /* Copy Pods Resources */,
+				0847BE2A1B686F5C001BFE21 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,6 +354,7 @@
 			files = (
 				0897144B1B59F6C100DC25D7 /* Assets.xcassets in Resources */,
 				0897144E1B59F6C100DC25D7 /* Main.storyboard in Resources */,
+				0847BE281B684C5B001BFE21 /* ReblogPopover.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +375,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0847BE2A1B686F5C001BFE21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\n#  update_build_number.sh\n#  Usage: `update_build_number.sh [branch]`\n#  Run this script after the 'Copy Bundle Resources' build phase\n#  Ref: http://tgoode.com/2014/06/05/sensible-way-increment-bundle-version-cfbundleversion-xcode/\n\nbranch=${1:-'master'}\nbuildNumber=$(expr $(git rev-list $branch --count) - $(git rev-list HEAD..$branch --count))\necho \"Updating build number to $buildNumber using branch '$branch'.\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
 		60027279E95E359AAACD08F4 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

@@ -57,8 +57,15 @@ class PostView : NSTableCellView {
         let reblogged = !sender.selected
         
         if(reblogged) {
-            NSLog("Post was reblogged!")
-            // Do something here!
+            let controller = ReblogController(nibName: "ReblogPopover", bundle: nil)
+            controller?.reblogKey = self.reblogKey
+            controller?.postId = self.postId
+            let popover = NSPopover()
+            popover.behavior = .Transient
+            popover.contentSize = NSSize(width: 361, height: 115)
+            popover.contentViewController = controller
+            popover.animates = true
+            popover.showRelativeToRect(sender.bounds, ofView: sender, preferredEdge: .MaxX)
         }
         else {
             NSLog("Post was uhh, I dunno what to do here")

@@ -36,8 +36,6 @@ class AudioPostController : PostController {
             previousPlayer.pause()
             UserInfo.sharedUserInfo.currentPlayer = self.player
         }
-        else {
-        }
     }
     
     override func fillContent() {
@@ -74,7 +72,9 @@ class AudioPostController : PostController {
                                 self.player = AVPlayer(URL: url!)
                                 self.player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: &self.kvoContext)
                                 NSNotificationCenter.defaultCenter().addObserver(self, selector: "restartPlayer:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
-                                self.togglePlayer()
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.togglePlayer()
+                                })
                             }
                         }
                         else {
@@ -136,11 +136,11 @@ class AudioPostController : PostController {
     func playPauseUpdate() {
         if let audioView = self.view as? AudioPostView where self.player != nil {
             if self.player!.rate == 0 {
-                audioView.playPauseButton.title = "Play"
+                audioView.playPauseButton.image = NSImage(named: "play")
             }
             else {
                 checkPlayer()
-                audioView.playPauseButton.title = "Pause"
+                audioView.playPauseButton.image = NSImage(named: "pause")
             }
         }
     }

@@ -137,7 +137,7 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         switch(typeForRow(row))
         {
             case "audio":
-                return 172
+                return 132
             case "chat":
                 let body = posts[row]["body"] as! String
                 if let attributedString = NSMutableAttributedString(HTML: body.dataUsingEncoding(NSUTF8StringEncoding)!, documentAttributes: nil) {

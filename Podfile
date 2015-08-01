@@ -13,7 +13,6 @@ target 'Tumbleweed' do
     pod 'TMCache', '~> 2.1'
     pod 'TMTumblrSDK', '~> 2.2'
     pod 'Regex', :git => 'https://github.com/nbudin/Regex.git', :branch => 'swift2', :commit => '72cd8ad4fdb9de250197883739eb72dcab3c4911'
-    pod 'SPMediaKeyTap', :git => 'https://github.com/trhodeos/SPMediaKeyTap', :commit => '11e9260e524f15a7c22a499de6eafae05d95c57b'
     pod 'SwiftyUserDefaults', '~> 1.3'
 end
 

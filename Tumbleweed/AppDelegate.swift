@@ -7,10 +7,13 @@
 //
 
 import Cocoa
+import PFAboutWindow
 import TMTumblrSDK
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    let aboutWindowController = PFAboutWindowController()
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
@@ -27,6 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillFinishLaunching(notification: NSNotification) {
         let appleEventManger = NSAppleEventManager.sharedAppleEventManager()
         appleEventManger.setEventHandler(self, andSelector: "handleURLEvent:withReplyEvent:", forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
+        
+        aboutWindowController.appURL = NSURL(string: "http://chloestars.me/apps/tumbleweed/")
     }
     
     func handleURLEvent(event : NSAppleEventDescriptor, withReplyEvent replyEvent : NSAppleEventDescriptor) {
@@ -36,6 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func handleReopen() {
         NSNotificationCenter.defaultCenter().postNotificationName("handleReopen", object: self)
+    }
+    
+    @IBAction func showAbout(sender: AnyObject) {
+        aboutWindowController.showWindow(sender)
     }
     
     @IBAction func refreshDashboard(sender: AnyObject) {

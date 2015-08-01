@@ -9,9 +9,11 @@ target 'Tumbleweed' do
     pod 'DDHidLib', :git => 'https://github.com/arturphoenix/DDHidLib', :commit => 'ef506d2be17abde3923afaf59c1fc394b4c61e49'
     pod 'DOFavoriteButton', :git => 'https://github.com/hachidorii/DOFavoriteButton'
     pod 'INAppStoreWindow', '~> 1.4'
+    pod 'PFAboutWindow', :git => 'https://github.com/perfaram/PFAboutWindow.git', :commit =>'b1947e5eae4dc215ccb5732e61322e559304606d'
     pod 'TMCache', '~> 2.1'
     pod 'TMTumblrSDK', '~> 2.2'
     pod 'Regex', :git => 'https://github.com/nbudin/Regex.git', :branch => 'swift2', :commit => '72cd8ad4fdb9de250197883739eb72dcab3c4911'
+    pod 'SPMediaKeyTap', :git => 'https://github.com/trhodeos/SPMediaKeyTap', :commit => '11e9260e524f15a7c22a499de6eafae05d95c57b'
     pod 'SwiftyUserDefaults', '~> 1.3'
 end
 

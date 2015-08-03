@@ -11,4 +11,12 @@ import AVKit
 
 class VideoPostView : PostView {
     @IBOutlet var playerView : AVPlayerView!
+    
+    init(frameRect: NSRect, options: PostViewOptions) {
+        super.init(frameRect: frameRect)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

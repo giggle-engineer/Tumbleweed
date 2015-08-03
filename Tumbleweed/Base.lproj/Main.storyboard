@@ -786,7 +786,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="photo" id="xAc-Cw-XZ5" customClass="ImagePostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                        <tableCellView id="xAc-Cw-XZ5" customClass="ImagePostView" customModule="Tumbleweed" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="275" height="232"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -967,7 +967,7 @@
                                                                 <outlet property="reblogedFrom" destination="Gmu-jm-8ja" id="Fhe-M3-oCo"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="text" id="SIc-v5-4fF" customClass="TextPostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                        <tableCellView id="SIc-v5-4fF" customClass="TextPostView" customModule="Tumbleweed" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="235" width="275" height="232"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1162,7 +1162,7 @@
                                                                 <outlet property="reblogedFrom" destination="Hel-u3-Oii" id="xTb-PQ-u19"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="audio" id="zE9-mr-5xc" customClass="AudioPostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                        <tableCellView id="zE9-mr-5xc" customClass="AudioPostView" customModule="Tumbleweed" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="469" width="275" height="172"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1371,7 +1371,7 @@
                                                                 <outlet property="trackName" destination="qfI-mt-Z6H" id="iAq-ig-qBF"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="video" misplaced="YES" id="8CB-mI-Vj1" customClass="VideoPostView" customModule="Tumbleweed" customModuleProvider="target">
+                                                        <tableCellView misplaced="YES" id="8CB-mI-Vj1" customClass="VideoPostView" customModule="Tumbleweed" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="643" width="275" height="232"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

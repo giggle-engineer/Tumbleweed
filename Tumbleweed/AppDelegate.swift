@@ -8,6 +8,7 @@
 
 import Cocoa
 import PFAboutWindow
+import TMCache
 import TMTumblrSDK
 
 @NSApplicationMain
@@ -30,8 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillFinishLaunching(notification: NSNotification) {
         let appleEventManger = NSAppleEventManager.sharedAppleEventManager()
         appleEventManger.setEventHandler(self, andSelector: "handleURLEvent:withReplyEvent:", forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
-        
         aboutWindowController.appURL = NSURL(string: "http://chloestars.me/apps/tumbleweed/")
+        TMDiskCache.sharedCache().byteLimit = 1000*1000*126
     }
     
     func handleURLEvent(event : NSAppleEventDescriptor, withReplyEvent replyEvent : NSAppleEventDescriptor) {

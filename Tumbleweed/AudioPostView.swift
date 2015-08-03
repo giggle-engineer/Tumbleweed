@@ -16,4 +16,12 @@ class AudioPostView : PostView {
     
     var playPauseCallback: (() -> Void)!
     @IBAction func playPause(sender : NSButton) { playPauseCallback() }
+    
+    init(frameRect: NSRect, options: PostViewOptions) {
+        super.init(frameRect: frameRect)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

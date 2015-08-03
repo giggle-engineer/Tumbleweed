@@ -103,31 +103,46 @@ class DashboardDataSource : NSObject, NSTableViewDataSource, NSTableViewDelegate
         print("type of post: \(typeForRow(tableView.selectedRow)) id:\(id)")
     }
     
+    func makeViewIfNotCreated(postView: PostView?) {
+        
+    }
+    
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        var postView : PostView!
+        var postView : PostView?
         let type = typeForRow(row)
-        switch(type) {
+        switch type {
             case "audio":
                 postView = tableView.makeViewWithIdentifier("audio", owner: self) as? PostView
+                if postView == nil {
+                    postView = AudioPostView(frameRect:NSRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 0), options:.None)
+                }
                 break
-            case "chat":
+            case "chat", "quote", "text":
                 postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
-                break
-            case "quote":
-                postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
-                break
-            case "text":
-                postView = tableView.makeViewWithIdentifier("text", owner: self) as? PostView
+                if postView == nil {
+                    postView = TextPostView(frameRect:NSRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 0), options:.None)
+                }
                 break
             case "photo":
                 postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
+                if postView == nil {
+                    postView = ImagePostView(frameRect:NSRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 0), options:.None)
+                }
                 break
             case "video":
                 postView = tableView.makeViewWithIdentifier("video", owner: self) as? PostView
+                if postView == nil {
+                    postView = VideoPostView(frameRect:NSRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 0), options:.None)
+                }
+                break
             default:
                 print("type: \(type) at row: \(row)")
-                postView = tableView.makeViewWithIdentifier("photo", owner: self) as? PostView
+                if postView == nil {
+                    postView = ImagePostView(frameRect:NSRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 0), options:.None)
+                }
         }
+        postView?.identifier = type
+        
         postControllers[row].post = posts[row] as? NSDictionary
         postControllers[row].view = postView
         return postView

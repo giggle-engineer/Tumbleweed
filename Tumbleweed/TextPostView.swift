@@ -10,4 +10,12 @@ import Cocoa
 
 class TextPostView : PostView {
     @IBOutlet var body : NSTextView!
+    
+    init(frameRect: NSRect, options: PostViewOptions) {
+        super.init(frameRect: frameRect)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

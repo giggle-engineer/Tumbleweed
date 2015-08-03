@@ -11,6 +11,7 @@ import AVFoundation
 
 class UserInfo {
     static let sharedUserInfo = UserInfo()
+    private init() {}
     
     var blogs : Array<String>!
     var currentPlayer : AVPlayer?
